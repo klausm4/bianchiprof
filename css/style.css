@@ -1,0 +1,18 @@
+@import "/bootstrap/bootstrap.css";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header__up {
+  height: 65px;
+  background-color: #9BC715;
+  color: white;
+}
+
+.header__bottom {
+  height: 85px;
+  background-color: #E1E1E1;
+}
