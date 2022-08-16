@@ -16,3 +16,18 @@
   height: 85px;
   background-color: #E1E1E1;
 }
+
+li {
+  list-style-type: none;
+  font-size: 11pt;
+}
+
+.telephone {
+  text-decoration: none;
+  color: #fff;
+  font-size: 11pt;
+}
+.telephone:hover {
+  color: #fff;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
