@@ -36,9 +36,16 @@
   color: #085507;
 }
 
+#navbarNav a {
+  font-size: 9pt;
+}
+
 .dropdown-item {
   --bs-dropdown-link-hover-color: #000;
   --bs-dropdown-link-hover-bg: #c3e953;
+}
+.dropdown-item:hover {
+  font-size: 19pt;
 }
 
 .fullscreen-bg {
@@ -71,4 +78,4 @@
   font-size: 18px;
   margin-top: 35%;
   margin-left: 10%;
-}
+}/*# sourceMappingURL=style.css.map */
