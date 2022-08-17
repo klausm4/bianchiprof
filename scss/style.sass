@@ -1,36 +1,71 @@
 @import "/bootstrap/bootstrap.css"
 
-* 
-    box-sizing: border-box
-    margin: 0
-    padding: 0
+*
     font-family: 'Roboto', sans-serif
 
+$litegreen: #9BC715
+$darkgreen: #085507
 
-.header__up 
-    height: 65px
-    background-color: #9BC715
+.header__up
+    background-color: $litegreen
     color: white
 
+.header__item
+    margin: 5px auto
+    ul
+        margin: 0
+        padding: 0
+    button
+        margin-top: 5px
+        background-color: #fff
 
-.header__bottom 
-    height: 85px
-    background-color: #E1E1E1
-
-
-li 
+.telephone
     list-style-type: none
-    font-size: 11pt
-
-
-.telephone 
     text-decoration: none
     color: #fff
-    font-size: 11pt
+    font-size: 9pt
+
     &:hover
         color: #fff
         text-decoration: none
 
+.header__bottom
+    .btn
+        margin-left: 5px
+        color: $darkgreen
 
+.dropdown-item
+    --bs-dropdown-link-hover-color: #000
+    --bs-dropdown-link-hover-bg: #c3e953
 
+.fullscreen-bg 
+    overflow: hidden
+    z-index: -100
+    position: relative
+    height: 1000%
+    width: 100%
+    padding-top:45%
 
+ 
+.fullscreen-bg__video 
+    position: absolute
+    top: -25%
+    left: 0
+    width: 100%
+
+.overlay 
+    background: rgba(0,0,0,0.5)
+    position: absolute
+    top:0
+    left:0
+    width: 100%
+    height: 100%
+    z-index: 4
+    button 
+        text-align:center
+        color:#fff
+        font-size: 18px
+        margin-top: 35%
+        margin-left: 10%
+ 
+    
