@@ -74,11 +74,14 @@
   height: 100%;
   z-index: 4;
 }
-.overlay button {
-  color: #fff;
+.overlay p {
+  color: rgba(255, 255, 255, 0.8352941176);
   font-size: 18px;
-  margin-top: 35%;
-  margin-left: 10%;
+  bottom: 25px;
+  left: 25px;
+  font-size: 19pt;
+  width: 50%;
+  position: absolute;
 }
 
 .main-text {
