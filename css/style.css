@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "/bootstrap/bootstrap.css";
 * {
   font-family: "Roboto", sans-serif;
@@ -24,7 +25,7 @@
   list-style-type: none;
   text-decoration: none;
   color: #fff;
-  font-size: 9pt;
+  font-size: 10pt;
 }
 .telephone:hover {
   color: #fff;
@@ -37,7 +38,7 @@
 }
 
 #navbarNav a {
-  font-size: 9pt;
+  font-size: 11pt;
 }
 
 .dropdown-item {
@@ -54,7 +55,7 @@
   position: relative;
   height: 1000%;
   width: 100%;
-  padding-top: 45%;
+  padding-top: 48%;
 }
 
 .fullscreen-bg__video {
@@ -78,4 +79,63 @@
   font-size: 18px;
   margin-top: 35%;
   margin-left: 10%;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.main-text {
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.main-text li {
+  list-style-type: none;
+}
+.main-text li:before {
+  color: #9BC715;
+  content: "●";
+  padding-right: 10px;
+}
+
+.icons {
+  margin-bottom: 15px;
+}
+.icons .card {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 24rem;
+  box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.25);
+}
+.icons .card img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 30%;
+  width: 30%;
+}
+
+.image {
+  margin-bottom: 15px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  width: 24rem;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+}
+.image .bottom-left {
+  position: absolute;
+  font-size: 20px;
+  bottom: 10px;
+  left: 15px;
+  color: #fff;
+}
+.image img {
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transition: 1s;
+}
+.image img:hover {
+  transform: scale(1.2);
+}
