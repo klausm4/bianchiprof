@@ -1,8 +1,9 @@
 @import "/bootstrap/bootstrap.css"
 
 *
-    font-family: 'Roboto', sans-serif
-
+    font-family: 'Open Sans', sans-serif
+    //font-family: 'Roboto', sans-serif
+    
 $litegreen: #9BC715
 $darkgreen: #085507
 
@@ -124,7 +125,6 @@ h4
     margin-left: auto
     margin-right: auto
     width: 24rem
-    overflow: hidden
     border-radius: 5px
     position: relative
     .bottom-left
@@ -143,18 +143,20 @@ h4
         &:hover
             transform: scale(1.2)
 
-.consultation
-    width: 70%
-    margin-left: auto
-    margin-right: auto
-
-
 form
     padding: 30px
     border: 1px solid #E1E1E1
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)  
 
 .consultation
+    width: 70%
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 35px
+    img
+        width: 300px
+        display: block
+        margin: 0 auto
     .btn
         color: #085507
         --bs-btn-bg: #fff
@@ -164,7 +166,76 @@ form
             background-color: #9BC715
             border-color: #085507
 
-            
+.socialnet-item
+    position: relative
+    margin-bottom: 35px
+    width: 345px
+    height: 181px
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))            
+    background: #FFFFFF
+    border-radius: 55px
+    padding-left: 43px
+    padding-top: 15px  
+    overflow: hidden
+    margin-left: auto
+    margin-right: auto
+    img
+        position: absolute
+        left: -25px
+        bottom: -35px  
+    .btn
+        width: 190px
+        height: 44px
+        position: absolute
+        left: 120px
+        top: 111px
+        color: #fff
+        --bs-btn-border-color: #fff
+        &:hover
+            border-color: #085507
+            background-color: #9BC715
+    .btn-instagram
+        background: #D8479A
+    .btn-facebook
+        background: #4F71A7
+    .btn-telegram
+        background: #4AB5E2
+
+.separator
+    background-image: url('/img/separator.png')
+    height: 53px
+    background-position: center
+    background-repeat: repeat-x
+    color: #fff
+    text-align: center
+    margin-bottom: 35px
+    h3
+        line-height: 53px
+
+.partners
+    margin-bottom: 35px
+    .partner
+
+
+.footer
+    font-size: 10pt
+    .footer-items
+        // padding: 2% 10%
+        background-color: #4E4D4D
+        color: #fff
+        h6
+            color: $litegreen
+        p
+            margin-bottom: 0px
+        .footer-left
+            margin-bottom: 20px
+    .separator
+        margin-bottom: 0px
+        h7
+            line-height: 53px
         
- 
+
+    
+
+
     
