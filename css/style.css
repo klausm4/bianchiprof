@@ -14,10 +14,6 @@ h4 {
   color: #9BC715;
 }
 
-.header {
-  margin-bottom: 20px;
-}
-
 .header__up {
   background-color: #9BC715;
   color: white;
@@ -63,10 +59,6 @@ h4 {
   font-size: 19pt;
 }
 
-.main-text {
-  margin-bottom: 35px;
-}
-
 .fullscreen-bg {
   overflow: hidden;
   z-index: -100;
@@ -86,7 +78,7 @@ h4 {
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 0;
   left: 0;
@@ -138,11 +130,10 @@ h4 {
 }
 
 .image {
-  margin-bottom: 35px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  width: 24rem;
+  width: 345px;
   border-radius: 5px;
   position: relative;
 }
@@ -168,13 +159,13 @@ form {
   padding: 30px;
   border: 1px solid #E1E1E1;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
 }
 
 .consultation {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 35px;
 }
 .consultation img {
   width: 300px;
@@ -194,7 +185,6 @@ form {
 
 .socialnet-item {
   position: relative;
-  margin-bottom: 35px;
   width: 345px;
   height: 181px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -247,9 +237,6 @@ form {
   line-height: 53px;
 }
 
-.partners {
-  margin-bottom: 35px;
-}
 .footer {
   font-size: 10pt;
 }
@@ -271,4 +258,4 @@ form {
 }
 .footer .separator h7 {
   line-height: 53px;
-}
+}/*# sourceMappingURL=style.css.map */
