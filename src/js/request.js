@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+function req() {
 
     const requestButton = document.querySelector('.send-request');
 
@@ -9,11 +9,12 @@ window.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             sendRequest(name, telephone);
         }
-        
-    }) 
+    }); 
 
     const sendRequest = (name, telephone) => {
         console.log(name, telephone);
-    }
+    };
 
-});
+}
+
+export default req;

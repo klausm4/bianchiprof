@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "/bootstrap/bootstrap.css";
+@import "/src/bootstrap/bootstrap.css";
 * {
   font-family: "Open Sans", sans-serif;
 }
@@ -64,21 +64,21 @@ h4 {
   z-index: -100;
   position: relative;
   height: 100%;
-  width: 76%;
-  padding-top: 36%;
+  width: 81%;
+  padding-top: 39%;
   margin: auto;
   border-radius: 5px;
 }
 
 .fullscreen-bg__video {
   position: absolute;
-  top: -25%;
+  top: -24%;
   left: 0;
   width: 100%;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   left: 0;
@@ -258,4 +258,4 @@ form {
 }
 .footer .separator h7 {
   line-height: 53px;
-}/*# sourceMappingURL=style.css.map */
+}
