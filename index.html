@@ -24,7 +24,7 @@
         <div class="header__up">
             <div class="header__wrapper container text-center">
                 <div class="row">
-            
+
                     <div class="header__item col">
                         <ul>
                             <li class="telephone text-nowrap" href="tel:+380960542770">ХАРКІВ (096) 054-27-70</li>
@@ -68,7 +68,8 @@
                     </div>
 
                     <div class="header__item col">
-                        <button class="btn text-nowrap">Залишити заявку</button>
+                        <button class="btn text-nowrap" data-bs-toggle="modal" data-bs-target="#Modal">Залишити
+                            заявку</button>
                     </div>
 
                 </div>
@@ -163,7 +164,7 @@
                 впізнавані споживачами завдяки новітнім смакам та оформленню напоїв
             </p> -->
         </div>
-        <video loop muted autoplay poster="" class="fullscreen-bg__video">
+        <video loop muted autoplay class="fullscreen-bg__video">
             <source src="video/2.mp4" type="video/mp4">
             <div class="bottom-left">
 
@@ -260,14 +261,14 @@
 
                 <div class="col-lg-4 p-1">
                     <div class="image">
-                        <img src="./img/classic.jpg" class="card-img-top" alt="horeca">
+                        <img src="./img/classic.jpg" class="card-img-top" alt="ckassic">
                         <div class="bottom-left">ДЛЯ КАФЕ, РЕСТОРАНІВ,<br>ОФІСІВ</div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 p-1">
                     <div class="image">
-                        <img src="./img/vending.jpg" class="card-img-top" alt="horeca">
+                        <img src="./img/vending.jpg" class="card-img-top" alt="vending">
                         <div class="bottom-left">ВЕНДІНГ</div>
                     </div>
                 </div>
@@ -280,24 +281,36 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="./img/cap.png" class="" alt="cap">
+                    <img src="./img/cap.png" alt="cap">
                 </div>
                 <div class="col">
                     <form>
                         <h4>Безкоштовна консультація нашого спеціаліста</h4>
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="validationName" placeholder="Ім'я" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="validationTelephone" placeholder="Телефон"
+                            <input type="text" class="form-control" id="validationName" placeholder="Ваше Ім'я"
                                 required>
                         </div>
                         <div class="mb-3">
-                            <select id="validationCity" class="form-select" required>
+                            <input type="text" class="form-control validationTelephone tel" id="validationTelephone"
+                                placeholder="Телефон" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select validationDirection" id="validationDirection" required>
+                                <option selected disabled value="">Мене цікавить...</option>
+                                <option>Кавомашина для кафе або торгової точки</option>
+                                <option>Торговий автомат з кавою або снеками</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select validationCity" id="validationCity" required>
                                 <option selected disabled value="">Ваше місто...</option>
                                 <option>Харків</option>
                                 <option>Київ</option>
+                                <option>Бровари</option>
+                                <option>Бориспіль</option>
                                 <option>Біла Церква</option>
+                                <option>Черкаси</option>
+                                <option>Інше місто</option>
                             </select>
                         </div>
 
@@ -459,14 +472,15 @@
                         <div class="row">
                             <div class="col footer-left">
                                 <h6>e-mail</h6>
-                                <a class="telephone text-nowrap" href="mailto:vend.coffee@bianchiprof.com">vend.coffee@bianchiprof.com</a>
+                                <a class="telephone text-nowrap"
+                                    href="mailto:vend.coffee@bianchiprof.com">vend.coffee@bianchiprof.com</a>
                             </div>
                         </div>
                     </div>
 
 
                     <div class="col-4 p-4 offset-md-2">
-                       
+
                         <div class="footer-left">
                             <h6>ВЕНДІНГ</h6>
                             <p>
@@ -474,21 +488,22 @@
                                 Харків, Київ, Біла Церква, Дніпро, Запоріжжя, Рівне, Львів,
                                 Івано-Франківськ, Чернівці, Вінниця, Житомир, Одеса,
                                 Миколаїв, Кривий Ріг, Маріуполь, Тернопіль
-    
+
                             </p>
                         </div>
-                       
+
 
                         <h6>Менеджер з розвитку</h6>
                         <p>
                             <a class="telephone text-nowrap" href="tel:+380950252822">т. +38 (095) 025-28-22</a>
                         </p>
                         <p>
-                            <a class="telephone text-nowrap" href="mailto:vend.coffee@bianchiprof.com">vend.coffee@bianchiprof.com</a>
+                            <a class="telephone text-nowrap"
+                                href="mailto:vend.coffee@bianchiprof.com">vend.coffee@bianchiprof.com</a>
                         </p>
-                        
-                       
-                        
+
+
+
                     </div>
                 </div>
             </div>
@@ -499,11 +514,60 @@
         </div>
     </footer>
 
+    <!-- /////////////////////////////////////modal///////////////////////////// -->
+    <!-- Модальное окно -->
 
+    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Безкоштовна консультація нашого спеціаліста</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="validationNameModal" placeholder="Ваше Ім'я"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control tel" id="validationTelephoneModal"
+                                placeholder="Телефон" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select validationDirection" id="validationDirectionModal" required>
+                                <option selected disabled value="">Мене цікавить...</option>
+                                <option>Кавомашина для кафе або торгової точки</option>
+                                <option>Торговий автомат з кавою або снеками</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" id="validationCityModal" required>
+                                <option selected disabled value="">Ваше місто...</option>
+                                <option>Харків</option>
+                                <option>Київ</option>
+                                <option>Бровари</option>
+                                <option>Бориспіль</option>
+                                <option>Біла Церква</option>
+                                <option>Черкаси</option>
+                                <option>Інше місто</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                        <button type="submit" class="btn send-request-modal">Відправити</button>
+                    </div>
+                </form>
 
-    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="./bootstrap/bootstrap.bundle.min.js"></script> -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/js/boundle.js"></script>
 </body>
 
 </html>

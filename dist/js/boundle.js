@@ -1,2 +1,0 @@
-(()=>{"use strict";window.addEventListener("DOMContentLoaded",(()=>{!function(){document.querySelector(".send-request").addEventListener("click",(t=>{const n=document.querySelector("#validationName").value,o=document.querySelector("#validationTelephone").value;n&&o&&(t.preventDefault(),e(n,o))}));const e=(e,t)=>{console.log(e,t)}}()}))})();
-//# sourceMappingURL=boundle.js.map
