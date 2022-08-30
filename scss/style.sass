@@ -1,10 +1,9 @@
 @import "../bootstrap/bootstrap.css"
 
-
 *
     font-family: 'Open Sans', sans-serif
     //font-family: 'Roboto', sans-serif
-    
+
 $litegreen: #9BC715
 $darkgreen: #085507
 
@@ -19,7 +18,7 @@ h4
 .header__up
     background-color: $litegreen
     color: white
-   
+
 .header__item
     margin: 5px auto
     ul
@@ -44,7 +43,7 @@ h4
         margin-left: 5px
         color: $darkgreen
 
-#navbarNav 
+#navbarNav
     a
         font-size: 11pt
 
@@ -54,32 +53,32 @@ h4
     &:hover
         font-size: 19pt
 
-.fullscreen-bg 
+.fullscreen-bg
     overflow: hidden
     z-index: -100
     position: relative
     height: 100%
-    width: 81%
-    padding-top:39%
+    width: 84%
+    padding-top: 39%
     margin: auto
     border-radius: 5px
 
-.fullscreen-bg__video 
+.fullscreen-bg__video
     position: absolute
     top: -24%
     left: 0
     width: 100%
-    
-.overlay 
+
+.overlay
     background: rgba(0,0,0,0.1)
     position: absolute
-    top:0
-    left:0
+    top: 0
+    left: 0
     width: 100%
     height: 100%
     z-index: 4
-    p 
-        color:#ffffffd5
+    p
+        color: #ffffffd5
         font-size: 18px
         bottom: 25px
         left: 25px
@@ -111,7 +110,7 @@ h4
             margin-left: auto
             margin-right: auto
             height: 30%
-            width:30%
+            width: 30%
 
 .image
     overflow: hidden
@@ -139,8 +138,8 @@ h4
 form
     padding: 30px
     border: 1px solid #E1E1E1
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) 
-    border-radius: 5px 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    border-radius: 5px
 
 .consultation
     width: 70%
@@ -151,23 +150,22 @@ form
         display: block
         margin: 0 auto
 
-
 .socialnet-item
     position: relative
     width: 345px
     height: 181px
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))            
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
     background: #FFFFFF
     border-radius: 55px
     padding-left: 43px
-    padding-top: 15px  
+    padding-top: 15px
     overflow: hidden
     margin-left: auto
     margin-right: auto
     img
         position: absolute
         left: -25px
-        bottom: -35px  
+        bottom: -35px
     .btn
         width: 190px
         height: 44px
@@ -230,10 +228,55 @@ form
     .separator
         margin-bottom: 0px
         h7
-            line-height: 53px
-        
+        line-height: 53px
 
-    
+.popup
+    position: relative
+    display: inline-block
+    cursor: pointer
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    .popuptext 
+        visibility: hidden
+        width: 180px
+        background-color: red
+        color: #fff
+        text-align: center
+        border-radius: 6px
+        padding: 8px 4px
+        position: absolute
+        z-index: 1
+        bottom: 125%
+        left: 50%
+        margin-left: -165px
+        margin-bottom: 28px
+        &:after 
+            content: ""
+            position: absolute
+            top: 100%
+            left: 50%
+            margin-left: -5px
+            border-width: 5px
+            border-style: solid
+            border-color: red transparent transparent transparent
+    .show 
+        visibility: visible
+        -webkit-animation: fadeIn 1s
+        animation: fadeIn 1s
+
+@-webkit-keyframes fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+@keyframes fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+       
 
 
-    
