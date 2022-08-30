@@ -1,4 +1,4 @@
-function telInput () {
+function telephoneMatrix () {
     [].forEach.call(document.querySelectorAll('.tel'), function (input) {
         var keyCode;
         function mask(event) {
@@ -34,4 +34,4 @@ function telInput () {
     });
 }
 
-export default telInput;
+export default telephoneMatrix;

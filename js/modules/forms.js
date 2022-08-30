@@ -1,4 +1,4 @@
-function requestToEmail(triggerSelector, nameSelector, telephoneSelector, directionSelector, citySelector, popupSelector) {
+function forms(triggerSelector, nameSelector, telephoneSelector, directionSelector, citySelector, popupSelector) {
 
     const requestButton = document.querySelector(triggerSelector);
     const message = { //набор сообщений
@@ -96,7 +96,7 @@ function requestToEmail(triggerSelector, nameSelector, telephoneSelector, direct
             thanksModal.remove();
             resetForm();
         }, 3000);
-    }
+    };
 
     function resetForm() {
         document.querySelector('#validationName').value = '';
@@ -108,12 +108,7 @@ function requestToEmail(triggerSelector, nameSelector, telephoneSelector, direct
         document.querySelector('#validationTelephoneModal').value = '';
         document.querySelector('#validationDirectionModal').value = '';
         document.querySelector('#validationCityModal').value = '';
-    }
-
-    getDynamicInformation('#validationName');
-    getDynamicInformation('#validationTelephone');
-    getDynamicInformation('#validationNameModal');
-    getDynamicInformation('#validationTelephoneModal');
+    };
 
     function getDynamicInformation(selector) {
         const input = document.querySelector(selector);
@@ -124,9 +119,14 @@ function requestToEmail(triggerSelector, nameSelector, telephoneSelector, direct
             } else {
                 input.style.border = null;
             }
-        })
-    }
+        });
+    };
 
-}
+    getDynamicInformation('#validationName');
+    getDynamicInformation('#validationTelephone');
+    getDynamicInformation('#validationNameModal');
+    getDynamicInformation('#validationTelephoneModal');
 
-export default requestToEmail;
+};
+
+export default forms;

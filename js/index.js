@@ -1,17 +1,11 @@
 // require('es6-promise').polyfill();
-import requestToEmail from './modules/request';
-import telInput from './modules/telInput';
+import forms from './modules/forms';
+import telephoneMatrix from './modules/TelephoneMatrix';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    requestToEmail('.send-request','#validationName', '#validationTelephone', '#validationDirection', '#validationCity', '#popupSelector');
-    requestToEmail('.send-request-modal','#validationNameModal', '#validationTelephoneModal', '#validationDirectionModal', '#validationCityModal', '#popupSelectorModal');
-    telInput(); 
-
-    
-    
-
-    // requestToEmail('.send-request', '#validationName')
-
+    forms('.send-request','#validationName', '#validationTelephone', '#validationDirection', '#validationCity', '#popupSelector');
+    forms('.send-request-modal','#validationNameModal', '#validationTelephoneModal', '#validationDirectionModal', '#validationCityModal', '#popupSelectorModal');
+    telephoneMatrix(); 
 
 });
