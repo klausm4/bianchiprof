@@ -6,6 +6,12 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
         failure: 'Что-то пошло не так'
     };
 
+    document.addEventListener('click', (event) => {
+        if (!event.target.classList.contains('btn')) {
+            clearPopup();
+        };
+    });
+
     requestButton.addEventListener('click', (e) => {
 
         const name = document.querySelector(nameSelector).value;
@@ -13,42 +19,59 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
         const direction = document.querySelector(directionSelector).value;
         const city = document.querySelector(citySelector).value;
         const popup = document.querySelector(popupSelector);
-        popup.classList.remove("show");
 
-        if (name && telephone && direction && city) {
+        e.preventDefault();
+        clearPopup();
 
-            e.preventDefault();
-            if (name.trim().length < 2) {
-                popup.textContent = "Занадто коротке Ім'я";
-                popup.classList.add("show");
+        if (name.trim().length < 2) {
+            const textContent = "Занадто коротке Ім'я";
+            showPopup(nameSelector, textContent);
+            return
+        };
+
+        if (telephone.length < 18) {
+            const textContent = "Занадто короткий номер телефону";
+            showPopup(telephoneSelector, textContent);
+            return
+        };
+
+        if (!direction) {
+            const textContent = "Виберіть один з пунктів списку";
+            showPopup(directionSelector, textContent);
+            return
+        };
+
+        if (!city) {
+            const textContent = "Виберіть один з пунктів списку";
+            showPopup(citySelector, textContent);
+            return
+        };
+
+        if (localStorage.getItem('dispatchTime')) {
+            const wait = 1000 * 60 * 15 //время ожидания между отправками
+            const diff = new Date().getTime() - localStorage.getItem('dispatchTime');
+            if (diff < wait) {
+                const minute = Math.ceil((wait - diff) / (1000 * 60));
+                const textContent = `Спробуйте відправити наступну заявку через ${minute} хвилин`;
+                showPopup(popupSelector, textContent);
                 return
             };
-
-            if (telephone.length < 18) {
-                popup.textContent = 'Занадто короткий номер телефону';
-                popup.classList.add("show");
-                return
-            }
-
-            if (localStorage.getItem('dispatchTime')) {
-                const diff = new Date().getTime() - localStorage.getItem('dispatchTime');
-                if (diff < 1000*60*15) {
-                    const minute = Math.ceil((1000*60*15 - diff)/(1000*60));
-                    popup.textContent = `Спробуйте відправити наступну заявку через ${minute} хвилин`;
-                    popup.classList.add("show");
-                    setTimeout(() => {
-                        popup.classList.remove("show");
-                    }, 3000);
-                    return
-                } else {
-                    sendRequest(name, telephone, direction, city)
-                }
-            } else {
-                sendRequest(name, telephone, direction, city);
-            }
-
         }
+        sendRequest(name, telephone, direction, city);
     });
+
+    function clearPopup() {
+        const popups = document.querySelectorAll('.popuptext');
+        popups.forEach(element => {
+            element.classList.remove('show');
+        });
+    }
+
+    function showPopup(trigger, text) {
+        const popup = document.querySelector(trigger + 'Popup');
+        popup.textContent = text;
+        popup.classList.toggle('show');
+    }
 
     const sendRequest = (name, telephone, direction, city) => {
         console.log(name, telephone, direction, city);
@@ -78,17 +101,17 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
             `;
         document.querySelector('body').append(fade);
         const thanksModal = document.createElement('div'); //формируем html нового окна
-        //thanksModal.classList.add('modal__dialog');
+       
         thanksModal.innerHTML = `
             <div class="modal fade show" id="thanksModal" tabindex="-1" aria-labelledby="exampleThanksModalLabel" aria-modal="true" role="dialog" style="display: block">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form action="">
-                        <h4 class="modal-title" id="exampleThanksModalLabel">${message}</h4>
-                    </form>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="">
+                            <h4 class="modal-title" id="exampleThanksModalLabel">${message}</h4>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
         `;
         document.querySelector('body').append(thanksModal);
         setTimeout(() => {

@@ -280,20 +280,26 @@
                     <img src="./img/cap.png" alt="cap">
                 </div>
                 <div class="col">
-                    <form class="needs-validation">
+                    <form class="needs-validation" novalidate>
                         <h4>Безкоштовна консультація нашого спеціаліста</h4>
                         <div class="mb-3">
+                            <div class="popup">
+                                <span class="popuptext" id="validationNamePopup"></span>
+                            </div>
                             <input type="text" class="form-control" id="validationName" placeholder="Ваше Ім'я"
                                 required>
-                            <div class="invalid-tooltip">
-                                Укажите имя пользователя!
-                            </div>
                         </div>
                         <div class="mb-3">
+                            <div class="popup">
+                                <span class="popuptext" id="validationTelephonePopup"></span>
+                            </div>
                             <input type="text" class="form-control validationTelephone tel" id="validationTelephone"
                                 placeholder="Телефон" required>
                         </div>
                         <div class="mb-3">
+                            <div class="popup">
+                                <span class="popuptext" id="validationDirectionPopup"></span>
+                            </div>
                             <select class="form-select validationDirection" id="validationDirection" required>
                                 <option selected disabled value="">Мене цікавить...</option>
                                 <option>Кавомашина для кафе або торгової точки</option>
@@ -301,6 +307,9 @@
                             </select>
                         </div>
                         <div class="mb-3">
+                            <div class="popup">
+                                <span class="popuptext" id="validationCityPopup"></span>
+                            </div>
                             <select class="form-select validationCity" id="validationCity" required>
                                 <option selected disabled value="">Ваше місто...</option>
                                 <option>Харків</option>
@@ -312,11 +321,14 @@
                                 <option>Інше місто</option>
                             </select>
                         </div>
-
-                        <button type="submit" class="btn send-request">Залишити заявку</button>
+                        
                         <div class="popup">
-                            <span class="popuptext" id="popupSelector"></span>
+                            <span class="popuptext" id="popupSelectorPopup"></span>
                         </div>
+                        <button type="submit" class="btn send-request">Залишити заявку</button>
+                        <!-- <div class="popup">
+                            <span class="popuptext" id="popupSelector"></span>
+                        </div> -->
                         
                     </form>
                 </div>
@@ -529,14 +541,23 @@
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
+                            <div class="popup">
+                                <span class="popuptext" id="validationNameModalPopup"></span>
+                            </div>
                             <input type="text" class="form-control" id="validationNameModal" placeholder="Ваше Ім'я"
                                 required>
                         </div>
                         <div class="mb-3">
+                            <div class="popup">
+                                <span class="popuptext" id="validationTelephoneModalPopup"></span>
+                            </div>
                             <input type="text" class="form-control tel" id="validationTelephoneModal"
                                 placeholder="Телефон" required>
                         </div>
                         <div class="mb-3">
+                            <div class="popup">
+                                <span class="popuptext" id="validationDirectionModalPopup"></span>
+                            </div>
                             <select class="form-select validationDirection" id="validationDirectionModal" required>
                                 <option selected disabled value="">Мене цікавить...</option>
                                 <option>Кавомашина для кафе або торгової точки</option>
@@ -544,6 +565,9 @@
                             </select>
                         </div>
                         <div class="mb-3">
+                            <div class="popup" >
+                                <span class="popuptext" id="validationCityModalPopup"></span>
+                            </div>
                             <select class="form-select" id="validationCityModal" required>
                                 <option selected disabled value="">Ваше місто...</option>
                                 <option>Харків</option>
@@ -556,12 +580,13 @@
                             </select>
                         </div>
                     </div>
+                    
                     <div class="modal-footer">
+                        <div class="popup popup-modal">
+                            <span class="popuptext" id="popupSelectorModalPopup"></span>
+                        </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
                         <button type="submit" class="btn send-request-modal">Відправити</button>
-                        <div class="popup">
-                            <span class="popuptext" id="popupSelectorModal"></span>
-                        </div>
                     </div>
                 </form>
 
