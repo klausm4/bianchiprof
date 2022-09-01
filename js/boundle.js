@@ -10,7 +10,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function forms(triggerSelector, nameSelector, telephoneSelector, directionSelector, citySelector, popupSelector) {
-
+    
     const requestButton = document.querySelector(triggerSelector);
     const message = { //набор сообщений
         success: 'Дякуємо! Чекайте на дзвінок менеджера!',
@@ -24,37 +24,37 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
     });
 
     requestButton.addEventListener('click', (e) => {
-
-        const name = document.querySelector(nameSelector).value;
-        const telephone = document.querySelector(telephoneSelector).value;
-        const direction = document.querySelector(directionSelector).value;
-        const city = document.querySelector(citySelector).value;
-        const popup = document.querySelector(popupSelector);
+        console.log('add')
+        const name = document.querySelector(nameSelector);
+        const telephone = document.querySelector(telephoneSelector);
+        const direction = document.querySelector(directionSelector);
+        const city = document.querySelector(citySelector);
+        const button =  document.querySelector(popupSelector);
 
         e.preventDefault();
         clearPopup();
 
-        if (name.trim().length < 2) {
+        if (name.value.trim().length < 2) {
             const textContent = "Занадто коротке Ім'я";
-            showPopup(nameSelector, textContent);
+            showPopup(name, textContent);
             return
         };
 
-        if (telephone.length < 18) {
+        if (telephone.value.length < 18) {
             const textContent = "Занадто короткий номер телефону";
-            showPopup(telephoneSelector, textContent);
+            showPopup(telephone, textContent);
             return
         };
 
-        if (!direction) {
+        if (!direction.value) {
             const textContent = "Виберіть один з пунктів списку";
-            showPopup(directionSelector, textContent);
+            showPopup(direction, textContent);
             return
         };
 
-        if (!city) {
+        if (!city.value) {
             const textContent = "Виберіть один з пунктів списку";
-            showPopup(citySelector, textContent);
+            showPopup(city, textContent);
             return
         };
 
@@ -64,24 +64,25 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
             if (diff < wait) {
                 const minute = Math.ceil((wait - diff) / (1000 * 60));
                 const textContent = `Спробуйте відправити наступну заявку через ${minute} хвилин`;
-                showPopup(popupSelector, textContent);
+                showPopup(button, textContent);
                 return
             };
         }
-        sendRequest(name, telephone, direction, city);
+        sendRequest(name.value, telephone.value, direction.value, city.value);
     });
 
     function clearPopup() {
-        const popups = document.querySelectorAll('.popuptext');
+        const popups = document.querySelectorAll('.popup');
         popups.forEach(element => {
-            element.classList.remove('show');
+            element.remove();
         });
     }
 
     function showPopup(trigger, text) {
-        const popup = document.querySelector(trigger + 'Popup');
-        popup.textContent = text;
-        popup.classList.toggle('show');
+        const popup = document.createElement('div');
+        popup.className = "popup";
+        popup.innerHTML = `<span class="popuptext show">${text}</span>`;
+        trigger.before(popup);
     }
 
     const sendRequest = (name, telephone, direction, city) => {
@@ -156,8 +157,13 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
         });
     };
 
-    getDynamicInformation('#validationName');
-    getDynamicInformation('#validationTelephone');
+    try {
+        getDynamicInformation('#validationName');
+        getDynamicInformation('#validationTelephone');
+    } catch {
+        ///////
+    };
+    
     getDynamicInformation('#validationNameModal');
     getDynamicInformation('#validationTelephoneModal');
 
@@ -279,21 +285,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', () => {
+   
+    try {
+        (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__["default"])('.send-request',
+            '#validationName',
+            '#validationTelephone',
+            '#validationDirection',
+            '#validationCity',
+            '.send-request');
+    } catch (err) {
+        // обработка ошибки
+    };
 
-    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__["default"])('.send-request',
-        '#validationName',
-        '#validationTelephone',
-        '#validationDirection',
-        '#validationCity',
-        '#popupSelector');
-    
-    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__["default"])('.send-request-modal',
-        '#validationNameModal',
-        '#validationTelephoneModal',
-        '#validationDirectionModal',
-        '#validationCityModal',
-        '#popupSelectorModal');
-    
+    try {
+        (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__["default"])('.send-request-modal',
+            '#validationNameModal',
+            '#validationTelephoneModal',
+            '#validationDirectionModal',
+            '#validationCityModal',
+            '.btn-secondary');
+    } catch (err) {
+        // обработка ошибки
+    }
+
     (0,_modules_TelephoneMask__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
 });

@@ -167,6 +167,7 @@ form
         left: -25px
         bottom: -35px
     .btn
+        padding: 8px
         width: 190px
         height: 44px
         position: absolute
@@ -201,6 +202,13 @@ form
         color: #fff
         background-color: #9BC715
         border-color: #085507
+
+.modal-footer
+    .popup
+        position: relative
+        left: 55px
+        bottom: 20px
+
 
 .separator
     background-image: url('/img/separator.png')
@@ -267,9 +275,6 @@ form
         -webkit-animation: fadeIn 1s
         animation: fadeIn 1s
 
-.popup-modal
-    width: 380px
-
 @-webkit-keyframes fadeIn
     from
         opacity: 0
@@ -282,5 +287,61 @@ form
     to
         opacity: 1
        
+
+.timeline-steps 
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    .timeline-step
+        align-items: center
+        display: flex
+        flex-direction: column
+        position: relative
+        margin: 3rem
+    .timeline-content
+        width: 10rem
+        text-align: center
+        .inner-circle
+            border-radius: 5rem
+            height: 3rem
+            width: 3rem
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            background-color: #9BC715
+            &:before
+                content: ""
+                background-color: #9BC715
+                display: inline-block
+                height: 4rem
+                width: 4rem
+                min-width: 4rem
+                border-radius: 6.25rem
+                opacity: .5
+ 
+@media (min-width:768px) 
+    .timeline-steps
+        .timeline-step:not(:last-child)
+            &:after
+                content: ""
+                display: block
+                border-top: .25rem dotted #9BC715
+                width: 5.46rem
+                position: absolute
+                left: 8rem
+                top: 1.2125rem
+        .timeline-step:not(:first-child)
+            &:before
+                content: ""
+                display: block
+                border-top: .25rem dotted #9BC715
+                width: 4rem
+                position: absolute
+                right: 8rem
+                top: 1.2125rem
+                
+    
+
+
 
 
