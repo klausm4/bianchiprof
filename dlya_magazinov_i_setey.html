@@ -299,22 +299,22 @@
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="validationNameModal" placeholder="Ваше Ім'я"
+                            <input type="text" name="userNameModal" class="form-control" id="validationNameModal" minlength="2" placeholder="Ваше Ім'я"
                                 required>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control tel" id="validationTelephoneModal"
+                            <input type="text" name="telephoneModal" class="form-control tel" id="validationTelephoneModal" minlength="18" maxlength="18"
                                 placeholder="Телефон" required>
                         </div>
                         <div class="mb-3">
-                            <select class="form-select validationDirection" id="validationDirectionModal" required>
+                            <select class="form-select validationDirection" name="directionModal" id="validationDirectionModal" required>
                                 <option selected disabled value="">Мене цікавить...</option>
                                 <option>Кавомашина для кафе або торгової точки</option>
                                 <option>Торговий автомат з кавою або снеками</option>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <select class="form-select" id="validationCityModal" required>
+                            <select class="form-select" name="cityModal" id="validationCityModal" required>
                                 <option selected disabled value="">Ваше місто...</option>
                                 <option>Харків</option>
                                 <option>Київ</option>
@@ -330,7 +330,7 @@
                     <div class="modal-footer">
                         
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
-                        <button class="btn send-request-modal">Відправити</button>
+                        <button name="sendRequestModal" lass="btn send-request-modal">Відправити</button>
                     </div>
                 </form>
 
@@ -340,7 +340,7 @@
 
     <!-- <script src="./bootstrap/bootstrap.bundle.min.js"></script> -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
     <script src="/js/boundle.js"></script>
 </body>
 

@@ -1,6 +1,5 @@
-function forms(triggerSelector, nameSelector, telephoneSelector, directionSelector, citySelector, popupSelector) {
-    
-    const requestButton = document.querySelector(triggerSelector);
+function forms() {
+
     const message = { //набор сообщений
         success: 'Дякуємо! Чекайте на дзвінок менеджера!',
         failure: 'Что-то пошло не так'
@@ -12,67 +11,84 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
         };
     });
 
-    requestButton.addEventListener('click', (e) => {
-        console.log('add')
-        const name = document.querySelector(nameSelector);
-        const telephone = document.querySelector(telephoneSelector);
-        const direction = document.querySelector(directionSelector);
-        const city = document.querySelector(citySelector);
-        const button =  document.querySelector(popupSelector);
+    const forms = document.querySelectorAll('form');
 
-        e.preventDefault();
-        clearPopup();
-
-        if (name.value.trim().length < 2) {
-            const textContent = "Занадто коротке Ім'я";
-            showPopup(name, textContent);
-            return
-        };
-
-        if (telephone.value.length < 18) {
-            const textContent = "Занадто короткий номер телефону";
-            showPopup(telephone, textContent);
-            return
-        };
-
-        if (!direction.value) {
-            const textContent = "Виберіть один з пунктів списку";
-            showPopup(direction, textContent);
-            return
-        };
-
-        if (!city.value) {
-            const textContent = "Виберіть один з пунктів списку";
-            showPopup(city, textContent);
-            return
-        };
-
-        if (localStorage.getItem('dispatchTime')) {
-            const wait = 1000 * 60 * 15 //время ожидания между отправками
-            const diff = new Date().getTime() - localStorage.getItem('dispatchTime');
-            if (diff < wait) {
-                const minute = Math.ceil((wait - diff) / (1000 * 60));
-                const textContent = `Спробуйте відправити наступну заявку через ${minute} хвилин`;
-                showPopup(button, textContent);
-                return
-            };
-        }
-        sendRequest(name.value, telephone.value, direction.value, city.value);
+    forms.forEach(item => {
+        bindPostData(item);
     });
 
+    function bindPostData(form) {
+        form.addEventListener('submit', (e) => { //подписываем элементы формы на событие отправки данных формы (submit)
+            e.preventDefault(); //убираем действия по умолчанию
+            clearPopup();
+
+            let prefix = '';
+            const data = new FormData(form); //получаем данные
+
+            if (data.has('userNameModal')) {//Устанавливаем префикс имени поля для модального окна
+                prefix = 'Modal';
+            }
+
+            const name = data.get('userName' + prefix);
+            const telephone = data.get('telephone' + prefix);
+            const direction = data.get('direction' + prefix);
+            const city = data.get('city' + prefix);
+
+            if (name.trim().length < 2) {
+
+                const textContent = "Занадто коротке Ім'я";
+                showPopup('userName' + prefix, textContent);
+                return
+            };
+
+            if (telephone.length < 18) {
+                const textContent = "Занадто короткий номер телефону";
+                showPopup('telephone' + prefix, textContent);
+                return
+            };
+
+            if (!direction) {
+                const textContent = "Виберіть один з пунктів списку";
+                showPopup('direction' + prefix, textContent);
+                return
+            };
+
+            if (!city) {
+                const textContent = "Виберіть один з пунктів списку";
+                showPopup('city' + prefix, textContent);
+                return
+            };
+
+            if (localStorage.getItem('dispatchTime')) {
+                const wait = 1000 * 60 * 15 //время ожидания между отправками
+                const diff = new Date().getTime() - localStorage.getItem('dispatchTime');
+                if (diff < wait) {
+                    const minute = Math.ceil((wait - diff) / (1000 * 60));
+                    const textContent = `Спробуйте відправити наступну заявку через ${minute} хвилин`;
+                    showPopup('sendRequest' + prefix, textContent);
+                    return
+                };
+            }
+            sendRequest(name, telephone, direction, city);
+        });
+    };
+
+  
     function clearPopup() {
         const popups = document.querySelectorAll('.popup');
         popups.forEach(element => {
             element.remove();
         });
-    }
+    };
 
     function showPopup(trigger, text) {
         const popup = document.createElement('div');
+        const element = document.getElementsByName(trigger);
         popup.className = "popup";
         popup.innerHTML = `<span class="popuptext show">${text}</span>`;
-        trigger.before(popup);
-    }
+        
+        element[0].before(popup);
+    };
 
     const sendRequest = (name, telephone, direction, city) => {
         console.log(name, telephone, direction, city);
@@ -80,13 +96,14 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
         localStorage.setItem('dispatchTime', new Date().getTime());
     };
 
-    function closeWindow(id) {
-        document.querySelector('body').className = '';
-        document.querySelector('body').style.removeProperty("overflow");
-        document.querySelector('body').style.removeProperty("padding-right");
-        document.querySelector(id).className = 'modal fade';
-        document.querySelector(id).style.setProperty('display', 'none');
-        document.querySelector('.modal-backdrop').remove();
+    function closeWindow(selector) {
+        const modalWindow = document.querySelector(selector);
+        const backdrop = document.querySelector('.modal-backdrop');
+        const body = document.querySelector('body');
+        modalWindow.classList.add('hide');
+        modalWindow.classList.remove('show');
+        backdrop.className = 'hide';
+        body.removeAttribute('style');
     };
 
     function showThanksModal(selector, message) {  //отображаем новое модальное окно пользователю после ввода данных
@@ -102,7 +119,7 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
             `;
         document.querySelector('body').append(fade);
         const thanksModal = document.createElement('div'); //формируем html нового окна
-       
+
         thanksModal.innerHTML = `
             <div class="modal fade show" id="thanksModal" tabindex="-1" aria-labelledby="exampleThanksModalLabel" aria-modal="true" role="dialog" style="display: block">
                 <div class="modal-dialog">
@@ -123,20 +140,15 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
     };
 
     function resetForm() {
-        document.querySelector('#validationName').value = '';
-        document.querySelector('#validationTelephone').value = '';
-        document.querySelector('#validationDirection').value = '';
-        document.querySelector('#validationCity').value = '';
-
-        document.querySelector('#validationNameModal').value = '';
-        document.querySelector('#validationTelephoneModal').value = '';
-        document.querySelector('#validationDirectionModal').value = '';
-        document.querySelector('#validationCityModal').value = '';
+        const resetForms = document.querySelectorAll('form');
+        resetForms.forEach(e => {
+            e.reset();
+        });
     };
 
     function getDynamicInformation(selector) {
         const input = document.querySelector(selector);
-        const minLength = (selector === '#validationTelephone' || selector === '#validationTelephoneModal') ? 18 : 2;
+        const minLength = (selector === '#validationTelephone' || selector === '#validationTelephoneModal') ? 13 : 2;
         input.addEventListener('input', () => {
             if (input.value.trim().length < minLength) {
                 input.style.border = '1px solid red';
@@ -152,7 +164,7 @@ function forms(triggerSelector, nameSelector, telephoneSelector, directionSelect
     } catch {
         ///////
     };
-    
+
     getDynamicInformation('#validationNameModal');
     getDynamicInformation('#validationTelephoneModal');
 

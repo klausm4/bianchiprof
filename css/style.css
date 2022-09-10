@@ -287,7 +287,7 @@ form {
 }
 .popup .popuptext {
   visibility: hidden;
-  width: 280px;
+  width: 400px;
   background-color: #9BC715;
   color: #fff;
   text-align: center;
@@ -297,7 +297,7 @@ form {
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: 80px;
+  margin-left: 0px;
   margin-bottom: 8px;
 }
 .popup .popuptext:after {
@@ -387,4 +387,4 @@ form {
     right: 8rem;
     top: 1.2125rem;
   }
-}
+}/*# sourceMappingURL=style.css.map */
