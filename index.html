@@ -68,7 +68,8 @@
                     </div>
 
                     <div class="header__item col">
-                        <button class="btn text-nowrap" data-bs-toggle="modal" data-bs-target="#Modal">Залишити заявку</button>
+                        <button class="btn text-nowrap" data-bs-toggle="modal" data-bs-target="#Modal">Залишити
+                            заявку</button>
                     </div>
 
                 </div>
@@ -97,7 +98,8 @@
                                         НАПРЯМКИ
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" type="button" href="/dlya_magazinov_i_setey.html">Для магазинів та
+                                        <li><a class="dropdown-item" type="button"
+                                                href="/dlya_magazinov_i_setey.html">Для магазинів та
                                                 торгівельних мереж</a></li>
                                         <li><a class="dropdown-item" type="button" href="#">Для кафе, ресторанів,
                                                 офісів</a></li>
@@ -282,15 +284,16 @@
                     <form class="needs-validation" novalidate>
                         <h4>Безкоштовна консультація нашого спеціаліста</h4>
                         <div class="mb-3">
-                            <input type="text" name="userName" class="form-control" id="validationName" placeholder="Ваше Ім'я" minlength="2"
+                            <input type="text" name="userName" class="form-control" id="validationName"
+                                placeholder="Ваше Ім'я" minlength="2" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="telephone" class="form-control validationTelephone tel"
+                                id="validationTelephone" minlength="18" placeholder="Телефон" required>
+                        </div>
+                        <div class="mb-3">
+                            <select name="direction" class="form-select validationDirection" id="validationDirection"
                                 required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="telephone" class="form-control validationTelephone tel" id="validationTelephone"  minlength="18"
-                                placeholder="Телефон" required>
-                        </div>
-                        <div class="mb-3">
-                            <select name="direction" class="form-select validationDirection" id="validationDirection" required>
                                 <option selected disabled value="">Мене цікавить...</option>
                                 <option>Кавомашина для кафе або торгової точки</option>
                                 <option>Торговий автомат з кавою або снеками</option>
@@ -308,7 +311,7 @@
                                 <option>Інше місто</option>
                             </select>
                         </div>
-                        <button name="sendRequest" class="btn send-request">Залишити заявку</button>        
+                        <button name="sendRequest" class="btn send-request">Залишити заявку</button>
                     </form>
                 </div>
             </div>
@@ -323,14 +326,16 @@
                     <div class="socialnet-item">
                         <h3>INSTAGRAM</h3>
                         <img src="./img/index/instagram.png" alt="logo_instagram">
-                        <a target="_blank" href="https://instagram.com/bianchiprofessional?utm_medium=copy_link" class="btn btn-instagram">ПІДПИСАТИСЯ</a>
+                        <a target="_blank" href="https://instagram.com/bianchiprofessional?utm_medium=copy_link"
+                            class="btn btn-instagram">ПІДПИСАТИСЯ</a>
                     </div>
                 </div>
                 <div class="col-lg-4 p-1">
                     <div class="socialnet-item">
                         <h3>FACEBOOK</h3>
                         <img src="./img/index/facebook.png" alt="logo_facebook">
-                        <a target="_blank" href="https://facebook.com/bianchiprofessional" class="btn btn-facebook">ПІДПИСАТИСЯ</a>
+                        <a target="_blank" href="https://facebook.com/bianchiprofessional"
+                            class="btn btn-facebook">ПІДПИСАТИСЯ</a>
                     </div>
                 </div>
                 <div class="col-lg-4 p-1">
@@ -496,19 +501,17 @@
                                 href="mailto:vend.coffee@bianchiprof.com">vend.coffee@bianchiprof.com</a>
                         </p>
 
-
-
                     </div>
                 </div>
             </div>
         </div>
-    <div class="separator">
-            <h7>© 2016-2022 Bianchi professional</h7>
+        <div class="separator">
+            <h6><small>© 2016-2022 Bianchi professional</small></h6>
         </div>
     </footer>
 
     <!-- /////////////////////////////////////modal///////////////////////////// -->
-   
+
     <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -519,15 +522,16 @@
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <input type="text" name="userNameModal" class="form-control" id="validationNameModal" minlength="2" placeholder="Ваше Ім'я"
-                                required>
+                            <input type="text" name="userNameModal" class="form-control" id="validationNameModal"
+                                placeholder="Ваше Ім'я" required>
                         </div>
                         <div class="mb-3">
-                            <input type="text" name="telephoneModal" class="form-control tel" id="validationTelephoneModal" minlength="18" maxlength="18"
-                                placeholder="Телефон" required>
+                            <input type="text" name="telephoneModal" class="form-control tel"
+                                id="validationTelephoneModal" placeholder="Телефон" required>
                         </div>
                         <div class="mb-3">
-                            <select class="form-select validationDirection" name="directionModal" id="validationDirectionModal" required>
+                            <select class="form-select validationDirection" name="directionModal"
+                                id="validationDirectionModal" required>
                                 <option selected disabled value="">Мене цікавить...</option>
                                 <option>Кавомашина для кафе або торгової точки</option>
                                 <option>Торговий автомат з кавою або снеками</option>
@@ -546,9 +550,9 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="modal-footer">
-                        
+
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
                         <button name="sendRequestModal" lass="btn send-request-modal">Відправити</button>
                     </div>

@@ -69,7 +69,7 @@ function forms() {
                     return
                 };
             }
-            sendRequest(name, telephone, direction, city);
+            sendRequest(name, telephone, direction, city, prefix);
         });
     };
 
@@ -90,9 +90,9 @@ function forms() {
         element[0].before(popup);
     };
 
-    const sendRequest = (name, telephone, direction, city) => {
+    const sendRequest = (name, telephone, direction, city, prefix) => {
         console.log(name, telephone, direction, city);
-        showThanksModal(triggerSelector, message.success);
+        showThanksModal(prefix, message.success);
         localStorage.setItem('dispatchTime', new Date().getTime());
     };
 
@@ -106,8 +106,8 @@ function forms() {
         body.removeAttribute('style');
     };
 
-    function showThanksModal(selector, message) {  //отображаем новое модальное окно пользователю после ввода данных
-        if (selector === '.send-request-modal') {
+    function showThanksModal(prefix, message) {  //отображаем новое модальное окно пользователю после ввода данных
+        if (prefix === 'Modal') {
             closeWindow('#Modal');
         }
         document.querySelector('body').className = 'modal-open';

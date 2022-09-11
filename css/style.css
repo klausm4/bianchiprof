@@ -274,8 +274,11 @@ form {
 }
 .footer .separator {
   margin-bottom: 0px;
+}
+.footer .separator h6 {
   line-height: 53px;
 }
+
 .popup {
   position: relative;
   display: inline;
