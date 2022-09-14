@@ -25,63 +25,81 @@ function forms() {
     const forms = document.querySelectorAll('form');
 
     forms.forEach(item => {
-        bindPostData(item);
-    });
+        item.addEventListener('submit', bindPostData);
 
-    function bindPostData(form) {
-        form.addEventListener('submit', (e) => { //подписываем элементы формы на событие отправки данных формы (submit)
-            e.preventDefault(); //убираем действия по умолчанию
-            clearPopup();
-
-            let prefix = '';
-            const data = new FormData(form); //получаем данные
-
-            if (data.has('userNameModal')) {//Устанавливаем префикс имени поля для модального окна
-                prefix = 'Modal';
-            }
-
-            const name = data.get('userName' + prefix);
-            const telephone = data.get('telephone' + prefix);
-            const direction = data.get('direction' + prefix);
-            const city = data.get('city' + prefix);
-
-            if (name.trim().length < 2) {
-                const textContent = "Занадто коротке Ім'я";
-                showPopup('userName' + prefix, textContent);
-                return
-            };
-
-            if (telephone.length < 18) {
-                const textContent = "Занадто короткий номер телефону";
-                showPopup('telephone' + prefix, textContent);
-                return
-            };
-
-            if (!direction) {
-                const textContent = "Виберіть один з пунктів списку";
-                showPopup('direction' + prefix, textContent);
-                return
-            };
-
-            if (!city) {
-                const textContent = "Виберіть один з пунктів списку";
-                showPopup('city' + prefix, textContent);
-                return
-            };
-
-            if (localStorage.getItem('dispatchTime')) {
-                const wait = 1000 * 60 * 15 //время ожидания между отправками
-                const diff = new Date().getTime() - localStorage.getItem('dispatchTime');
-                if (diff < wait) {
-                    const minute = Math.ceil((wait - diff) / (1000 * 60));
-                    const textContent = `Спробуйте відправити наступну заявку через ${minute} хвилин`;
-                    showPopup('sendRequest' + prefix, textContent);
+        async function bindPostData(e) {
+            //form.addEventListener('submit', (e) => { //подписываем элементы формы на событие отправки данных формы (submit)
+                e.preventDefault(); //убираем действия по умолчанию
+                clearPopup();
+    
+                let prefix = '';
+                const data = new FormData(item); //получаем данные
+                data.append('mailList','admin@bianchiprof.com')
+    
+                if (data.has('userNameModal')) {//Устанавливаем префикс имени поля для модального окна
+                    prefix = 'Modal';
+                }
+    
+                const name = data.get('userName' + prefix);
+                const telephone = data.get('telephone' + prefix);
+                const direction = data.get('direction' + prefix);
+                const city = data.get('city' + prefix);
+    
+                if (name.trim().length < 2) {
+                    const textContent = "Занадто коротке Ім'я";
+                    showPopup('userName' + prefix, textContent);
                     return
                 };
-            }
-            sendRequest(name, telephone, direction, city, prefix);
-        });
-    };
+    
+                if (telephone.length < 18) {
+                    const textContent = "Занадто короткий номер телефону";
+                    showPopup('telephone' + prefix, textContent);
+                    return
+                };
+    
+                if (!direction) {
+                    const textContent = "Виберіть один з пунктів списку";
+                    showPopup('direction' + prefix, textContent);
+                    return
+                };
+    
+                if (!city) {
+                    const textContent = "Виберіть один з пунктів списку";
+                    showPopup('city' + prefix, textContent);
+                    return
+                };
+    
+                if (localStorage.getItem('dispatchTime')) {
+                    const wait = 1000 * 60 * 15 //время ожидания между отправками
+                    const diff = new Date().getTime() - localStorage.getItem('dispatchTime');
+                    if (diff < wait) {
+                        const minute = Math.ceil((wait - diff) / (1000 * 60));
+                        const textContent = `Спробуйте відправити наступну заявку через ${minute} хвилин`;
+                        showPopup('sendRequest' + prefix, textContent);
+                        return
+                    };
+                }
+                
+                let response = await fetch('sendmail.php', {
+                    method: 'POST',
+                    body: data
+                });
+    
+                if (response.ok) {
+                    //let result = await response.json();
+                    showThanksModal(prefix, message.success);
+                    //alert(result.message);
+                    localStorage.setItem('dispatchTime', new Date().getTime());
+                } else {
+    
+                };
+    
+                // sendRequest(name, telephone, direction, city, prefix);
+           // });
+        };
+    });
+
+    
 
     function clearPopup() {
         const popups = document.querySelectorAll('.popup');
@@ -99,11 +117,14 @@ function forms() {
         element[0].before(popup);
     };
 
-    const sendRequest = (name, telephone, direction, city, prefix) => {
-        console.log(name, telephone, direction, city);
-        showThanksModal(prefix, message.success);
-        localStorage.setItem('dispatchTime', new Date().getTime());
-    };
+    // const sendRequest = (name, telephone, direction, city, prefix) => {
+    //     // console.log(name, telephone, direction, city);
+
+    //     showThanksModal(prefix, message.success);
+    //     localStorage.setItem('dispatchTime', new Date().getTime());
+    // };
+
+
 
     function closeWindow(selector) {
         const modalWindow = document.querySelector(selector);
