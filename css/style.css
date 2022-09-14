@@ -376,7 +376,7 @@ form {
     content: "";
     display: block;
     border-top: 0.25rem dotted #9BC715;
-    width: 5.46rem;
+    width: 5.76rem;
     position: absolute;
     left: 8rem;
     top: 1.2125rem;
@@ -390,4 +390,4 @@ form {
     right: 8rem;
     top: 1.2125rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
