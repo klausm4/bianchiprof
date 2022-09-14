@@ -46,7 +46,6 @@ function forms() {
             const city = data.get('city' + prefix);
 
             if (name.trim().length < 2) {
-
                 const textContent = "Занадто коротке Ім'я";
                 showPopup('userName' + prefix, textContent);
                 return
@@ -84,7 +83,6 @@ function forms() {
         });
     };
 
-  
     function clearPopup() {
         const popups = document.querySelectorAll('.popup');
         popups.forEach(element => {
@@ -124,7 +122,9 @@ function forms() {
         document.querySelector('body').className = 'modal-open';
         document.querySelector('body').style.setProperty("overflow", "hidden");
         document.querySelector('body').style.setProperty("padding-right", "17px");
+        
         const fade = document.createElement('div');
+        
         fade.innerHTML = `
             <div class="modal-backdrop fade show">
             `;
