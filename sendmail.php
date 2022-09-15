@@ -34,7 +34,11 @@ $mail->Port       = 465;                                    //TCP port to connec
 //Recipients
 $mail->setFrom('admin@bianchiprof.com', 'Bianchiprof.com');
 $mail->addAddress($_POST['mainMail']);     //Add a recipient
-$mail->addAddress($_POST['copyMail']);
+
+if ($_POST['copyMail']) {
+    $mail->addAddress($_POST['copyMail']);
+}
+
 // $mail->addAddress('admin@bianchiprof.com');     //Add a recipient
 // $mail->addAddress('ellen@example.com');               //Name is optional
 // $mail->addReplyTo('info@example.com', 'Information');
