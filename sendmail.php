@@ -19,50 +19,47 @@ require 'PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
 
-// try {
-    //Server settings
-    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();  
-    $mail->CharSet = 'UTF-8';                                          //Send using SMTP
-    $mail->Host       = 'mail.bianchiprof.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'admin@bianchiprof.com';                     //SMTP username
-    $mail->Password   = 'lahm5bu7';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-    //Recipients
-    $mail->setFrom('admin@bianchiprof.com', 'Bianchiprof.com');
-    //foreach ($_POST['mailList'] as $mail) {
-        $mail->addAddress($_POST['mailList']);     //Add a recipient
-    //}
-    // $mail->addAddress('admin@bianchiprof.com');     //Add a recipient
-    // $mail->addAddress('ellen@example.com');               //Name is optional
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
+//Server settings
+// $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+$mail->isSMTP();
+$mail->CharSet = 'UTF-8';                                          //Send using SMTP
+$mail->Host       = 'mail.bianchiprof.com';                     //Set the SMTP server to send through
+$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+$mail->Username   = 'admin@bianchiprof.com';                     //SMTP username
+$mail->Password   = 'lahm5bu7';                               //SMTP password
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+$mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-    //Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+//Recipients
+$mail->setFrom('admin@bianchiprof.com', 'Bianchiprof.com');
+$mail->addAddress($_POST['mainMail']);     //Add a recipient
+$mail->addAddress($_POST['copyMail']);
+// $mail->addAddress('admin@bianchiprof.com');     //Add a recipient
+// $mail->addAddress('ellen@example.com');               //Name is optional
+// $mail->addReplyTo('info@example.com', 'Information');
+// $mail->addCC('cc@example.com');
+// $mail->addBCC('bcc@example.com');
 
-    //Content
+//Attachments
+// $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Сообщение с сайта';
-    $mail->Body    = 'Ім"я: ' .$_POST['userName'] .$_POST['userNameModal'] .'<br/>' .'Телефон: ' .$_POST['telephone'] .$_POST['telephoneModal'] .'<br/>' .'Напрямок: ' .$_POST['direction'] .$_POST['directionModal'] .'<br/>' .'Місто: '  .$_POST['city'] .$_POST['cityModal'];
-    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+//Content
 
-    $mail->send();
+$mail->isHTML(true);                                  //Set email format to HTML
+$mail->Subject = 'Сообщение с сайта';
+$mail->Body    = 'Ім"я: ' . $_POST['userName'] . $_POST['userNameModal'] . '<br/>' . 'Телефон: ' . $_POST['telephone'] . $_POST['telephoneModal'] . '<br/>' . 'Напрямок: ' . $_POST['direction'] . $_POST['directionModal'] . '<br/>' . 'Місто: '  . $_POST['city'] . $_POST['cityModal'];
+// $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-    if (!$mail->send()) {
-        $messsage = 'Ошибка';
-    } else {
-        $messsage = 'Данные отправлены';
-    }
-    $response = ['message' => $message];
-// } catch (Exception $e) {
-    header('Content-type: application/json');
-    echo json_encode($response);
+$mail->send();
+
+// if (!$mail->send()) {
+//     $message = 'error';
+// } else {
+//     $message = 'dataSent';
 // }
+// $response = ['message' => $message];
+// header("Content-type: application/json; charset=utf-8");
+// echo json_encode($response);
 ?>
