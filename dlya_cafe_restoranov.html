@@ -12,14 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+
     <!-- /////////////////////////////////////////   Header    //////////////////////////////////////// -->
+
     <header class="header">
         <div class="header__up">
             <div class="header__wrapper container text-center">
@@ -151,228 +153,204 @@
         </div>
     </nav>
 
-    <!-- /////////////////////////////////////////   Video    ////////////////////////////////////////     -->
-
-    <div class="fullscreen-bg">
-        <div class="overlay">
-        </div>
-        <video loop muted autoplay class="fullscreen-bg__video">
-            <source src="video/video.ogv" type="video/ogg">
-            <source src="video/video.mp4" type="video/mp4">
-            <source src="video/video.webm" type="video/webm">
-            <div class="bottom-left">
-
-            </div>
-        </video>
-    </div>
-
-    <!-- /////////////////////////////////////////   Main text    ////////////////////////////////////////     -->
-
-    <section class="main-text mb-4">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1 class="green text-center">ПРО КОМПАНІЮ</h1>
-                    <p>
-                        Ми — команда професіоналів, яка працює на кавовому ринку України з 2005 року. За цей час ми
-                        здобули великий досвід в організації сервісу гарячих напоїв. Наша діяльність допомагає партнерам
-                        задовольнити потреби своїх клієнтів в цьому напрямку. Розроблені нами оригінальні рецепти
-                        впізнавані споживачами завдяки новітнім смакам та оформленню напоїв
-                    </p>
-                    <ul>
-                        <li>Більше 5000 клієнтів та торгівельних точок співпрацюють з нами.</li>
-                        <li>Понад 3 000 000 оригінальних напоїв щомісяця смакують наші щасливі споживачі.</li>
-                        <li>В 24 регіонах України помітна наша присутність (завдяки вендінговій мережі).</li>
-                        <li>16 років присутності на ринку дає можливості задовольнити будь-які потреби наших партнерів
-                            на всій території Україні.</li>
-                        <li>Фахівці компанії регулярно відвідують наших клієнтів, пропонуючи повний спектр сервісного
-                            обслуговування, від дрібного планового ремонту на місці, до капітального ремонту на
-                            території нашої майстерні.</li>
-                        <li>Ми гарантуємо максимально можливий прибуток при роботі з нашими продуктами.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- /////////////////////////////////////////   Images    ////////////////////////////////////////     -->
-
-    <section class="images mb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 p-1">
-                    <div class="image">
-                        <a href="/dlya_magazinov_i_setey.html"><img src="./img/index/horeca.webp" class="card-img-top"
-                                alt="horeca"></a>
-                        <div class="bottom-left">ДЛЯ МАГАЗИНІВ<br>ТА ТОРГІВЕЛЬНИХ МЕРЕЖ</div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 p-1">
-                    <div class="image">
-                        <img src="./img/index/classic.webp" class="card-img-top" alt="classic">
-                        <div class="bottom-left">ДЛЯ КАФЕ, РЕСТОРАНІВ,<br>ОФІСІВ</div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 p-1">
-                    <div class="image">
-                        <img src="./img/index/vending.webp" class="card-img-top" alt="vending">
-                        <div class="bottom-left">ВЕНДІНГ</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /////////////////////////////////////////   Consultation    ////////////////////////////////////////     -->
-
-    <section class="consultation mb-4">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="./img/index/cap.webp" alt="cap">
-                </div>
-                <div class="col">
-                    <form class="needs-validation" novalidate>
-                        <h4 class="green text-center">Безкоштовна консультація нашого спеціаліста</h4>
-                        <div class="mb-3">
-                            <input type="text" name="userName" class="form-control" id="validationName"
-                                placeholder="Ваше Ім'я" minlength="2" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="telephone" class="form-control validationTelephone tel"
-                                id="validationTelephone" minlength="18" placeholder="Телефон" required>
-                        </div>
-                        <div class="mb-3">
-                            <select name="direction" class="form-select validationDirection" id="validationDirection"
-                                required>
-                                <option selected disabled value="">Мене цікавить...</option>
-                                <option>Кавомашина для кафе або торгової точки</option>
-                                <option>Торговий автомат з кавою або снеками</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <select name="city" class="form-select validationCity" id="validationCity" required>
-                                <option selected disabled value="">Ваше місто...</option>
-                                <option>Харків</option>
-                                <option>Київ</option>
-                                <option>Бровари</option>
-                                <option>Бориспіль</option>
-                                <option>Біла Церква</option>
-                                <option>Черкаси</option>
-                                <option>Інше місто</option>
-                            </select>
-                        </div>
-                        <button name="sendRequest" class="btn send-request">Залишити заявку</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- /////////////////////////////////////////   SocialNet    ////////////////////////////////////////     -->
-    <section class="socialnet mb-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 p-1">
-                    <div class="socialnet-item">
-                        <h3>INSTAGRAM</h3>
-                        <img src="./img/index/instagram.webp" alt="logo_instagram">
-                        <a target="_blank" href="https://instagram.com/bianchiprofessional?utm_medium=copy_link"
-                            class="btn btn-instagram">ПІДПИСАТИСЯ</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 p-1">
-                    <div class="socialnet-item">
-                        <h3>FACEBOOK</h3>
-                        <img src="./img/index/facebook.webp" alt="logo_facebook">
-                        <a target="_blank" href="https://facebook.com/bianchiprofessional"
-                            class="btn btn-facebook">ПІДПИСАТИСЯ</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 p-1">
-                    <div class="socialnet-item">
-                        <h3>TELEGRAM</h3>
-                        <img src="./img/index/telegram.webp" alt="logo_telegram">
-                        <a target="_blank" href="https://t.me/bianchi_prof" class="btn btn-telegram">ПІДПИСАТИСЯ</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- /////////////////////////////////////////   Partners    ////////////////////////////////////////     -->
     <div class="separator">
-        <h3>НАШІ ПАРТНЕРИ</h3>
+        <h3>Для кафе, ресторанів, офісів</h3>
     </div>
 
-    <section class="partners mb-4">
-        <div class="container text-center">
-            <div class="row g-0">
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner1-1.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner1-2.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner2-1.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner2-2.webp" alt="partner">
-                    </div>
-                </div>
-            </div>
+    <!-- /////////////////////////////////////////   Banner    ////////////////////////////////////////     -->
 
-            <div class="row g-0">
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner3-1.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner3-2.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner4-1.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner4-2.webp" alt="partner">
-                    </div>
-                </div>
-            </div>
+    <section class="banner">
+        <div class="container">
+            <a><img src="/img/dlya_magazinov_i_setey/banner.webp" class="img-fluid" alt="banner"></a>
+        </div>
+    </section>
 
+    <!-- /////////////////////////////////////////   Icons    ////////////////////////////////////////     -->
+
+    <section class="icons">
+        <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner5-1.webp" alt="partner">
+                    <div class="card text-center">
+                        <img src="/img/dlya_magazinov_i_setey/icon.webp" class="card-img-top" alt="icon">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Безкоштовне обладнання</h5>
+                            <p class="card-text">Встановлюємо будь-яку модель кавомашини Автомат, Суперавтомат без
+                                орендної плати, під виконання обсягу реалізацій кави. Забезпечуємо тумбами під апарат та
+                                рекламними матеріалами.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card text-center">
+                        <img src="./img/dlya_magazinov_i_setey/icon.webp" class="card-img-top" alt="icon">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Встановлення кавомашин впродовж однієї доби <span class="select">
+                                    *</span></h5>
+                            <p class="card-text">Після узгодження всіх питань, встановлення здійснюється в максимально
+                                стислі терміни.
+                                <br> <br> <span class="select">* </span> Залежно від відстані
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card text-center">
+                        <img src="./img/dlya_magazinov_i_setey/icon.webp" class="card-img-top" alt="icon">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Безкоштовний сервіс <br> та доставка</h5>
+                            <p class="card-text">Забезпечуємо своєчасним сервісом і доставкою інгредієнтів. <br> Всі
+                                продукти вищої якості виробництва Голландії та Італії.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container hr-line"></div>
+
+    <!-- /////////////////////////////////////////   Magazin    ////////////////////////////////////////     -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+               <img src="./img/dlya_magazinov_i_setey/magazin1.webp" class="p-3 img-fluid" alt="magazin">
+            </div>
+            
+            <div class="col-lg-6">
+                <p class="p-4 magazine">Випити смачну каву зараз можна не тільки в кав'ярнях, але і в магазинах, як
+                    великих, так і маленьких. Пропонуємо вам встановити кавове обладнання у вашій торговельній мережі на
+                    вигідних умовах. Тільки уявіть, як аромат свіжомеленої кави зустрічає ваших клієнтів і спонукає
+                    повертатися за стаканчиком улюбленого напою знову і знову.
+                    Вибір кавового обладнання залежить від розміру закладу і його статусності, прохідності людей. Наші
+                    менеджери підберуть найвигідніший варіант саме для Вас, враховуючи всі нюанси і побажання.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container magazine">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="p-4">
+                    <h5 class="green text-center">Переваги співпраці з нами</h5>
+                    <p>Випити смачну каву зараз можна не тільки в кав'ярнях, але і в магазинах, як
+                        великих, так і маленьких. Пропонуємо вам встановити кавове обладнання у вашій торговельній
+                        мережі на
+                        вигідних умовах. Тільки уявіть, як аромат свіжомеленої кави зустрічає ваших клієнтів і спонукає
+                        повертатися за стаканчиком улюбленого напою знову і знову.
+                        Вибір кавового обладнання залежить від розміру закладу і його статусності, прохідності людей.
+                        Наші
+                        менеджери підберуть найвигідніший варіант саме для Вас, враховуючи всі нюанси і побажання.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="./img/dlya_magazinov_i_setey/magazin.webp" class="p-3 img-fluid" alt="magazin">
+            </div>
+        </div>
+    </div>
+
+    <div class="separator">
+        <h3>Що потрібно для співпраці</h3>
+    </div>
+
+    <div class="container timeline">
+        <div class="row">
+            <div class="col">
+                <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                    <div class="timeline-step">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                            title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                            data-original-title="2004">
+                            <div class="inner-circle"></div>
+                            <p class="num fw-bold">1</p>
+                            <h5>Оформлення</h5>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Залиште заявку на нашому сайті по телефону чи
+                                електронній пошті</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                            title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                            data-original-title="2005">
+                            <div class="inner-circle"></div>
+                            <p class="num fw-bold">2</p>
+                            <h5>Підтвердження</h5>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Наш менеджер зв'яжеться з Вами та підготує для Вас
+                                найвігіднішу пропозицію, виходячи з ваших потреб.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                            title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                            data-original-title="2010">
+                            <div class="inner-circle"></div>
+                            <p class="num fw-bold">3</p>
+                            <h5>Встановлювання</h5>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Ми в короткий термін встановимо кавомашину у Вашому
+                                закладі.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step mb-0">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                            title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                            data-original-title="2020">
+                            <div class="inner-circle"></div>
+                            <p class="num fw-bold">4</p>
+                            <h5>Обслуговування</h5>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Повний супровід та безкоштовна технична підримка
+                                протягом усього співробітництва.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hr-line"></div>
+
+    <!-- /////////////////////////////////////////   CoffeMashineGallery    //////////////////////////////////////// -->
+
+    <section class="gallery">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <a><img src="/img/dlya_magazinov_i_setey/franke.webp" class="p-3 img-fluid" alt="franke fm-800"></a>
+                        <p>Franke FM-800</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div>
+                        <a><img src="/img/dlya_magazinov_i_setey/GaiaStyle.webp" class="p-3 img-fluid" alt="Bianchi Gaia Style"></a>
+                        <p>Bianchi Gaia Style</p>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner5-2.webp" alt="partner">
+                    <div>
+                        <a><img src="/img/dlya_magazinov_i_setey/wmf.webp" class="p-3 img-fluid" alt="WMF 1500S"></a>
+                        <p>WMF 1500 S</p>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner5-3.webp" alt="partner">
+                    <div>
+                        <a><img src="/img/dlya_magazinov_i_setey/GaiaTouch.webp" class="p-3 img-fluid" alt="Bianchi Gaia Touch"></a>
+                        <p>Bianchi Gaia Touch</p>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner5-4.webp" alt="partner">
+                    <div>
+                        <a><img src="/img/dlya_magazinov_i_setey/carimali.webp" class="p-3 img-fluid" alt="Carimali BlueDot"></a>
+                        <p>Franke FM-800</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <a><img src="/img/dlya_magazinov_i_setey/TaliaTouch.webp" class="p-3 img-fluid" alt="Bianchi Talia Touch"></a>
+                        <p>Bianchi Talia Touch</p>
                     </div>
                 </div>
             </div>
@@ -452,11 +430,12 @@
                             <a class="telephone"
                                 href="mailto:vend.coffee@bianchiprof.com">vend.coffee@bianchiprof.com</a>
                         </p>
-
                     </div>
                 </div>
             </div>
         </div>
+
+
         <div class="separator">
             <h6><small>© 2016-2022 Bianchi professional</small></h6>
         </div>

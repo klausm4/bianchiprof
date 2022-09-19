@@ -21,10 +21,11 @@ function forms() {
             clearPopup();
 
             let prefix = '';
+            const TOKEN = '5774145299:AAGy5P9iegkmnE51AWQBBCE9P-npbKCN4aY';
+            const CHAT_ID = '-1001646707499';
+            const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
             const data = new FormData(form); //получаем данные
-            data.append('mainMail', 'admin@bianchiprof.com'); //почта для теста, в дальнейшем будет отправка пользователю + руководителю
-            data.append('copyMail', 'korn.alexey@gmail.com');
-
+            
             if (data.has('userNameModal')) {//Устанавливаем префикс имени поля для модального окна
                 prefix = 'Modal';
             }
@@ -70,22 +71,45 @@ function forms() {
             }
 
             form.classList.add('sending');
-            
-            let response = await fetch('sendmail.php', {
-                method: 'POST',
-                body: data
-            });
 
-            if (response.ok) {
-                form.classList.remove('sending');
+            let siteMessage = `<b>Заявка с сайта bianchiprof.com</b>\n`;
+            siteMessage += `<b>Отправитель: </b> ${ name }\n`;
+            siteMessage += `<b>Телефон: </b> ${ telephone }\n`;
+            siteMessage += `<b>Направление: </b> ${ direction }\n`;
+            siteMessage += `<b>Город: </b> ${ city }`;
+
+            axios.post(URL_API, {
+                chat_id: CHAT_ID,
+                parse_mode: 'html',
+                text: siteMessage
+            })
+            .then((res) => {
                 showThanksModal(prefix, message.success);
                 localStorage.setItem('dispatchTime', new Date().getTime());
-                resetForm();
-                
-            } else {
-                form.classList.remove('sending');
+            })
+            .catch((err) => {
                 showThanksModal(prefix, message.failure);
-            };
+            })
+            .finally(() => {
+                form.classList.remove('sending');
+                resetForm();
+            })
+            
+            // let response = await fetch('sendmail.php', {
+            //     method: 'POST',
+            //     body: data
+            // });
+
+            // if (response.ok) {
+            //     form.classList.remove('sending');
+            //     showThanksModal(prefix, message.success);
+            //     localStorage.setItem('dispatchTime', new Date().getTime());
+            //     resetForm();
+                
+            // } else {
+            //     form.classList.remove('sending');
+            //     showThanksModal(prefix, message.failure);
+            // };
 
         };
     });
@@ -135,7 +159,7 @@ function forms() {
         thanksModal.innerHTML = `
             <div class="modal fade show" id="thanksModal" tabindex="-1" aria-labelledby="exampleThanksModalLabel" aria-modal="true" role="dialog" style="display: block">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content text-center green">
                         <form action="">
                             <h4 class="modal-title" id="exampleThanksModalLabel">${message}</h4>
                         </form>
