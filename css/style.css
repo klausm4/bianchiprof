@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "../bootstrap/bootstrap.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css";
 * {
   font-family: "Open Sans", sans-serif;
 }
@@ -446,4 +446,4 @@ form::after {
 }
 .gallery img {
   max-height: 250px;
-}
+}/*# sourceMappingURL=style.css.map */

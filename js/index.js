@@ -1,4 +1,3 @@
-// require('es6-promise').polyfill();
 import forms from './modules/forms';
 import telephoneMask from './modules/TelephoneMask';
 
