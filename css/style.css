@@ -41,12 +41,16 @@
   text-decoration: none;
 }
 
-.header__bottom .btn {
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.navbar .btn {
   margin-left: 5px;
   color: #085507;
 }
-
-#navbarNav a {
+.navbar #navbarNav a {
   font-size: 11pt;
 }
 
@@ -431,4 +435,15 @@ form::after {
 .hr-line {
   margin: 30px auto 30px auto;
   border-top: 2px dashed #bbb;
+}
+
+.magazine {
+  margin-bottom: 30px;
+}
+
+.gallery {
+  margin-bottom: 30px;
+}
+.gallery img {
+  max-height: 250px;
 }
