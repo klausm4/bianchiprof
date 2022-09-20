@@ -64,8 +64,8 @@ function forms() {
                 return
             };
 
-            if (!city) {
-                const textContent = "Виберіть один з пунктів списку";
+            if (city.trim().length < 2) {
+                const textContent = "Занадто коротка назва міста";
                 showPopup('city' + prefix, textContent);
                 return
             };
@@ -265,6 +265,30 @@ function telephoneMask () {
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (telephoneMask);
 
+/***/ }),
+/* 3 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function navbar() {
+
+    window.addEventListener('scroll', e => {
+        const navbar = document.getElementById('navbar').classList;
+        const active_class = 'navbar-opacity';
+        if (scrollY > 100) {
+            navbar.add(active_class);
+        } else {
+            navbar.remove(active_class);
+        };
+    })
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navbar);
+
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -328,7 +352,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _modules_TelephoneMask__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-// require('es6-promise').polyfill();
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+
 
 
 
@@ -336,6 +361,7 @@ window.addEventListener('DOMContentLoaded', () => {
    
     (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__["default"])();
     (0,_modules_TelephoneMask__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    (0,_modules_navbar__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
 });
 })();

@@ -53,8 +53,8 @@ function forms() {
                 return
             };
 
-            if (!city) {
-                const textContent = "Виберіть один з пунктів списку";
+            if (city.trim().length < 2) {
+                const textContent = "Занадто коротка назва міста";
                 showPopup('city' + prefix, textContent);
                 return
             };

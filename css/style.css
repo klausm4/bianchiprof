@@ -54,6 +54,16 @@
   font-size: 11pt;
 }
 
+.navbar-opacity {
+  opacity: 0.9;
+  transition: 1s;
+}
+
+.btn-group {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
 .dropdown-item {
   --bs-dropdown-link-hover-color: #000;
   --bs-dropdown-link-hover-bg: #c3e953;
@@ -115,6 +125,9 @@
 .icons {
   margin-bottom: 35px;
 }
+.icons a {
+  color: #9BC715;
+}
 .icons p {
   line-height: 1.3;
 }
@@ -124,6 +137,7 @@
   margin-right: auto;
   width: 24rem;
   box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.1);
+  --bs-card-border-width: 0px;
 }
 .icons .card img {
   margin-left: auto;
@@ -371,19 +385,19 @@ form::after {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .timeline-steps .timeline-content {
-  width: 10rem;
+  width: 12rem;
   text-align: center;
 }
 .timeline-steps .timeline-content .num {
   position: absolute;
   display: inline-flex;
-  left: 73px;
+  left: 89px;
   top: 6px;
   color: #fff;
   font-size: 1.5rem;
@@ -413,18 +427,18 @@ form::after {
     content: "";
     display: block;
     border-top: 0.25rem dotted #9BC715;
-    width: 5.76rem;
+    width: 5rem;
     position: absolute;
-    left: 8.5rem;
+    left: 9.3rem;
     top: 1.2125rem;
   }
   .timeline-steps .timeline-step:not(:first-child):before {
     content: "";
     display: block;
     border-top: 0.25rem dotted #9BC715;
-    width: 5rem;
+    width: 6rem;
     position: absolute;
-    right: 8.5rem;
+    right: 9.5rem;
     top: 1.2125rem;
   }
 }
@@ -441,9 +455,9 @@ form::after {
   margin-bottom: 30px;
 }
 
-.gallery {
+#gallery {
   margin-bottom: 30px;
 }
-.gallery img {
+#gallery img {
   max-height: 250px;
-}/*# sourceMappingURL=style.css.map */
+}
