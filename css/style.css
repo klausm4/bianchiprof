@@ -145,7 +145,7 @@
   margin-top: 10px;
   height: 25%;
   width: 25%;
-  transition: 1s;
+  transition: 0.5s;
 }
 .icons .card img:hover {
   transform: scale(1.2);
@@ -171,7 +171,7 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
-  transition: 1s;
+  transition: 0.5s;
 }
 .image img:hover {
   transform: scale(1.2);
@@ -375,6 +375,16 @@ form::after {
     opacity: 1;
   }
 }
+.timeline .btn {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  background-color: #9BC715;
+  height: 50px;
+}
+.timeline .btn:hover {
+  background-color: #fff;
+}
+
 .timeline-steps {
   display: flex;
   justify-content: center;
@@ -459,5 +469,26 @@ form::after {
   margin-bottom: 30px;
 }
 #gallery img {
-  max-height: 250px;
+  max-width: 180px;
+}
+
+.grayscale {
+  transition: 0.25s ease-in-out;
+}
+.grayscale:hover {
+  transform: scale(1.2);
+}
+
+.carousel-item {
+  transition: transform 1.5s ease-in-out;
+}
+.carousel-item .btn {
+  position: relative;
+  left: 170px;
+  bottom: 180px;
+  background-color: #9BC715;
+  height: 50px;
+}
+.carousel-item .btn:hover {
+  background-color: #fff;
 }

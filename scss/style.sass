@@ -1,4 +1,3 @@
-// @import "../bootstrap/bootstrap.css"
 @import "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"
 
 *
@@ -7,6 +6,7 @@
 
 $litegreen: #9BC715
 $darkgreen: #085507
+
 
 .green
      color: $litegreen
@@ -126,7 +126,7 @@ $darkgreen: #085507
             margin-top: 10px
             height: 25%
             width: 25%
-            transition: 1s
+            transition: .5s
             &:hover
                 transform: scale(1.2)
 
@@ -148,7 +148,7 @@ $darkgreen: #085507
         margin-left: auto
         margin-right: auto
         display: block
-        transition: 1s
+        transition: .5s
         //width: 24rem
         &:hover
             transform: scale(1.2)
@@ -319,7 +319,15 @@ form
         opacity: 0
     to
         opacity: 1
-       
+
+.timeline
+    .btn
+        margin-top: 15px
+        margin-bottom: 30px
+        background-color: $litegreen
+        height: 50px
+        &:hover
+            background-color: #fff
 
 .timeline-steps 
     display: flex
@@ -396,9 +404,24 @@ form
 #gallery
     margin-bottom: 30px
     img
-        max-height: 250px
+        max-width: 180px
 
-    
+.grayscale
+    transition: .25s ease-in-out
+    &:hover
+        transform: scale(1.2)
+
+.carousel-item
+    transition: transform 1.5s ease-in-out
+    .btn
+        position: relative
+        left: 170px
+        bottom: 180px
+        background-color: $litegreen
+        height: 50px
+        &:hover
+            background-color: #fff
+
 
 
 

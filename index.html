@@ -150,8 +150,8 @@
                     <li class="nav-item">
                         <ul class="btn-group">
                             <li class="nav-item">
-                                <a class="btn text-nowrap dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
-                                    href="#">
+                                <a class="btn text-nowrap dropdown-toggle" data-bs-toggle="dropdown"
+                                    aria-expanded="false" href="#">
                                     ТОВАРИ
                                 </a>
                                 <ul class="dropdown-menu">
@@ -166,7 +166,7 @@
                         </ul>
                     </li>
 
-                <li class="nav-item">
+                    <li class="nav-item">
                         <a class="btn text-nowrap" role="button" href="#">КОНТАКТИ</a>
                     </li>
                 </ul>
@@ -179,7 +179,7 @@
     <div class="fullscreen-bg">
         <div class="overlay">
         </div>
-        <video loop muted autoplay class="fullscreen-bg__video">
+        <video loop muted autoplay poster="/img/index/banner.webp" class="fullscreen-bg__video">
             <source src="video/video.ogv" type="video/ogg">
             <source src="video/video.mp4" type="video/mp4">
             <source src="video/video.webm" type="video/webm">
@@ -220,8 +220,7 @@
 
     <!-- /////////////////////////////////////////   Images    ////////////////////////////////////////     -->
 
-    <div class="images mb-5">
-        <div class="container">
+        <div class="container images mb-5">
             <div class="row">
                 <div class="col-lg-4 p-1">
                     <div class="image">
@@ -246,38 +245,37 @@
                 </div>
             </div>
         </div>
-    </div>
+
     <!-- /////////////////////////////////////////   Consultation    ////////////////////////////////////////     -->
 
-    <div class="consultation mb-4">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="./img/index/cap.webp" alt="cap">
-                </div>
-                <div class="col">
-                    <form class="needs-validation" novalidate>
-                        <h4 class="green text-center">Безкоштовна консультація нашого спеціаліста</h4>
-                        <div class="mb-3">
-                            <input type="text" name="userName" class="form-control" id="validationName"
-                                placeholder="Ваше Ім'я" minlength="2" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="telephone" class="form-control validationTelephone tel"
-                                id="validationTelephone" minlength="18" placeholder="Телефон" required>
-                        </div>
-                        <div class="mb-3">
-                            <select name="direction" class="form-select validationDirection" id="validationDirection"
-                                required>
-                                <option selected disabled value="">Мене цікавить...</option>
-                                <option>Кавомашина для кафе або торгової точки</option>
-                                <option>Торговий автомат з кавою або снеками</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="city" class="form-control validationCity" id="validationCity"
-                                placeholder="Ваше місто..." required>
-                            <!-- <select name="city" class="form-select validationCity" id="validationCity" required>
+    <div class="container consultation mb-4">
+        <div class="row">
+            <div class="col">
+                <img src="./img/index/cap.webp" alt="cap">
+            </div>
+            <div class="col">
+                <form class="needs-validation" novalidate>
+                    <h4 class="green text-center">Безкоштовна консультація нашого спеціаліста</h4>
+                    <div class="mb-3">
+                        <input type="text" name="userName" class="form-control" id="validationName"
+                            placeholder="Ваше Ім'я" minlength="2" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="telephone" class="form-control validationTelephone tel"
+                            id="validationTelephone" minlength="18" placeholder="Телефон" required>
+                    </div>
+                    <div class="mb-3">
+                        <select name="direction" class="form-select validationDirection" id="validationDirection"
+                            required>
+                            <option selected disabled value="">Мене цікавить...</option>
+                            <option>Кавомашина для кафе або торгової точки</option>
+                            <option>Торговий автомат з кавою або снеками</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="city" class="form-control validationCity" id="validationCity"
+                            placeholder="Ваше місто..." required>
+                        <!-- <select name="city" class="form-select validationCity" id="validationCity" required>
                                 <option selected disabled value="">Ваше місто...</option>
                                 <option>Харків</option>
                                 <option>Київ</option>
@@ -287,10 +285,9 @@
                                 <option>Черкаси</option>
                                 <option>Інше місто</option>
                             </select> -->
-                        </div>
-                        <button name="sendRequest" class="btn send-request">Залишити заявку</button>
-                    </form>
-                </div>
+                    </div>
+                    <button name="sendRequest" class="btn send-request">Залишити заявку</button>
+                </form>
             </div>
         </div>
     </div>
@@ -331,74 +328,73 @@
         <h3>НАШІ ПАРТНЕРИ</h3>
     </div>
 
-    <div class="partners mb-4">
-        <div class="container text-center">
-            <div class="row g-0">
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner1-1.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner1-2.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner2-1.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner2-2.webp" alt="partner">
-                    </div>
+
+    <div class="container text-center partners mb-4">
+        <div class="row g-0">
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner1-1.webp" alt="partner">
                 </div>
             </div>
-
-            <div class="row g-0">
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner3-1.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner3-2.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner4-1.webp" alt="partner">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner4-2.webp" alt="partner">
-                    </div>
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner1-2.webp" alt="partner">
                 </div>
             </div>
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner2-1.webp" alt="partner">
+                </div>
+            </div>
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner2-2.webp" alt="partner">
+                </div>
+            </div>
+        </div>
 
-            <div class="row">
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner5-1.webp" alt="partner">
-                    </div>
+        <div class="row g-0">
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner3-1.webp" alt="partner">
                 </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner5-2.webp" alt="partner">
-                    </div>
+            </div>
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner3-2.webp" alt="partner">
                 </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner5-3.webp" alt="partner">
-                    </div>
+            </div>
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner4-1.webp" alt="partner">
                 </div>
-                <div class="col">
-                    <div class="partner">
-                        <img src="./img/index/partner5-4.webp" alt="partner">
-                    </div>
+            </div>
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner4-2.webp" alt="partner">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner5-1.webp" alt="partner">
+                </div>
+            </div>
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner5-2.webp" alt="partner">
+                </div>
+            </div>
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner5-3.webp" alt="partner">
+                </div>
+            </div>
+            <div class="col">
+                <div class="partner">
+                    <img src="./img/index/partner5-4.webp" alt="partner">
                 </div>
             </div>
         </div>
@@ -494,7 +490,8 @@
             <div class="modal-content">
                 <form novalidate>
                     <div class="modal-header">
-                        <h4 class="modal-title green text-center" id="exampleModalLabel">Безкоштовна консультація нашого спеціаліста</h4>
+                        <h4 class="modal-title green text-center" id="exampleModalLabel">Безкоштовна консультація нашого
+                            спеціаліста</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                     </div>
                     <div class="modal-body">
