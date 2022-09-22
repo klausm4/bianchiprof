@@ -479,16 +479,51 @@ form::after {
   transform: scale(1.2);
 }
 
-.carousel-item {
-  transition: transform 1.5s ease-in-out;
+.carousel-wrapper {
+  padding-bottom: 30px;
 }
+
+.partners-wrapper {
+  padding-bottom: 30px;
+}
+
 .carousel-item .btn {
   position: relative;
-  left: 170px;
-  bottom: 180px;
+  left: 24%;
+  bottom: 120px;
   background-color: #9BC715;
-  height: 50px;
+  width: 150px;
+  height: 40px;
 }
 .carousel-item .btn:hover {
   background-color: #fff;
+}
+
+.app {
+  width: 220px;
+}
+
+.description {
+  margin-bottom: 30px;
+}
+.description li {
+  list-style-type: none;
+}
+.description li::before {
+  content: "- ";
+}
+
+.mashines {
+  padding-bottom: 30px;
+}
+.mashines .card {
+  height: 100%;
+}
+.mashines li {
+  list-style-type: none;
+}
+.mashines li:before {
+  color: #fd0000;
+  content: "●";
+  padding-right: 10px;
 }
