@@ -455,59 +455,69 @@ form
 .indent
     text-indent: 10px
 
-// .hover-text-one
-//     overflow: hidden
-//     margin: 0
-//     width: 100%
-//     list-style: none
-//     text-align: center
-//     figure
-//         position: relative
-//         z-index: 1
-//         display: inline-block
-//         overflow: hidden
-//         text-align: center
-//         img
-//             position: relative
-//             display: block
-//             figcaption
-//                 padding: 2em
-//                 -webkit-backface-visibility: hidden
-//                 backface-visibility: hidden
-//                 &::after
-//                     pointer-events: none
-//                 &::before
-//                     pointer-events: none
-//             figcaption
-//                 position: absolute
-//                 top: 0
-//                 left: 0
-//                 width: 100%
-//                 height: 100%
+.hover-text-one
+    figure 
+        position: relative
+        z-index: 1
+        display: inline-block
+        overflow: hidden
+        text-align: center
+        img
+            position: relative
+            display: block
+            min-height: 100%
+            z-index: 10
+        figcaption
+            padding-left: .45em
+            text-transform: uppercase
+            font-size: .8em
+            -webkit-backface-visibility: hidden
+            backface-visibility: hidden
+        figcaption
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+        .timeline
+            position: absolute
+            width: 100%
+            left: -25%
+            margin: 0
+            // top: 80%
+            text-align: center
+            opacity: 0
+            transition: opacity .35s ease
+            z-index: 20
+        
+figure.effect-text-three
+        img
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s
+            transition: opacity 0.35s, transform 0.35s
+            transform: translate3d(0,0,0)
+            -webkit-backface-visibility: hidden
+            backface-visibility: hidden
+        &:hover
+            img
+                -webkit-transform: translate3d(60px,0,0)
+                transform: translate3d(60px,0,0)
+            ul
+                opacity: 1
+                -webkit-transform: translate3d(0,0,0)
+                transform: translate3d(0,0,0)
+            .timeline
+                opacity: 1
+        figcaption
+            text-align: left
+        ul
+            padding-top: 1.5em
+            opacity: 0
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s
+            transition: opacity 0.35s, transform 0.35s
+            -webkit-transform: translate3d(30%,0,0)
+            transform: translate3d(30%,0,0)
 
-// figure
-//     .effect-text-tree
-//         img
-//             -webkit-transition: opacity 0.35s, -webkit-transform 0.35s
-//             transition: opacity 0.35s, transform 0.35s
-//             transform: scale(1.1)
-//             -webkit-backface-visibility: hidden
-//             backface-visibility: hidden
-//             &:hover
-//                 -webkit-transform: translate3d(0,0,0)
-//                 transform: translate3d(0,0,0)
-//         ul
-//             padding: 1em 0
-//             opacity: 0
-//             -webkit-transition: opacity 0.35s, -webkit-transform 0.35s
-//             transition: opacity 0.35s, transform 0.35s
-//             -webkit-transform: translate3d(100%,0,0)
-//             transform: translate3d(100%,0,0)
-//             &:hover
-//                 opacity: 1
-//                 -webkit-transform: translate3d(0,0,0)
-//                 transform: translate3d(0,0,0)
-    
+
 
         
 
