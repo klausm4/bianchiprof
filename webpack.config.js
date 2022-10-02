@@ -1,21 +1,67 @@
-
 'use strict';
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 let path = require('path');
 
 module.exports = {
-  // mode: 'production'
-  mode: 'none',
-  entry: './js/index.js',
+  mode: 'production',
+  // mode: 'development',
+  entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'js')
-    // path: 'd:/Prog/bianchiprof/js'
-    //path: 'd:/Prog/Git/git/food/js'
+    filename: 'index.js',
+    path: path.join(__dirname, 'dist')
   },
-  watch: true,
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: /.js$/,
+        use: ['babel-loader']
+      }
+    ]
+  },
+  // watch: true,
   devtool: "source-map",
-}; 
+  plugins: [
+    // new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/index.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'avtomaty.html',
+      template: path.resolve(__dirname, 'src/avtomaty.html'),
+    }),
+    new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "./src/video",
+          to: "./video",
+        },
+        {
+          from: "./src/img",
+          to: "./img",
+        },
+        {
+          from: "./src/favicon.png",
+          to: "./favicon.png",
+        }
+      ],
+    })
+  ],
+  devServer: {
+    port: 8080,
+    static: {
+      directory: path.join(__dirname, 'src'),
+    },
+    hot: true,
+}
+};
 
 // 'use strict';
 
@@ -62,7 +108,7 @@ module.exports = {
 //       {
 //         test: /\.(sa|sc|c)ss$/,
 //         use: [
-//           MiniExtractCssPlugin.loader, 
+//           MiniExtractCssPlugin.loader,
 //           'css-loader',
 //           'sass-loader',
 //         ],
