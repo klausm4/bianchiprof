@@ -470,20 +470,21 @@ form
         figcaption
             padding-left: .45em
             text-transform: uppercase
-            font-size: .8em
+            font-size: .7em
             -webkit-backface-visibility: hidden
             backface-visibility: hidden
         figcaption
             position: absolute
-            top: 0
+            top: 4%
             left: 0
             width: 100%
             height: 100%
         .timeline
             position: absolute
             width: 100%
-            left: -25%
+            left: -30%
             margin: 0
+            padding: 0
             // top: 80%
             text-align: center
             opacity: 0
@@ -497,6 +498,9 @@ figure.effect-text-three
             transform: translate3d(0,0,0)
             -webkit-backface-visibility: hidden
             backface-visibility: hidden
+        .combo
+            -webkit-transition: scale 0.35s, -webkit-transform 0.35s
+            transition: scale 0.35s, transform 0.35s
         &:hover
             img
                 -webkit-transform: translate3d(60px,0,0)
@@ -507,6 +511,13 @@ figure.effect-text-three
                 transform: translate3d(0,0,0)
             .timeline
                 opacity: 1
+            .combo
+                -webkit-transition: scale 0.35s, -webkit-transform 0.35s
+                transition: scale 0.35s, transform 0.35s
+                -webkit-transform: translate3d(110px,0,0)
+                transform: translate3d(110px,0,0)
+                scale: .75
+
         figcaption
             text-align: left
         ul
