@@ -514,16 +514,16 @@ form::after {
   content: "- ";
 }
 
-.mashines {
+.cards {
   padding-bottom: 30px;
 }
-.mashines .card {
+.cards .card {
   height: 100%;
 }
-.mashines li {
+.cards li {
   list-style-type: none;
 }
-.mashines li:before {
+.cards li:before {
   color: #fd0000;
   content: "●";
   padding-right: 10px;
@@ -559,6 +559,10 @@ form::after {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.hover-text-one figure .goods {
+  top: 18%;
+  left: -10px;
 }
 .hover-text-one figure .timeline {
   position: absolute;
