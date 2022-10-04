@@ -54,6 +54,29 @@
 .navbar #navbarNav a {
   font-size: 11pt;
 }
+.navbar #logo1 {
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.navbar #logo1:hover {
+  -o-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.navbar #logo2 {
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.navbar #logo2:hover {
+  scale: 0.8;
+  opacity: 0;
+}
 
 .navbar-opacity {
   opacity: 0.9;
@@ -616,4 +639,4 @@ figure.effect-text-three ul {
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(30%, 0, 0);
   transform: translate3d(30%, 0, 0);
-}
+}/*# sourceMappingURL=style.css.map */
