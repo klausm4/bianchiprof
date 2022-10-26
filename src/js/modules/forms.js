@@ -5,8 +5,8 @@ function forms() {
         failure: 'Спробуйте відправити повідомлення через декілька хвилин'
     };
 
-    document.addEventListener('click', (event) => {
-        if (!event.target.classList.contains('btn')) {
+    document.addEventListener('click', ({target}) => {
+        if (!target.classList.contains('btn')) {
             clearPopup();
         };
     });
