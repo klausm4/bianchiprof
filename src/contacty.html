@@ -16,7 +16,7 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="contacts_body">
 
     <!-- /////////////////////////////////////////   Header    //////////////////////////////////////// -->
 
@@ -181,50 +181,130 @@
         <h3>Контактна інформація</h3>
     </div>
 
-    <div class="description container">
+    <div class="description container fill contacts">
         <div class="row">
-            <div class="col"></div>
-            <div class="col-10">
+            <div class="col p-3 m-3">
                 <h4 class="text-center fw-bold">Ми працюємо! <br> <br> Але ситуація змінюється кожну хвилину. Тому
                     уточнюйте інформацію за номерами телефонів вашого регіону, які вказані нижче.</h4>
-
             </div>
-            <div class="col"></div>
         </div>
-
     </div>
 
     <!-- /////////////////////////////////////////   Body    ////////////////////////////////////////     -->
 
-
-
-    <div class="container cards">
+    <div class="container">
         <div class="row">
-
-            <div class="col mb-1 text-center">
-                <h5><b>ХОРЕКА</b></h5>
+            <div class="col p-3 m-3 mb-5 fill contacts">
+                <h5 class="text-center green"><b>ХОРЕКА</b></h5>
+                <div class="container hr-line-contacts"></div>
                 <h6><b>ХАРКІВ</b></h6>
-               
-
-
                 <ul>
-                    <li class=" text-nowrap">
-                        <a class="" href="tel:+380960542770">+38(096) 054-27-70</a>
+                    <li class="text-nowrap tel">
+                        <a href="tel:+380960542770">+38(096) 054-27-70</a>
                     </li>
-                    <li class="text-nowrap">
-                        <a class="" href="tel:+380935475572">+38(093) 547-55-72</a>
+                    <li class="text-nowrap tel">
+                        <a href="tel:+380935475572">+38(093) 547-55-72</a>
                     </li>
+                </ul>
 
+                <div class="container hr-line-contacts"></div>
+
+                <h6><b>КИЇВ</b></h6>
+                <ul>
+                    <li class="text-nowrap tel">
+                        <a href="tel:+380960542770">+38(096) 054-27-70</a>
+                    </li>
+                </ul>
+
+                <div class="container hr-line-contacts"></div>
+
+                <h6><b>БРОВАРИ, БОРИСПІЛЬ</b></h6>
+                <ul>
+                    <li class="text-nowrap tel">
+                        <a href="tel:+380960542770">+38(096) 054-27-70</a>
+                    </li>
+                </ul>
+
+                <div class="container hr-line-contacts"></div>
+
+                <h6><b>БІЛА ЦЕРКВА</b></h6>
+                <ul>
+                    <li class="text-nowrap tel">
+                        <a href="tel:+380960542770">+38(096) 054-27-70</a>
+                    </li>
+                </ul>
+
+                <div class="container hr-line-contacts"></div>
+
+                <h6><b>ЧЕРКАСИ</b></h6>
+                <ul>
+                    <li class="text-nowrap tel">
+                        <a href="tel:+380960542770">+38(096) 054-27-70</a>
+                    </li>
                 </ul>
             </div>
 
-            <div class="col mb-1">
-                <h5 class="text-center"><b>ВЕНДІНГ</b></h5>
+            <div class="col p-3 m-3 mb-5 fill contacts">
+                <h5 class="text-center green"><b>ВЕНДІНГ</b></h5>
+                <div class="container hr-line-contacts"></div>
+                <h6>Встановлення вендінгового обладнання по містах:
+                    Харків, Київ, Біла Церква, Дніпро, Запоріжжя, Рівне, Львів, Івано-Франківськ, Чернівці, Вінниця,
+                    Житомир, Одеса, Миколаїв, Кривий Ріг, Маріуполь, Тернопіль.</h6>
+                <div class="container hr-line-contacts"></div>
+                <ul>
+                    <li class="text-nowrap tel">
+                        <a href="tel:+380960542770">+38(096) 054-27-70</a>
+                    </li>
+                    <li class="text-nowrap mail">
+                        <a href="mailto:vend.coffee@bianchiprof.com">vend.coffee@bianchiprof.com</a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="col-md-1 mb-1"></div>
+            <!-- /////////////////////////////////////////   Consultation    ////////////////////////////////////////     -->
+
+            <div class="col p-3 m-3 mb-5 fill contacts">
+                <form class="needs-validation form-contacts" novalidate>
+                    <h4 class="green text-center"><b> Залиште заявку і наш менеджер запропонує вам кращі умови
+                            співпраці</b>
+                    </h4>
+                    <div class="container hr-line-contacts"></div>
+                    <div class="mb-3">
+                        <input type="text" name="userName" class="form-control" id="validationName"
+                            placeholder="Ваше Ім'я" minlength="2" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="telephone" class="form-control validationTelephone tel"
+                            id="validationTelephone" minlength="18" placeholder="Телефон" required>
+                    </div>
+                    <div class="mb-3">
+                        <select name="direction" class="form-select validationDirection" id="validationDirection"
+                            required>
+                            <option selected disabled value="">Мене цікавить...</option>
+                            <option>Кавомашина для кафе або торгової точки</option>
+                            <option>Торговий автомат з кавою або снеками</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="city" class="form-control validationCity" id="validationCity"
+                            placeholder="Ваше місто..." required>
+                        <!-- <select name="city" class="form-select validationCity" id="validationCity" required>
+                                <option selected disabled value="">Ваше місто...</option>
+                                <option>Харків</option>
+                                <option>Київ</option>
+                                <option>Бровари</option>
+                                <option>Бориспіль</option>
+                                <option>Біла Церква</option>
+                                <option>Черкаси</option>
+                                <option>Інше місто</option>
+                            </select> -->
+                    </div>
+                    <button name="sendRequest" class="btn send-request">Залишити заявку</button>
+                </form>
+            </div>
         </div>
     </div>
+
 
 
 

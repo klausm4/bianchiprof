@@ -199,14 +199,14 @@
   transform: scale(1.2);
 }
 
-form {
+.form-main {
   padding: 30px;
   border: 1px solid #E1E1E1;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   position: relative;
 }
-form::after {
+.form-main::after {
   content: "";
   position: absolute;
   top: 0;
@@ -483,6 +483,11 @@ form::after {
   border-top: 2px dashed #bbb;
 }
 
+.hr-line-contacts {
+  margin: 15px auto 15px auto;
+  border-top: 2px dashed #bbb;
+}
+
 .magazine {
   margin-bottom: 30px;
 }
@@ -637,4 +642,45 @@ figure.effect-text-three ul {
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(30%, 0, 0);
   transform: translate3d(30%, 0, 0);
-}/*# sourceMappingURL=style.css.map */
+}
+
+.contacts_body {
+  background-image: url("../img/contacty/map.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.contacts_body .fill {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+
+.contacts {
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.contacts ul {
+  margin-left: -1em;
+}
+.contacts .tel {
+  list-style-type: none;
+}
+.contacts .tel:before {
+  color: #9BC715;
+  content: "📱";
+  padding-right: 10px;
+}
+.contacts .mail {
+  list-style-type: none;
+}
+.contacts .mail:before {
+  color: #9BC715;
+  content: "✉";
+  padding-right: 10px;
+}
+.contacts a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #000;
+  font-size: 12pt;
+}

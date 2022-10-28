@@ -7,8 +7,6 @@
 $litegreen: #9BC715
 $darkgreen: #085507
 
-
-
 .green
      color: $litegreen
 
@@ -176,7 +174,7 @@ $darkgreen: #085507
         &:hover
             transform: scale(1.2)
 
-form
+.form-main
     padding: 30px
     border: 1px solid #E1E1E1
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
@@ -192,6 +190,24 @@ form
         background: url('../img/loading.gif') center / 50px no-repeat
         opacity: 0
         visibility: hidden
+
+.form-contacts
+    //padding: 30px
+    //border: 1px solid #E1E1E1
+//    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    //border-radius: 5px
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: url('../img/loading.gif') center / 50px no-repeat
+        opacity: 0
+        visibility: hidden
+
 .sending
     &::after
         opacity: 1
@@ -421,6 +437,10 @@ form
     margin: 30px auto 30px auto
     border-top: 2px dashed #bbb
 
+.hr-line-contacts
+    margin: 15px auto 15px auto
+    border-top: 2px dashed #bbb
+
 .magazine
     margin-bottom: 30px
 
@@ -554,9 +574,53 @@ figure.effect-text-three
             -webkit-transform: translate3d(30%,0,0)
             transform: translate3d(30%,0,0)
 
+.contacts_body
+    background-image: url('../img/contacty/map.webp')
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: cover
+    .fill
+        background-color: rgba(255,255,255,.9)
+        border-radius: 10px
+    
+    // ul
+    //     margin-left: -1em
+    // li
+    //     list-style-type: none
+    //     &:before
+    //         color: #9BC715
+    //         content: "☎"
+    //         padding-right: 10px
 
-
-        
+.contacts
+    margin-bottom: 10px
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    ul
+        margin-left: -1em
+    .tel
+        list-style-type: none
+        &:before
+            color: #9BC715
+            content: "📱"
+            padding-right: 10px
+    .mail
+        list-style-type: none
+        &:before
+            color: #9BC715
+            content: "✉"
+            padding-right: 10px
+    a
+        list-style-type: none
+        text-decoration: none
+        color: #000
+        font-size: 12pt
+    //list-style-type: none
+    //text-decoration: none
+    //color: #000
+    //font-size: 12pt
+    //&:hover
+    //    color: #000
+    //    text-decoration: none
 
 
 
