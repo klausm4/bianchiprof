@@ -665,24 +665,14 @@ figure.effect-text-three ul {
 .contacts .tel {
   list-style-type: none;
 }
-.contacts .tel:before {
-  color: #9BC715;
-  content: "☎";
-  padding-right: 10px;
-}
 .contacts .mail {
   list-style-type: none;
-}
-.contacts .mail:before {
-  color: #9BC715;
-  content: "✉";
-  padding-right: 10px;
 }
 .contacts a {
   list-style-type: none;
   text-decoration: none;
   color: #000;
-  font-size: 12pt;
+  font-size: 11pt;
 }
 
 /*# sourceMappingURL=main.css.map*/
