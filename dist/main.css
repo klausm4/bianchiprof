@@ -573,11 +573,12 @@
   z-index: 10;
 }
 .hover-text-one figure figcaption {
-  padding-left: 0.45em;
+  padding-left: 0.4em;
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: 0.68em;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  z-index: 20;
 }
 .hover-text-one figure figcaption {
   position: absolute;
@@ -589,6 +590,10 @@
 .hover-text-one figure .goods {
   top: 18%;
   left: -10px;
+}
+.hover-text-one figure .machine {
+  top: 4%;
+  left: -20px;
 }
 .hover-text-one figure .timeline {
   position: absolute;
@@ -645,19 +650,17 @@ figure.effect-text-three ul {
 }
 
 .contacts_body {
-  background-image: url(cfa8caf9fe3a681722f4.webp);
+  background-image: url(6d94cccbeec56453f983.webp);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 .contacts_body .fill {
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
 }
 
 .contacts {
   margin-bottom: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .contacts ul {
   margin-left: -1em;
