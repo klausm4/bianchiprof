@@ -21,7 +21,7 @@ function forms() {
             clearPopup();
 
             let prefix = '';
-            const TOKEN = '5774145299:AAGy5P9iegkmnE51AWQBBCE9P-npbKCN4aY';
+            const TOKEN = process.env.TOKEN;
             const CHAT_ID = '-1001646707499';
             const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
             const data = new FormData(form); //получаем данные

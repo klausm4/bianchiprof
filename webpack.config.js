@@ -3,8 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const Dotenv = require('dotenv-webpack');
 let path = require('path');
-
+require('dotenv').config();
 module.exports = {
   mode: 'production',
   // mode: 'development',
@@ -100,7 +101,8 @@ module.exports = {
           to: "./favicon.png",
         }
       ],
-    })
+    }),
+    new Dotenv()
   ],
   devServer: {
     port: 8080,

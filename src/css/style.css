@@ -146,6 +146,10 @@
   padding-right: 10px;
 }
 
+.main-text-size {
+  font-size: 0.97rem;
+}
+
 .icons {
   margin-bottom: 35px;
 }
@@ -556,7 +560,7 @@
 }
 
 .indent {
-  text-indent: 10px;
+  text-indent: 1.5rem;
 }
 
 .hover-text-one figure {
