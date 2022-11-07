@@ -1,12 +1,12 @@
 import forms from './js/modules/forms';
 import telephoneMask from './js/modules/TelephoneMask';
-import navbar from './js/modules/navbar';
+import interactiveElements from './js/modules/interactiveElements';
 import './css/style.css';
 
 window.addEventListener('DOMContentLoaded', () => {
    
     forms();
     telephoneMask();
-    navbar();
+    interactiveElements();
 
 });

@@ -1,8 +1,8 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"
 
 *
-    font-family: 'Open Sans', sans-serif
-    //font-family: 'Roboto', sans-serif
+    //font-family: 'Open Sans', sans-serif
+    font-family: 'Roboto', sans-serif
 
 $litegreen: #9BC715
 $darkgreen: #085507
@@ -22,8 +22,8 @@ $darkgreen: #085507
 .header__item
     margin: 5px auto
     ul
-        margin: 0
-        padding: 0
+        margin: 2px
+        padding: 2px
     button
         margin-top: 5px
         margin-bottom: 5px
@@ -53,27 +53,25 @@ $darkgreen: #085507
         -moz-transition: all 0.5s ease-in-out
         -webkit-transition: all 0.5s ease-in-out
         transition: all 0.5s ease-in-out
-        &:hover
-            -o-transform: scaleX(-1)
-            -ms-transform: scaleX(-1)
-            -moz-transform: scaleX(-1)
-            -webkit-transform: scaleX(-1)
-            transform: scaleX(-1)
-    #logo2
-        -o-transition: all 0.5s ease-in-out
-        -moz-transition: all 0.5s ease-in-out
-        -webkit-transition: all 0.5s ease-in-out
-        transition: all 0.5s ease-in-out
-        &:hover
-            // -o-transform: translateX(-20px)
-            // -ms-transform: translateX(-20px)
-            // -moz-transform: translateX(-20px)
-            // -webkit-transform: translateX(-20px)
-            // transform: translateX(-20px)
-            scale: .8
-            opacity: 0
+    .logo1-transform
+        -o-transform: scaleX(-1)
+        -ms-transform: scaleX(-1)
+        -moz-transform: scaleX(-1)
+        -webkit-transform: scaleX(-1)
+        transform: scaleX(-1)
+    // #logo2
+    //     -o-transition: all 0.5s ease-in-out
+    //     -moz-transition: all 0.5s ease-in-out
+    //     -webkit-transition: all 0.5s ease-in-out
+    //     transition: all .5s ease-in-out
+    // .logo2-transform
+    //     opacity: 0
+    //     // -webkit-transform: translate3d(200px,0,0)
+    //     // transform: translate3d(200px,0,0)
+    //     -webkit-transform: scale(.2)
+    //     transform: scale(.2)
 
-.navbar-opacity
+.navbar-transform
         opacity: .85
         transition: 1s
 
@@ -133,6 +131,53 @@ $darkgreen: #085507
 
 .main-text-size
     font-size: .97rem
+
+.sidepanel
+    position: fixed
+    left: 2rem
+    top: 200px
+    height: 350px
+    width: 25px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+
+.sidepanel__wrapper
+    position: fixed
+    -webkit-transition: scale 1s, -webkit-transform 1s
+    transition: scale 1s, transform 1s
+    -webkit-transform: translate3d(0,0,0)
+    transform: translate3d(0,0,0)
+
+.sidepanel__text
+    width: 120px
+    height: 120px
+    font-size: 1rem
+    color: #085507
+    span
+        display: flex
+        transform: rotate(-90deg) translateX(-50px)
+
+.sidepanel__divider
+    width: 1px
+    height: 80px
+    background-color: #085507
+
+.sidepanel__icon
+    width: 30px
+    height: 30px
+    img
+        width: 100%
+        transition: .25s ease-in-out
+        &:hover
+            transform: scale(1.2)
+
+.sidepanel-transform
+    -webkit-transition: scale 1s, -webkit-transform 1s
+    transition: scale 1s, transform 1s
+    -webkit-transform: translate3d(0,-999px,0)
+    transform: translate3d(0,-999px,0)
 
 .icons
     margin-bottom: 35px
@@ -230,10 +275,10 @@ $darkgreen: #085507
 .socialnet-item
     position: relative
     width: 345px
-    height: 181px
+    height: 171px
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
     background: #FFFFFF
-    border-radius: 55px
+    border-radius: 25px
     padding-left: 43px
     padding-top: 15px
     overflow: hidden
@@ -381,8 +426,8 @@ $darkgreen: #085507
         display: flex
         flex-direction: column
         position: relative
-        margin-left: 3rem
-        margin-right: 3rem
+        margin-left: 2.7rem
+        margin-right: 2.7rem
         margin-top: 1rem
         margin-bottom: 1rem
     .timeline-content
@@ -422,7 +467,7 @@ $darkgreen: #085507
                 border-top: .25rem dotted #9BC715
                 width: 5rem
                 position: absolute
-                left: 9.3rem
+                left: 9.1rem
                 top: 1.2125rem
         .timeline-step:not(:first-child)
             &:before
@@ -431,7 +476,7 @@ $darkgreen: #085507
                 border-top: .25rem dotted #9BC715
                 width: 6rem
                 position: absolute
-                right: 9.5rem
+                right: 9.1rem
                 top: 1.2125rem
                 
 .banner
@@ -453,7 +498,7 @@ $darkgreen: #085507
     img
         max-width: 160px
 
-.grayscale
+.scale
     transition: .25s ease-in-out
     &:hover
         transform: scale(1.2)
@@ -547,38 +592,42 @@ $darkgreen: #085507
         
 figure.effect-text-three
         img
-            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s
-            transition: opacity 0.35s, transform 0.35s
+            transition-delay: .4s
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s ease-in-out
+            transition: opacity 0.35s, transform 0.35s  ease-in-out
             transform: translate3d(0,0,0)
             -webkit-backface-visibility: hidden
             backface-visibility: hidden
         .combo
-            -webkit-transition: scale 0.35s, -webkit-transform 0.35s
-            transition: scale 0.35s, transform 0.35s
+            transition-delay: .4s
+            -webkit-transition: scale 0.35s, -webkit-transform 0.35s ease-in-out
+            transition: scale 0.35s, transform 0.35s ease-in-out
         &:hover
             img
+                transition-delay: .4s
                 -webkit-transform: translate3d(60px,0,0)
                 transform: translate3d(60px,0,0)
             ul
+                transition-delay: .4s
                 opacity: 1
                 -webkit-transform: translate3d(0,0,0)
                 transform: translate3d(0,0,0)
             .timeline
+                transition-delay: .4s
                 opacity: 1
             .combo
-                -webkit-transition: scale 0.35s, -webkit-transform 0.35s
-                transition: scale 0.35s, transform 0.35s
-                -webkit-transform: translate3d(70px,0,0)
-                transform: translate3d(70px,0,0)
-                scale: .75
+                transition-delay: .4s
+                -webkit-transform: translate3d(70px,0,0) scale(.75)
+                transform: translate3d(70px,0,0) scale(.75)
 
         figcaption
             text-align: left
         ul
+            transition-delay: .4s
             padding-top: 1.5em
             opacity: 0
             -webkit-transition: opacity 0.35s, -webkit-transform 0.35s
-            transition: opacity 0.35s, transform 0.35s
+            transition: opacity 0.35s, transform 0.35s ease-in-out
             -webkit-transform: translate3d(30%,0,0)
             transform: translate3d(30%,0,0)
 
