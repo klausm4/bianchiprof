@@ -23,7 +23,7 @@ function interactiveElements() {
             }, 500);
         };
 
-        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 400) {
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 320) {
             sidepanelClassList.add(active_class_sidepanel);
         } else {
             sidepanelClassList.remove(active_class_sidepanel);
