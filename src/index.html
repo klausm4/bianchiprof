@@ -348,7 +348,6 @@
     </section>
     <!-- /////////////////////////////////////////   Calculator    ////////////////////////////////////////     -->
 
-
     <div class="calc text-center container">
         <div class="row">
             <img src="./img/index/calc.webp" class="img-fluid" alt="calc_header">
@@ -358,7 +357,7 @@
 
             <h4 class="p-2">Оберіть кавомашину</h4>
         </div>
-        
+
         <div class="btn-group p-2" role="group" aria-label="Базовая группа переключателей КМ">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
             <label class="btn btn-outline-success fw-bold" for="btnradio1">Bianchi Gaia</label>
@@ -375,50 +374,43 @@
 
     <div class="container text-center">
         <h4 class="p-2">Вкажіть ціну інгредієнтів</h4>
-        <div class="row">
-            <div class="col col-auto col-md-4">
+        <div class="row text-center">
+            <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
                     <span class="input-group-text calc__input">Зернова кава, 1 кг</span>
                     <input type="number" min="10" max="1000" step="1" class="form-control" value="240.00">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
-
-            <div class="col col-auto col-md-4">
+            <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
-                    <span class="input-group-text calc__input">Суха молоч. суміш, 1 кг</span>
+                    <span class="input-group-text calc__input">Суха мол. суміш, 1 кг</span>
                     <input type="number" min="10" max="1000" step="1" class="form-control" value="240.00">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
-
-            <div class="col col-auto col-md-4">
+            <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
-                    <span class="input-group-text calc__input">Ірландський Віскі, 1 кг</span>
+                    <span class="input-group-text calc__input">Ірланд. Віскі, 1 кг</span>
                     <input type="number" min="10" max="1000" step="1" class="form-control" value="240.00">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
+            <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
                     <span class="input-group-text calc__input">Цукор, 1 кг</span>
                     <input type="number" min="10" max="1000" step="1" class="form-control" value="42.00">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
-
-            <div class="col">
+            <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
                     <span class="input-group-text calc__input">Стакан 180 мл, 1 шт</span>
                     <input type="number" min="0.1" max="10" step="0.01" class="form-control" value="0.50">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
-
-            <div class="col">
+            <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
                     <span class="input-group-text calc__input">Стакан 340 мл, 1 шт</span>
                     <input type="number" min="0.1" max="10" step="0.01" class="form-control" value="0.75">
@@ -428,12 +420,189 @@
         </div>
     </div>
 
+    <div class="container hr-line-contacts"></div>
 
-
-
-
-
-
+    <div class="container">
+        <h4 class="pb-2 text-center">Розрахована собівартість*</h4>
+        <h6 class="pb-2">*У розрахунках не враховується вартість води та розмішувача</h6>
+        <div class="accordion p-2 pb-4" id="accordionFlushExample">
+            <div class="row">
+                <div class="col col-auto col-md-6">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Еспресо
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink">
+                                        4,14 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Склад: Кава(зерно) - 7,7 г; Цукор - 4 г; Стакан 180 мл - 1шт.;
+                                Вода - 50мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Американо
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink">
+                                        4,34 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Склад: Кава(зерно) - 7,7г; Цукор - 8г; Стакан 180 мл - 1шт.;
+                                Вода - 110мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        MAXI Лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink">
+                                        10,55 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Склад: Кава(зерно) - 7,7г; Суха молочна суміш - 18г; Цукор -
+                                12г; Стакан 340 мл - 1шт.; Вода - 280мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Капучино
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink">
+                                        7,54 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Склад: Кава(зерно) - 7,7г; Суха молочна суміш - 10г; Цукор -
+                                8г; Стакан 180 мл - 1шт.; Вода - 150мл</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-auto col-md-6">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Айріш Віскі
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink">
+                                        6,95 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 20г; Стакан 180 мл - 1шт.;
+                                Вода - 140мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink">
+                                        8,18 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Склад: Кава(зерно) - 7,7г; Суха молочна суміш - 10г; Цукор - 8г;
+                                Стакан 180 мл - 1шт.;
+                                Вода - 150мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                aria-controls="flush-collapseSeven">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        MAXI Ірландський Вискі
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink">
+                                        10,40 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 30г; Стакан 340 мл - 1шт.; Вода -
+                                270мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseEight" aria-expanded="false"
+                                aria-controls="flush-collapseEight">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Ірландський Вискі лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink">
+                                        10,15 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 20г; Суха молочна суміш - 10г;
+                                Стакан 180 мл - 1шт.; Вода - 150мл</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- /////////////////////////////////////////   Partners    ////////////////////////////////////////     -->
     <div class="separator">

@@ -732,4 +732,34 @@ figure.effect-text-three ul {
   font-size: 11pt;
 }
 
+.calc__input {
+  width: 180px;
+}
+
+.calc .btn {
+  color: #000;
+  --bs-btn-hover-bg: #e4e4e4;
+  --bs-btn-border-color: #9BC715;
+  --bs-btn-hover-border-color: #9BC715;
+  --bs-btn-active-border-color: #9BC715;
+  --bs-btn-active-bg: #9bc715;
+  --bs-btn-focus-shadow-rgb: 155,199,21;
+}
+.calc h3 {
+  background-color: #9BC715;
+  text-align: center;
+  line-height: 53px;
+}
+
+.accordion-drink {
+  width: 15rem;
+}
+
+.accordion-button {
+  background-color: #f8f9fa;
+}
+.accordion-button:not(.collapsed) {
+  color: #000;
+}
+
 /*# sourceMappingURL=main.css.map*/
