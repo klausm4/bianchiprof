@@ -733,7 +733,7 @@ figure.effect-text-three ul {
 }
 
 .calc__input {
-  width: 200px;
+  width: 180px;
 }
 
 .calc .btn {
@@ -749,4 +749,15 @@ figure.effect-text-three ul {
   background-color: #9BC715;
   text-align: center;
   line-height: 53px;
+}
+
+.accordion-drink {
+  width: 15rem;
+}
+
+.accordion-button {
+  background-color: #f8f9fa;
+}
+.accordion-button:not(.collapsed) {
+  color: #000;
 }
