@@ -99,6 +99,10 @@ module.exports = {
         {
           from: "./src/favicon.png",
           to: "./favicon.png",
+        },
+        {
+          from: "./src/robots.txt",
+          to: "./robots.txt",
         }
       ],
     }),
