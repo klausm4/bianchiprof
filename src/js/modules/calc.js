@@ -9,12 +9,7 @@ function calc() {
 
             if (elem.getAttribute('id') === coffeMachine) {
                 elem.classList.add(activeClass);
-            }
-
-            // if (elem.getAttribute('data-ratio') === localStorage.getItem('ratio')) {
-            //     elem.classList.add(activeClass);
-            // }
-
+            };
         });
     };
 
@@ -78,25 +73,23 @@ function calc() {
         const price = getPrice();
         const receipts = getReceipts(modelId);
         
-       
         const drinks = Object.keys(receipts);
         drinks.forEach(key => {
             let cost = 0;
             const receipt = receipts[key]; //напитки
-            console.log(key)//напиток
+            // console.log(key)//напиток
             const ingredients = Object.keys(receipt);
-            ingredients.forEach(ingredient => {//ингредиенты
+            ingredients.forEach(ingredient => { //ингредиенты
                 const ingredientPrice = +price[ingredient];
                 const weight = +receipt[ingredient];
-                cost += ingredientPrice*weight;
+                cost += ingredientPrice * weight;
             })
-            console.log(Math.floor(cost*100) / 100)
-            // const drinkElements = document.querySelectorAll('.'+ key);
-            // drinkElements.forEach(e => {
-            //     console.log(e)
-            // })
-            // console.log(cost);
-            // cost = 0;
+            // console.log(Math.floor(cost*100) / 100)
+            const drinkElements = document.querySelectorAll('.'+ key);
+            drinkElements.forEach(e => {
+                //console.log(e)
+                e.innerHTML = (Math.round(cost*100) / 100).toFixed(2) + ' грн.';
+            })
         });
     };
 
