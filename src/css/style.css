@@ -783,6 +783,11 @@ figure.effect-text-three ul {
   display: none;
 }
 
+.toast {
+  --bs-toast-border-color: #9BC715;
+  --bs-toast-border-width: 1px;
+}
+
 .toast-body a {
   color: #085507;
-}
+}/*# sourceMappingURL=style.css.map */

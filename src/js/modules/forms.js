@@ -9,7 +9,7 @@ function forms() {
     const toast = new bootstrap.Toast(toastLive);
     setTimeout(() => {
         toast.show();
-    }, 10000);
+    }, 7000);
     
 
 
