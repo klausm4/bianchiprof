@@ -5,6 +5,14 @@ function forms() {
         failure: 'Спробуйте відправити повідомлення через декілька хвилин'
     };
 
+    const toastLive = document.getElementById('liveToast');
+    const toast = new bootstrap.Toast(toastLive);
+    setTimeout(() => {
+        toast.show();
+    }, 10000);
+    
+
+
     document.addEventListener('click', ({target}) => {
         if (!target.classList.contains('btn')) {
             clearPopup();

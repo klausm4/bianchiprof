@@ -278,6 +278,7 @@
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
 }
 .consultation img {
   width: 300px;
@@ -741,6 +742,9 @@ figure.effect-text-three ul {
   background-color: #9BC715;
 }
 
+.calc a {
+  color: #9BC715;
+}
 .calc .btn {
   --bs-btn-color: #000;
   --bs-btn-hover-color: #000;
@@ -755,6 +759,9 @@ figure.effect-text-three ul {
   background-color: #9BC715;
   text-align: center;
   line-height: 53px;
+}
+.calc .calc_alert {
+  border: 2px solid red;
 }
 
 .accordion {
@@ -774,4 +781,8 @@ figure.effect-text-three ul {
 
 .hide_receipts {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.toast-body a {
+  color: #085507;
+}

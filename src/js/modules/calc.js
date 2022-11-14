@@ -13,20 +13,12 @@ function calc() {
         });
     };
 
-    initLocalSettings('.btn-outline-success', 'calc_item_active');
+    //initLocalSettings('.btn-outline-success', 'calc_item_active');
 
     function getStaticInformation(selector, activeClass) {
         const elements = document.querySelectorAll(selector);
         elements.forEach(elem => {
             elem.addEventListener('click', (e) => {
-                // if (e.target.getAttribute('data-ratio')) { 
-                //     ratio = +e.target.getAttribute('data-ratio');//получаем коэффициент по выбранной активности
-                //     localStorage.setItem('ratio', +e.target.getAttribute('data-ratio')); //сохраняем значение в локал сторедж
-                // } else {
-                //     sex = e.target.getAttribute('id');
-                //     localStorage.setItem('sex', e.target.getAttribute('id'));
-                //     console.log(e.target.getAttribute('id'));
-                // }
                 elements.forEach(elem => {
                     elem.classList.remove(activeClass);
                 });
@@ -40,17 +32,47 @@ function calc() {
     };
     getStaticInformation('.btn-outline-success', 'calc_item_active');
 
-    function getDynamicInformation(selector){
+    function getDynamicInformation(selector) {
+        const max = 9999; //максимальная стоимость ингредиента
+        //const min = 0;
         const elements = document.querySelectorAll(selector);
         elements.forEach(elem => {
             elem.addEventListener('input', () => {
-                calculateCost(getActiveModel());
+
+                const value = elem.value;
+                
+                if (value > max) {
+                    elem.value = max; //ограничиваем максимум в поле ввода
+                // } else if (value < min) {
+                //     elem.value = min;
+                } else {
+                    if (value.indexOf(".") != '-1') {
+                        elem.value=+value.substring(0, value.indexOf(".") + 3); //отсекаем более 2х знаков после запятой
+                      }
+                };
+
+                if (elem.value <= 0 || elem.value.trim() == '') { //проверяем на отрицательное или пустое значение
+                    elem.classList.add('calc_alert'); //подсвечиваем рамкой неверные данные
+                    resetCost();
+                } else {
+                    elem.classList.remove('calc_alert');
+                    calculateCost(getActiveModel()); //обнуляем расчеты при неверных данных
+                };
             });
         });
     };
     getDynamicInformation('.price-item');
 
-    function getActiveModel(){
+    function resetCost() {
+        console.log('1')
+        const elements = document.querySelectorAll('.text-end');
+        elements.forEach(e => {
+            console.log('2')
+            e.innerHTML = '0,00 грн.';
+        });
+    }
+
+    function getActiveModel() {
         const activeModel = document.querySelector('.calc_item_active').id;
         return activeModel;
     };
@@ -62,7 +84,7 @@ function calc() {
             e.classList.remove('show');
             if (modelId === "calcBianchiGaia" && receiptId === 'accordionBianchiGaia'
                 || modelId === "calcBianchiTalia" && receiptId === 'accordionBianchiTalia'
-                || modelId === "calcNectaCoro" && receiptId === 'accordionBianchiCoro') {
+                || modelId === "calcNectaKoro" && receiptId === 'accordionNectaKoro') {
                 e.classList.add('show');
             };
         });
@@ -72,7 +94,7 @@ function calc() {
     function calculateCost(modelId) {
         const price = getPrice();
         const receipts = getReceipts(modelId);
-        
+
         const drinks = Object.keys(receipts);
         drinks.forEach(key => {
             let cost = 0;
@@ -85,15 +107,15 @@ function calc() {
                 cost += ingredientPrice * weight;
             })
             // console.log(Math.floor(cost*100) / 100)
-            const drinkElements = document.querySelectorAll('.'+ key);
+            const drinkElements = document.querySelectorAll('.' + key);
             drinkElements.forEach(e => {
                 //console.log(e)
-                e.innerHTML = (Math.round(cost*100) / 100).toFixed(2) + ' грн.';
+                e.innerHTML = (Math.round(cost * 100) / 100).toFixed(2) + ' грн.';
             })
         });
     };
 
-    function getReceipts(model){
+    function getReceipts(model) {
         const receiptsBianchiGaia = {
             espresso: {
                 coffee: 0.0077,
@@ -101,18 +123,18 @@ function calc() {
                 cup180: 1
             },
             americano: {
-                coffee:  0.0077,
+                coffee: 0.0077,
                 sugar: 0.008,
                 cup180: 1
             },
             maxiLate: {
-                coffee:  0.0077,
+                coffee: 0.0077,
                 milk: 0.018,
                 sugar: 0.012,
                 cup340: 1
             },
             cappuccino: {
-                coffee:  0.0077,
+                coffee: 0.0077,
                 milk: 0.01,
                 sugar: 0.008,
                 cup180: 1
@@ -122,7 +144,7 @@ function calc() {
                 cup180: 1
             },
             late: {
-                coffee:  0.0077,
+                coffee: 0.0077,
                 milk: 0.012,
                 sugar: 0.008,
                 cup180: 1
@@ -137,12 +159,144 @@ function calc() {
                 cup180: 1
             }
         };
+
+        const receiptsBianchiTalia = {
+            espresso: {
+                coffee: 0.0086,
+                sugar: 0.004,
+                cup180: 1
+            },
+            americano: {
+                coffee: 0.0086,
+                sugar: 0.008,
+                cup180: 1
+            },
+            maxiLate: {
+                coffee: 0.0086,
+                milk: 0.018,
+                sugar: 0.012,
+                cup340: 1
+            },
+            cappuccino: {
+                coffee: 0.0086,
+                milk: 0.01,
+                sugar: 0.008,
+                cup180: 1
+            },
+            irishWhiskey: {
+                irish: 0.02,
+                cup180: 1
+            },
+            late: {
+                coffee: 0.0086,
+                milk: 0.014,
+                sugar: 0.008,
+                cup180: 1
+            },
+            maxiIrish: {
+                irish: 0.03,
+                cup340: 1
+            },
+            irishLate: {
+                irish: 0.018,
+                milk: 0.01,
+                cup180: 1
+            },
+            blackIrish: {
+                coffee: 0.0086,
+                milk: 0.01,
+                irish: 0.01,
+                sugar: 0.004,
+                cup180: 1
+            },
+            catalana: {
+                irish: 0.02,
+                cup180: 1
+            },
+            catalanaLate: {
+                irish: 0.01,
+                milk: 0.01,
+                cup180: 1
+            },
+            maxiCatalana: {
+                irish: 0.03,
+                cup340: 1
+            },
+            macchiato: {
+                coffee: 0.0086,
+                milk: 0.01,
+                sugar: 0.008,
+                cup340: 1
+            },
+            americanoMilk: {
+                coffee: 0.0086,
+                milk: 0.01,
+                sugar: 0.008,
+                cup180: 1
+            },
+            maxiCappuccino: {
+                coffee: 0.0086,
+                milk: 0.014,
+                sugar: 0.008,
+                cup180: 1
+            }
+        };
+
+        const receiptsNectaKoro = {
+            espresso: {
+                coffee: 0.009,
+                sugar: 0.004,
+                cup180: 1
+            },
+            americano: {
+                coffee: 0.009,
+                sugar: 0.008,
+                cup180: 1
+            },
+            maxiLate: {
+                coffee: 0.009,
+                milk: 0.018,
+                sugar: 0.012,
+                cup340: 1
+            },
+            cappuccino: {
+                coffee: 0.009,
+                milk: 0.01,
+                sugar: 0.008,
+                cup180: 1
+            },
+            late: {
+                coffee: 0.009,
+                milk: 0.012,
+                sugar: 0.008,
+                cup180: 1
+            },
+            maxiCappuccino: {
+                coffee: 0.009,
+                milk: 0.016,
+                sugar: 0.012,
+                cup340: 1
+            },
+            americanoMilk: {
+                coffee: 0.009,
+                milk: 0.007,
+                sugar: 0.008,
+                cup180: 1
+            },
+            espressoMilk: {
+                coffee: 0.009,
+                milk: 0.005,
+                sugar: 0.004,
+                cup180: 1
+            }
+        };
+
         if (model === 'calcBianchiGaia') {
             return receiptsBianchiGaia;
         } else if (model === 'calcBianchiTalia') {
-            return receiptsBianchiGaia;
-        } else if (model === 'calcNectaCoro') {
-            return receiptsBianchiGaia;
+            return receiptsBianchiTalia;
+        } else if (model === 'calcNectaKoro') {
+            return receiptsNectaKoro;
         };
     };
 

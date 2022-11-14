@@ -242,7 +242,7 @@
         </div>
     </div>
     <!-- /////////////////////////////////////////   Consultation    ////////////////////////////////////////     -->
-    <div class="container consultation mb-4">
+    <div class="container consultation">
         <div class="row">
             <div class="col">
                 <img src="./img/index/cap.webp" alt="cap">
@@ -316,13 +316,13 @@
         </div>
     </section>
     <!-- /////////////////////////////////////////   Calculator    ////////////////////////////////////////     -->
-    <div class="calc text-center container">
+    <div class="calc text-center container" name="calc">
         <div class="row">
             <img src="./img/index/calc.webp" class="img-fluid" alt="calc_header">
             <div>
                 <h3>Розрахунок собівартості напоїв</h3>
             </div>
-            <h4 class="p-2">Оберіть кавомашину</h4>
+            <h4 class="p-2">1. Оберіть <a href="./avtomaty.html">кавомашину</a></h4>
         </div>
         <div class="btn-group p-2" role="group">
             <input class="btn-check">
@@ -331,52 +331,53 @@
             <label class="btn btn-outline-success fw-bold" id="calcBianchiTalia">Bianchi Talia, Carimali Blue
                 Dot</label>
             <input class="btn-check">
-            <label class="btn btn-outline-success fw-bold" id="calcNectaCoro">Necta Coro Prime</label>
+            <label class="btn btn-outline-success fw-bold" id="calcNectaKoro">Necta Koro Prime</label>
         </div>
         <div class="container hr-line-contacts"></div>
     </div>
-    <div class="container text-center">
-        <h4 class="p-2">Вкажіть ціну інгредієнтів</h4>
+    <div class="container calc">
+        <h4 class="p-2 text-center">2. Вкажіть ціну інгредієнтів*</h4>
+        <h6 class="pb-2">*За актуальною ціною звертайтесь до менеджера <a href="./contacty.html">за телефоном або відправте заявку</a></h6>
         <div class="row text-center">
             <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
                     <span class="input-group-text calc__input">Зернова кава, 1 кг</span>
-                    <input id="coffee" type="number" min="10" max="1000" step="1" class="form-control price-item" value="240.00">
+                    <input id="coffee" type="number" min="10" max="999" required step="1" class="form-control price-item" value="540.00">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
             <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
                     <span class="input-group-text calc__input">Суха мол. суміш, 1 кг</span>
-                    <input id="milk" type="number" min="10" max="1000" step="1" class="form-control price-item" value="240.00">
+                    <input id="milk" type="number" min="10" max="1000" step="1" class="form-control price-item" value="400.00">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
             <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
                     <span class="input-group-text calc__input">Ірланд. Віскі, 1 кг</span>
-                    <input id="irish" type="number" min="10" max="1000" step="1" class="form-control price-item" value="240.00">
+                    <input id="irish" type="number" min="10" max="1000" step="1" class="form-control price-item" value="420.00">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
             <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
                     <span class="input-group-text calc__input">Цукор, 1 кг</span>
-                    <input id="sugar" type="number" min="10" max="1000" step="1" class="form-control price-item" value="42.00">
+                    <input id="sugar" type="number" min="10" max="1000" step="1" class="form-control price-item" value="55.00">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
             <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
                     <span class="input-group-text calc__input">Стакан 180 мл, 1 шт</span>
-                    <input id="cup180" type="number" min="0.1" max="10" step="0.01" class="form-control price-item" value="0.50">
+                    <input id="cup180" type="number" min="0.1" max="10" step="0.01" class="form-control price-item" value="0.85">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
             <div class="col col-md-4">
                 <div class="input-group flex-nowrap mb-3">
                     <span class="input-group-text calc__input">Стакан 340 мл, 1 шт</span>
-                    <input id="cup340" type="number" min="0.1" max="10" step="0.01" class="form-control price-item" value="0.75">
+                    <input id="cup340" type="number" min="0.1" max="10" step="0.01" class="form-control price-item" value="1.15">
                     <span class="input-group-text">грн.</span>
                 </div>
             </div>
@@ -384,8 +385,8 @@
     </div>
     <div class="container hr-line-contacts"></div>
     <div class="container">
-        <h4 class="pb-2 text-center">Розрахована собівартість*</h4>
-        <h6 class="pb-2">*У розрахунках не враховується вартість води та розмішувача</h6>
+        <h4 class="pb-2 text-center">3. Отримайте собівартість напоїв для вибраного типу кавомашини*</h4>
+        <h6 class="pb-2">*Не враховується вартість води та розмішувача</h6>
         <div class="accordion calc_receipts collapse show p-2 pb-4" id="accordionBianchiGaia">
             <div class="row">
                 <div class="col col-auto col-md-6">
@@ -617,7 +618,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         MAXI Лате
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink maxiLate">
                                         0,00 грн.
                                     </div>
                                 </div>
@@ -638,7 +639,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         Капучино
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink cappuccino">
                                        0,00 грн.
                                     </div>
                                 </div>
@@ -659,7 +660,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         Айріш Віскі
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink irishWhiskey">
                                        0,00 грн.
                                     </div>
                                 </div>
@@ -680,7 +681,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         Лате
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink late">
                                        0,00 грн.
                                     </div>
                                 </div>
@@ -702,7 +703,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         MAXI Ірландський Вискі
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink maxiIrish">
                                         0,00 грн.
                                     </div>
                                 </div>
@@ -723,7 +724,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         Ірландський Вискі лате
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink irishLate">
                                         0,00 грн.
                                     </div>
                                 </div>
@@ -731,7 +732,7 @@
                         </h2>
                         <div id="Talia-collapseEight" class="accordion-collapse collapse"
                             aria-labelledby="Talia-headingEight" data-bs-parent="#accordionBianchiTalia">
-                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 20г; Суха молочна суміш - 10г;
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 18г; Суха молочна суміш - 10г;
                                 Стакан 180 мл - 1шт.; Вода - 150мл</div>
                         </div>
                     </div>
@@ -746,7 +747,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         Блек Айріш Віскі
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink blackIrish">
                                        0,00 грн.
                                     </div>
                                 </div>
@@ -755,7 +756,7 @@
                         <div id="Talia-collapseNine" class="accordion-collapse collapse"
                             aria-labelledby="Talia-headingNine" data-bs-parent="#accordionBianchiTalia">
                             <div class="accordion-body">Склад: Кава(зерно) - 8,6г; Суха молочна суміш - 10г; Капучино
-                                Айріш Віскі - 10г; Стакан 180 мл - 1шт.;
+                                Айріш Віскі - 10г; Цукор - 4г; Стакан 180 мл - 1шт.;
                                 Вода - 150мл</div>
                         </div>
                     </div>
@@ -768,7 +769,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         Крема Каталана
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink catalana">
                                        0,00 грн.
                                     </div>
                                 </div>
@@ -790,7 +791,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         Крема Каталана Лате
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink catalanaLate">
                                        0,00 грн.
                                     </div>
                                 </div>
@@ -812,7 +813,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         MAXI Крема Каталана
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink maxiCatalana">
                                         0,00 грн.
                                     </div>
                                 </div>
@@ -833,7 +834,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         Макіато
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink macchiato">
                                         0,00 грн.
                                     </div>
                                 </div>
@@ -854,7 +855,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         Американо з молоком
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink americanoMilk">
                                         0,00 грн.
                                     </div>
                                 </div>
@@ -876,7 +877,7 @@
                                     <div class="col text-nowrap accordion-drink">
                                         MAXI Капучино
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink maxiCappuccino">
                                         0,00 грн.
                                     </div>
                                 </div>
@@ -892,89 +893,89 @@
                 </div>
             </div>
         </div>
-        <div class="accordion calc_receipts collapse p-2 pb-4" id="accordionNectaCoro">
+        <div class="accordion calc_receipts collapse p-2 pb-4" id="accordionNectaKoro">
             <div class="row">
                 <div class="col col-auto col-md-6">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="Coro-headingOne">
+                        <h2 class="accordion-header" id="Koro-headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#Coro-collapseOne" aria-expanded="false"
-                                aria-controls="Coro-collapseOne">
+                                data-bs-target="#Koro-collapseOne" aria-expanded="false"
+                                aria-controls="Koro-collapseOne">
                                 <div class="row">
                                     <div class="col text-nowrap accordion-drink">
                                         Еспресо
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink espresso">
                                        0,00 грн.
                                     </div>
                                 </div>
                             </button>
                         </h2>
-                        <div id="Coro-collapseOne" class="accordion-collapse collapse" aria-labelledby="Coro-headingOne"
-                            data-bs-parent="#accordionNectaCoro">
+                        <div id="Koro-collapseOne" class="accordion-collapse collapse" aria-labelledby="Koro-headingOne"
+                            data-bs-parent="#accordionNectaKoro">
                             <div class="accordion-body">Склад: Кава(зерно) - 9 г; Цукор - 4 г; Стакан 180 мл - 1шт.;
                                 Вода - 50мл</div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="Coro-headingTwo">
+                        <h2 class="accordion-header" id="Koro-headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#Coro-collapseTwo" aria-expanded="false"
-                                aria-controls="Coro-collapseTwo">
+                                data-bs-target="#Koro-collapseTwo" aria-expanded="false"
+                                aria-controls="Koro-collapseTwo">
                                 <div class="row">
                                     <div class="col text-nowrap accordion-drink">
                                         Американо
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink americano">
                                        0,00 грн.
                                     </div>
                                 </div>
                             </button>
                         </h2>
-                        <div id="Coro-collapseTwo" class="accordion-collapse collapse" aria-labelledby="Coro-headingTwo"
-                            data-bs-parent="#accordionNectaCoro">
+                        <div id="Koro-collapseTwo" class="accordion-collapse collapse" aria-labelledby="Koro-headingTwo"
+                            data-bs-parent="#accordionNectaKoro">
                             <div class="accordion-body">Склад: Кава(зерно) - 9г; Цукор - 8г; Стакан 180 мл - 1шт.;
                                 Вода - 110мл</div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="Coro-headingThree">
+                        <h2 class="accordion-header" id="Koro-headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#Coro-collapseThree" aria-expanded="false"
-                                aria-controls="Coro-collapseThree">
+                                data-bs-target="#Koro-collapseThree" aria-expanded="false"
+                                aria-controls="Koro-collapseThree">
                                 <div class="row">
                                     <div class="col text-nowrap accordion-drink">
                                         MAXI Лате
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink maxiLate">
                                         0,00 грн.
                                     </div>
                                 </div>
                             </button>
                         </h2>
-                        <div id="Coro-collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="Coro-headingThree" data-bs-parent="#accordionNectaCoro">
+                        <div id="Koro-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="Koro-headingThree" data-bs-parent="#accordionNectaKoro">
                             <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 18г; Цукор -
                                 12г; Стакан 340 мл - 1шт.; Вода - 280мл</div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="Coro-headingFour">
+                        <h2 class="accordion-header" id="Koro-headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#Coro-collapseFour" aria-expanded="false"
-                                aria-controls="Coro-collapseFour">
+                                data-bs-target="#Koro-collapseFour" aria-expanded="false"
+                                aria-controls="Koro-collapseFour">
                                 <div class="row">
                                     <div class="col text-nowrap accordion-drink">
                                         Капучино
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink cappuccino">
                                         0,00 грн.
                                     </div>
                                 </div>
                             </button>
                         </h2>
-                        <div id="Coro-collapseFour" class="accordion-collapse collapse"
-                            aria-labelledby="Coro-headingFour" data-bs-parent="#accordionNectaCoro">
+                        <div id="Koro-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="Koro-headingFour" data-bs-parent="#accordionNectaKoro">
                             <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 10г; Цукор -
                                 8г; Стакан 180 мл - 1шт.; Вода - 150мл</div>
                         </div>
@@ -982,87 +983,87 @@
                 </div>
                 <div class="col col-auto col-md-6">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="Coro-headingFive">
+                        <h2 class="accordion-header" id="Koro-headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#Coro-collapseFive" aria-expanded="false"
-                                aria-controls="Coro-collapseFive">
+                                data-bs-target="#Koro-collapseFive" aria-expanded="false"
+                                aria-controls="Koro-collapseFive">
                                 <div class="row">
                                     <div class="col text-nowrap accordion-drink">
                                         Лате
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink late">
                                         0,00 грн.
                                     </div>
                                 </div>
                             </button>
                         </h2>
-                        <div id="Coro-collapseFive" class="accordion-collapse collapse"
-                            aria-labelledby="Coro-headingFive" data-bs-parent="#accordionNectaCoro">
+                        <div id="Koro-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="Koro-headingFive" data-bs-parent="#accordionNectaKoro">
                             <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 12г; Цукор -
                                 8г; Стакан 180 мл - 1шт.; Вода - 140мл</div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="Coro-headingSix">
+                        <h2 class="accordion-header" id="Koro-headingSix">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#Coro-collapseSix" aria-expanded="false"
-                                aria-controls="Coro-collapseSix">
+                                data-bs-target="#Koro-collapseSix" aria-expanded="false"
+                                aria-controls="Koro-collapseSix">
                                 <div class="row">
                                     <div class="col text-nowrap accordion-drink">
                                         MAXI Капучино
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink maxiCappuccino">
                                         0,00 грн.
                                     </div>
                                 </div>
                             </button>
                         </h2>
-                        <div id="Coro-collapseSix" class="accordion-collapse collapse" aria-labelledby="Coro-headingSix"
-                            data-bs-parent="#accordionNectaCoro">
+                        <div id="Koro-collapseSix" class="accordion-collapse collapse" aria-labelledby="Koro-headingSix"
+                            data-bs-parent="#accordionNectaKoro">
                             <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 16г; Цукор - 12г;
                                 Стакан 340 мл - 1шт.;
                                 Вода - 270мл</div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="Coro-headingSeven">
+                        <h2 class="accordion-header" id="Koro-headingSeven">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#Coro-collapseSeven" aria-expanded="false"
-                                aria-controls="Coro-collapseSeven">
+                                data-bs-target="#Koro-collapseSeven" aria-expanded="false"
+                                aria-controls="Koro-collapseSeven">
                                 <div class="row">
                                     <div class="col text-nowrap accordion-drink">
                                         Американо з молоком
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink americanoMilk">
                                        0,00 грн.
                                     </div>
                                 </div>
                             </button>
                         </h2>
-                        <div id="Coro-collapseSeven" class="accordion-collapse collapse"
-                            aria-labelledby="Coro-headingSeven" data-bs-parent="#accordionNectaCoro">
+                        <div id="Koro-collapseSeven" class="accordion-collapse collapse"
+                            aria-labelledby="Koro-headingSeven" data-bs-parent="#accordionNectaKoro">
                             <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 7г; Цукор - 8г;
                                 Стакан 180 мл - 1шт.;
                                 Вода - 150мл</div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="Coro-headingEight">
+                        <h2 class="accordion-header" id="Koro-headingEight">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#Coro-collapseEight" aria-expanded="false"
-                                aria-controls="Coro-collapseEight">
+                                data-bs-target="#Koro-collapseEight" aria-expanded="false"
+                                aria-controls="Koro-collapseEight">
                                 <div class="row">
                                     <div class="col text-nowrap accordion-drink">
                                         Еспресо з молоком
                                     </div>
-                                    <div class="col text-nowrap text-end accordion-drink">
+                                    <div class="col text-nowrap text-end accordion-drink espressoMilk">
                                        0,00 грн.
                                     </div>
                                 </div>
                             </button>
                         </h2>
-                        <div id="Coro-collapseEight" class="accordion-collapse collapse"
-                            aria-labelledby="Coro-headingEight" data-bs-parent="#accordionNectaCoro">
+                        <div id="Koro-collapseEight" class="accordion-collapse collapse"
+                            aria-labelledby="Koro-headingEight" data-bs-parent="#accordionNectaKoro">
                             <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 5г; Цукор - 4г;
                                 Стакан 180 мл - 1шт.;
                                 Вода - 50мл</div>
