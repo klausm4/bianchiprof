@@ -13,7 +13,7 @@ function calc() {
         });
     };
 
-    //initLocalSettings('.btn-outline-success', 'calc_item_active');
+    //initLocalSettings('.btn-outline-success', 'calc_item_active'); //временно не используем
 
     function getStaticInformation(selector, activeClass) {
         const elements = document.querySelectorAll(selector);
@@ -47,16 +47,16 @@ function calc() {
                 //     elem.value = min;
                 } else {
                     if (value.indexOf(".") != '-1') {
-                        elem.value=+value.substring(0, value.indexOf(".") + 3); //отсекаем более 2х знаков после запятой
+                        elem.value = +value.substring(0, value.indexOf(".") + 3); //отсекаем более 2х знаков после запятой
                       }
                 };
 
                 if (elem.value <= 0 || elem.value.trim() == '') { //проверяем на отрицательное или пустое значение
                     elem.classList.add('calc_alert'); //подсвечиваем рамкой неверные данные
-                    resetCost();
+                    resetCost(); //обнуляем расчеты при неверных данных
                 } else {
                     elem.classList.remove('calc_alert');
-                    calculateCost(getActiveModel()); //обнуляем расчеты при неверных данных
+                    calculateCost(getActiveModel()); //рассчитываем себестоимость
                 };
             });
         });
@@ -64,13 +64,13 @@ function calc() {
     getDynamicInformation('.price-item');
 
     function resetCost() {
-        console.log('1')
+        console.log('1');
         const elements = document.querySelectorAll('.text-end');
         elements.forEach(e => {
-            console.log('2')
+            console.log('2');
             e.innerHTML = '0,00 грн.';
         });
-    }
+    };
 
     function getActiveModel() {
         const activeModel = document.querySelector('.calc_item_active').id;
@@ -99,17 +99,14 @@ function calc() {
         drinks.forEach(key => {
             let cost = 0;
             const receipt = receipts[key]; //напитки
-            // console.log(key)//напиток
             const ingredients = Object.keys(receipt);
             ingredients.forEach(ingredient => { //ингредиенты
                 const ingredientPrice = +price[ingredient];
                 const weight = +receipt[ingredient];
                 cost += ingredientPrice * weight;
             })
-            // console.log(Math.floor(cost*100) / 100)
             const drinkElements = document.querySelectorAll('.' + key);
             drinkElements.forEach(e => {
-                //console.log(e)
                 e.innerHTML = (Math.round(cost * 100) / 100).toFixed(2) + ' грн.';
             })
         });
@@ -308,7 +305,6 @@ function calc() {
         })
         return price;
     };
-
-}
+};
 
 export default calc;

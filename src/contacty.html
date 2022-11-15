@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ви можете зв'язатися з нами по e-mail, телефону або через форму зворотнього зв'язку">
+    <meta name="keywords"
+        content="кава, кавомашина в оренду, оренда, оренда кавоварки, прокат, кавомашина в прокат, кавовий бізнес, кавоварка" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Зв'язатися з нами | Bianchi Professional</title>
     <link rel="icon" href="./favicon.png" type="image/x-icon">
@@ -14,6 +18,27 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3311079555831977');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=3311079555831977&ev=PageView
+    &noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 
 <body class="contacts_body">
@@ -300,6 +325,19 @@
                     </div>
                     <button name="sendRequest" class="btn send-request">Залишити заявку</button>
                 </form>
+            </div>
+        </div>
+    </div>
+    <!-- /////////////////////////////////////Toast///////////////////////////// -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="60000">
+            <div class="toast-header">
+                <img src="./img/logo_popup.webp" class="rounded me-2" alt="logo">
+                <strong class="me-auto">Бажаєте розрахувати собівартість напоїв?</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+            </div>
+            <div class="toast-body text-center fw-bold">
+                Скористайтесь нашим <a href="./index.html#calc">калькулятором</a>.
             </div>
         </div>
     </div>

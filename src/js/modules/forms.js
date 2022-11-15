@@ -11,8 +11,6 @@ function forms() {
         toast.show();
     }, 7000);
     
-
-
     document.addEventListener('click', ({target}) => {
         if (!target.classList.contains('btn')) {
             clearPopup();
@@ -36,7 +34,7 @@ function forms() {
             
             if (data.has('userNameModal')) {//Устанавливаем префикс имени поля для модального окна
                 prefix = 'Modal';
-            }
+            };
 
             const name = data.get('userName' + prefix);
             const telephone = data.get('telephone' + prefix);

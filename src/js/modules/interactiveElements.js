@@ -2,12 +2,12 @@ function interactiveElements() {
 
     window.addEventListener('scroll', e => {
         const navbarClassList = document.querySelector('#navbar').classList;
-        const logo1ClassList = document.querySelector('#logo1').classList;
+        const logoClassList = document.querySelector('#logo1').classList;
         const sidepanelClassList = document.querySelector('.sidepanel__wrapper').classList;
         
         const active_class_navbar = 'navbar-transform';
         const active_class_sidepanel = 'sidepanel-transform';
-        const active_class_logo1 = 'logo1-transform';
+        const active_class_logo = 'logo1-transform';
         
         if (scrollY > 100) {
             navbarClassList.add(active_class_navbar);
@@ -16,10 +16,9 @@ function interactiveElements() {
         };
 
         if (window.pageYOffset < 1) {
-            console.log(window.pageYOffset);
-            logo1ClassList.add(active_class_logo1);
+            logoClassList.add(active_class_logo);
             setTimeout(() => {
-                logo1ClassList.remove(active_class_logo1);
+                logoClassList.remove(active_class_logo);
             }, 500);
         };
 
@@ -27,7 +26,7 @@ function interactiveElements() {
             sidepanelClassList.add(active_class_sidepanel);
         } else {
             sidepanelClassList.remove(active_class_sidepanel);
-        }
+        };
     })
 };
 
