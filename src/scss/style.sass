@@ -59,17 +59,6 @@ $darkgreen: #085507
         -moz-transform: scaleX(-1)
         -webkit-transform: scaleX(-1)
         transform: scaleX(-1)
-    // #logo2
-    //     -o-transition: all 0.5s ease-in-out
-    //     -moz-transition: all 0.5s ease-in-out
-    //     -webkit-transition: all 0.5s ease-in-out
-    //     transition: all .5s ease-in-out
-    // .logo2-transform
-    //     opacity: 0
-    //     // -webkit-transform: translate3d(200px,0,0)
-    //     // transform: translate3d(200px,0,0)
-    //     -webkit-transform: scale(.2)
-    //     transform: scale(.2)
 
 .navbar-transform
         opacity: .85
@@ -125,7 +114,7 @@ $darkgreen: #085507
     li
         list-style-type: none
         &:before
-            color: #9BC715
+            color: $litegreen
             content: "●"
             padding-right: 10px
 
@@ -154,7 +143,7 @@ $darkgreen: #085507
     width: 120px
     height: 120px
     font-size: 1rem
-    color: #085507
+    color: $darkgreen
     span
         display: flex
         transform: rotate(-90deg) translateX(-50px)
@@ -162,7 +151,7 @@ $darkgreen: #085507
 .sidepanel__divider
     width: 1px
     height: 80px
-    background-color: #085507
+    background-color: $darkgreen
 
 .sidepanel__icon
     width: 30px
@@ -182,7 +171,7 @@ $darkgreen: #085507
 .icons
     margin-bottom: 35px
     a
-        color: #9BC715
+        color: $litegreen
     p
         line-height: 1.3
     .card
@@ -219,7 +208,6 @@ $darkgreen: #085507
         margin-right: auto
         display: block
         transition: .5s
-        //width: 24rem
         &:hover
             transform: scale(1.2)
 
@@ -241,10 +229,6 @@ $darkgreen: #085507
         visibility: hidden
 
 .form-contacts
-    //padding: 30px
-    //border: 1px solid #E1E1E1
-//    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-    //border-radius: 5px
     position: relative
     &::after
         content: ""
@@ -299,8 +283,8 @@ $darkgreen: #085507
         color: #fff
         --bs-btn-border-color: #fff
         &:hover
-            border-color: #085507
-            background-color: #9BC715
+            border-color: $darkgreen
+            background-color: $litegreen
     .btn-instagram
         background: #D8479A
     .btn-facebook
@@ -309,22 +293,22 @@ $darkgreen: #085507
         background: #4AB5E2
 
 .send-request
-    color: #085507
+    color: $darkgreen
     --bs-btn-bg: #fff
     --bs-btn-border-color: #085507
     &:hover
         color: #fff
-        background-color: #9BC715
-        border-color: #085507
+        background-color: $litegreen
+        border-color: $darkgreen
 
 .send-request-modal
-    color: #085507
+    color: $darkgreen
     --bs-btn-bg: #fff
-    --bs-btn-border-color: #085507
+    --bs-btn-border-color: $darkgreen
     &:hover
         color: #fff
-        background-color: #9BC715
-        border-color: #085507
+        background-color: $litegreen
+        border-color: $darkgreen
 
 .modal-footer
     .popup
@@ -346,7 +330,6 @@ $darkgreen: #085507
 .footer
     font-size: 10pt
     .footer-items
-        // padding: 2% 10%
         background-color: #4E4D4D
         color: #fff
         h6
@@ -372,7 +355,7 @@ $darkgreen: #085507
     .popuptext 
         visibility: hidden
         width: 250px
-        background-color: #9BC715
+        background-color: $litegreen
         color: #fff
         text-align: center
         border-radius: 6px
@@ -536,7 +519,6 @@ $darkgreen: #085507
     padding-bottom: 30px
     .card
         height: 100%
-        // --bs-card-border-width: 0px
     li
         list-style-type: none
         &:before
@@ -585,7 +567,6 @@ $darkgreen: #085507
             left: -30%
             margin: 0
             padding: 0
-            // top: 80%
             text-align: center
             opacity: 0
             transition: opacity .35s ease
@@ -638,28 +619,16 @@ figure.effect-text-three
     background-position: top center
     background-size: cover
     .fill
-        //overflow: hidden
-        //position: relative
         background-color: rgba(255,255,255,.9)
-        //border-radius: 5px
 
 .contacts
     margin-bottom: 10px
-    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
     ul
         margin-left: -1em
     .tel
         list-style-type: none
-        // &:before
-        //     color: #9BC715
-        //     content: "1"
-        //     padding-right: 10px
     .mail
         list-style-type: none
-        // &:before
-        //     color: #9BC715
-        //     content: "✉"
-        //     padding-right: 10px
     a
         list-style-type: none
         text-decoration: none
@@ -669,24 +638,22 @@ figure.effect-text-three
     width: 180px
 .calc_item_active
     color: #fff
-    background-color: #9BC715
+    background-color: $litegreen
     
 .calc
     a
-        color: #9BC715 
+        color: $litegreen 
     .btn
-        //color: #000
         --bs-btn-color: #000
         --bs-btn-hover-color: #fff
         --bs-btn-hover-bg: #9BC715 
-        //--bs-btn-color: #085507
         --bs-btn-border-color: #0000003b
         --bs-btn-hover-border-color: #085507
         --bs-btn-active-border-color: #9BC715
         --bs-btn-active-bg: #9bc715
         --bs-btn-focus-shadow-rgb: 155,199,21
     h3
-        background-color: #9BC715
+        background-color: $litegreen
         text-align: center
         line-height: 53px
     .calc_alert
@@ -704,14 +671,14 @@ figure.effect-text-three
 .hide_receipts
     display: none
 .toast
-        --bs-toast-border-color: #085507
-        --bs-toast-border-width: 1px
+    --bs-toast-border-color: #085507
+    --bs-toast-border-width: 1px
 .toast-body
     a
-        color: #085507
+        color: $darkgreen
 .toast-header
     color: #000
-    background-color: #9BC715
+    background-color: $litegreen
 
 
 

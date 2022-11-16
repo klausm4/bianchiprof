@@ -5,7 +5,7 @@ function forms() {
         failure: 'Спробуйте відправити повідомлення через декілька хвилин'
     };
 
-    const toastLive = document.getElementById('liveToast');
+    const toastLive = document.querySelector('#liveToast');
     if (toastLive != null) {
         const toast = new bootstrap.Toast(toastLive);
         setTimeout(() => {
