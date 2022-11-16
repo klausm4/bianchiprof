@@ -15,14 +15,15 @@ function calc() {
 
     function getStaticInformation(selector, activeClass) {
         const elements = document.querySelectorAll(selector);
-        elements.forEach(elem => {
-            elem.addEventListener('click', (e) => {
-                elements.forEach(elem => {
-                    elem.classList.remove(activeClass);
+        elements.forEach(btn => {
+            btn.addEventListener('click', ({target}) => {
+                elements.forEach(e => {
+                    e.classList.remove(activeClass);//удаляем класс активности со всех кнопок
                 });
 
-                e.target.classList.add(activeClass);//устанавливаем класс активности нужному элементу
-                const id = e.target.getAttribute('id');//получаем id для дальнейшего отображения нужных рецептов
+                target.classList.add(activeClass);//устанавливаем класс активности нужному элементу
+                
+                const id = target.getAttribute('id');//получаем id для дальнейшего отображения нужных рецептов
                 showReceipts(id);//отображаем рецепты согласно выбранной модели КМ
                 //calcTotal();
             });
