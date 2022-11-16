@@ -1,8 +1,7 @@
 function calc() {
 
-    let coffeMachine = 'calcBianchiGaia'; //По умолчанию активна первая кофемашина
-
     function initLocalSettings(selector, activeClass) { //активизируем на сайте нужные элементы
+        let coffeMachine = 'calcBianchiGaia'; //По умолчанию активна первая кофемашина
         const elements = document.querySelectorAll(selector);
         elements.forEach(elem => {
             elem.classList.remove(activeClass);
@@ -12,7 +11,6 @@ function calc() {
             };
         });
     };
-
     //initLocalSettings('.btn-outline-success', 'calc_item_active'); //временно не используем
 
     function getStaticInformation(selector, activeClass) {
@@ -33,16 +31,16 @@ function calc() {
     getStaticInformation('.btn-outline-success', 'calc_item_active');
 
     function getDynamicInformation(selector) {
-        const max = 9999; //максимальная стоимость ингредиента
-        //const min = 0;
+        const maxPrice = 9999; //максимальная стоимость ингредиента
+        //const minPrice = 0;
         const elements = document.querySelectorAll(selector);
         elements.forEach(elem => {
             elem.addEventListener('input', () => {
 
                 const value = elem.value;
                 
-                if (value > max) {
-                    elem.value = max; //ограничиваем максимум в поле ввода
+                if (value > maxPrice) {
+                    elem.value = maxPrice; //ограничиваем максимум в поле ввода
                 // } else if (value < min) {
                 //     elem.value = min;
                 } else {
@@ -64,10 +62,8 @@ function calc() {
     getDynamicInformation('.price-item');
 
     function resetCost() {
-        console.log('1');
         const elements = document.querySelectorAll('.text-end');
         elements.forEach(e => {
-            console.log('2');
             e.innerHTML = '0,00 грн.';
         });
     };

@@ -361,6 +361,774 @@
             </div>
         </div>
     </div>
+    <!-- /////////////////////////////////////////   Calculator   ////////////////////////////////////////     -->
+    <div class="calc text-center container">
+        <a name="calc"></a>
+        <div class="row">
+            <img src="./img/index/calc.webp" class="img-fluid" alt="calc_header">
+            <div>
+                <h3>Розрахунок собівартості напоїв</h3>
+            </div>
+            <h4 class="p-2">1. Оберіть модель кавомашини</h4>
+        </div>
+        <div class="btn-group p-2" role="group">
+            <input class="btn-check">
+            <label class="btn btn-outline-success fw-bold" id="calcBianchiGaia">Bianchi Gaia</label>
+            <input class="btn-check">
+            <label class="btn btn-outline-success fw-bold" id="calcBianchiTalia">Bianchi Talia, Carimali Blue
+                Dot</label>
+            <input class="btn-check">
+            <label class="btn btn-outline-success fw-bold" id="calcNectaKoro">Necta Koro Prime</label>
+        </div>
+        <div class="container hr-line-contacts"></div>
+    </div>
+    <div class="container calc">
+        <h4 class="p-2 text-center">2. Вкажіть ціну інгредієнтів <span class="select">*</span></h4>
+        <h6 class="pb-2"><span class="select">*</span>За актуальною ціною звертайтесь до менеджера <a
+                href="./contacty.html">за телефоном або відправте заявку</a></h6>
+        <div class="row text-center">
+            <div class="col col-md-4">
+                <div class="input-group flex-nowrap mb-3">
+                    <span class="input-group-text calc__input">Зернова кава, 1 кг</span>
+                    <input id="coffee" type="number" min="10" max="999" required step="1"
+                        class="form-control price-item" value="540.00">
+                    <span class="input-group-text">грн.</span>
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <div class="input-group flex-nowrap mb-3">
+                    <span class="input-group-text calc__input">Суха мол. суміш, 1 кг</span>
+                    <input id="milk" type="number" min="10" max="1000" step="1" class="form-control price-item"
+                        value="400.00">
+                    <span class="input-group-text">грн.</span>
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <div class="input-group flex-nowrap mb-3">
+                    <span class="input-group-text calc__input">Ірланд. Віскі, 1 кг</span>
+                    <input id="irish" type="number" min="10" max="1000" step="1" class="form-control price-item"
+                        value="420.00">
+                    <span class="input-group-text">грн.</span>
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <div class="input-group flex-nowrap mb-3">
+                    <span class="input-group-text calc__input">Цукор, 1 кг</span>
+                    <input id="sugar" type="number" min="10" max="1000" step="1" class="form-control price-item"
+                        value="55.00">
+                    <span class="input-group-text">грн.</span>
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <div class="input-group flex-nowrap mb-3">
+                    <span class="input-group-text calc__input">Стакан 180 мл, 1 шт</span>
+                    <input id="cup180" type="number" min="0.1" max="10" step="0.01" class="form-control price-item"
+                        value="0.85">
+                    <span class="input-group-text">грн.</span>
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <div class="input-group flex-nowrap mb-3">
+                    <span class="input-group-text calc__input">Стакан 340 мл, 1 шт</span>
+                    <input id="cup340" type="number" min="0.1" max="10" step="0.01" class="form-control price-item"
+                        value="1.15">
+                    <span class="input-group-text">грн.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container hr-line-contacts"></div>
+    <div class="container">
+        <h4 class="pb-2 text-center">3. Отримайте собівартість напоїв для вибраного типу кавомашини<span
+                class="select">* **</span></h4>
+        <h6 class="pb-2"><span class="select">* </span>Не враховується вартість води та розмішувача.</h6>
+        <h6 class="pb-2"><span class="select">** </span>Зазначені рецептури напоїв є <b>базовими</b> для вибраного типу кавомашини і <b>можуть бути змінені</b> на вимогу замовника.</h6>
+        <div class="accordion calc_receipts collapse show p-2 pb-4" id="accordionBianchiGaia">
+            <div class="row">
+                <div class="col col-auto col-md-6">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Gaia-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Gaia-collapseOne" aria-expanded="false"
+                                aria-controls="Gaia-collapseOne">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Еспресо
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink espresso">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Gaia-collapseOne" class="accordion-collapse collapse" aria-labelledby="Gaia-headingOne"
+                            data-bs-parent="#accordionBianchiGaia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 7,7 г; Цукор - 4 г; Стакан 180 мл - 1шт.;
+                                Вода - 50мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Gaia-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Gaia-collapseTwo" aria-expanded="false"
+                                aria-controls="Gaia-collapseTwo">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Американо
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink americano">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Gaia-collapseTwo" class="accordion-collapse collapse" aria-labelledby="Gaia-headingTwo"
+                            data-bs-parent="#accordionBianchiGaia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 7,7г; Цукор - 8г; Стакан 180 мл - 1шт.;
+                                Вода - 110мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Gaia-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Gaia-collapseThree" aria-expanded="false"
+                                aria-controls="Gaia-collapseThree">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        MAXI Лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink maxiLate">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Gaia-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="Gaia-headingThree" data-bs-parent="#accordionBianchiGaia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 7,7г; Суха молочна суміш - 18г; Цукор -
+                                12г; Стакан 340 мл - 1шт.; Вода - 280мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Gaia-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Gaia-collapseFour" aria-expanded="false"
+                                aria-controls="Gaia-collapseFour">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Капучино
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink cappuccino">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Gaia-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="Gaia-headingFour" data-bs-parent="#accordionBianchiGaia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 7,7г; Суха молочна суміш - 10г; Цукор -
+                                8г; Стакан 180 мл - 1шт.; Вода - 150мл</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-auto col-md-6">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Gaia-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Gaia-collapseFive" aria-expanded="false"
+                                aria-controls="Gaia-collapseFive">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Айріш Віскі
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink irishWhiskey">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Gaia-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="Gaia-headingFive" data-bs-parent="#accordionBianchiGaia">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 20г; Стакан 180 мл - 1шт.;
+                                Вода - 140мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Gaia-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Gaia-collapseSix" aria-expanded="false"
+                                aria-controls="Gaia-collapseSix">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink late">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Gaia-collapseSix" class="accordion-collapse collapse" aria-labelledby="Gaia-headingSix"
+                            data-bs-parent="#accordionBianchiGaia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 7,7г; Суха молочна суміш - 10г; Цукор - 8г;
+                                Стакан 180 мл - 1шт.;
+                                Вода - 150мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Gaia-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Gaia-collapseSeven" aria-expanded="false"
+                                aria-controls="Gaia-collapseSeven">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        MAXI Ірландський Вискі
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink maxiIrish">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Gaia-collapseSeven" class="accordion-collapse collapse"
+                            aria-labelledby="Gaia-headingSeven" data-bs-parent="#accordionBianchiGaia">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 30г; Стакан 340 мл - 1шт.; Вода -
+                                270мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Gaia-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Gaia-collapseEight" aria-expanded="false"
+                                aria-controls="Gaia-collapseEight">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Ірландський Вискі лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink irishLate">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Gaia-collapseEight" class="accordion-collapse collapse"
+                            aria-labelledby="Gaia-headingEight" data-bs-parent="#accordionBianchiGaia">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 20г; Суха молочна суміш - 10г;
+                                Стакан 180 мл - 1шт.; Вода - 150мл</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion calc_receipts collapse p-2 pb-4" id="accordionBianchiTalia">
+            <div class="row">
+                <div class="col col-auto col-md-6">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseOne" aria-expanded="false"
+                                aria-controls="Talia-collapseOne">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Еспресо
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink espresso">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingOne" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 8,6г; Цукор - 4 г; Стакан 180 мл - 1шт.;
+                                Вода - 50мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseTwo" aria-expanded="false"
+                                aria-controls="Talia-collapseTwo">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Американо
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink americano">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingTwo" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 8,6г; Цукор - 8г; Стакан 180 мл - 1шт.;
+                                Вода - 110мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseThree" aria-expanded="false"
+                                aria-controls="Talia-collapseThree">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        MAXI Лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink maxiLate">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingThree" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 8,6г; Суха молочна суміш - 18г; Цукор -
+                                12г; Стакан 340 мл - 1шт.; Вода - 230мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseFour" aria-expanded="false"
+                                aria-controls="Talia-collapseFour">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Капучино
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink cappuccino">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingFour" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 8,6г; Суха молочна суміш - 10г; Цукор -
+                                8г; Стакан 180 мл - 1шт.; Вода - 150мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseFive" aria-expanded="false"
+                                aria-controls="Talia-collapseFive">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Айріш Віскі
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink irishWhiskey">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingFive" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 20г; Стакан 180 мл - 1шт.;
+                                Вода - 150мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseSix" aria-expanded="false"
+                                aria-controls="Talia-collapseSix">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink late">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseSix" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingSix" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 8,6г; Суха молочна суміш - 14г; Цукор - 8г;
+                                Стакан 180 мл - 1шт.;
+                                Вода - 150мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseSeven" aria-expanded="false"
+                                aria-controls="Talia-collapseSeven">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        MAXI Ірландський Вискі
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink maxiIrish">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseSeven" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingSeven" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 30г; Стакан 340 мл - 1шт.; Вода -
+                                270мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseEight" aria-expanded="false"
+                                aria-controls="Talia-collapseEight">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Ірландський Вискі лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink irishLate">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseEight" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingEight" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі - 18г; Суха молочна суміш - 10г;
+                                Стакан 180 мл - 1шт.; Вода - 150мл</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-auto col-md-6">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseNine" aria-expanded="false"
+                                aria-controls="Talia-collapseNine">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Блек Айріш Віскі
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink blackIrish">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseNine" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingNine" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Кава(зерно) - 8,6г; Суха молочна суміш - 10г; Капучино
+                                Айріш Віскі - 10г; Цукор - 4г; Стакан 180 мл - 1шт.;
+                                Вода - 150мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseTen" aria-expanded="false"
+                                aria-controls="Talia-collapseTen">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Крема Каталана
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink catalana">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseTen" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingTen" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі (Крема Каталана) - 20г;
+                                Стакан 180 мл - 1шт.;
+                                Вода - 150мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingEleven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseEleven" aria-expanded="false"
+                                aria-controls="Talia-collapseEleven">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Крема Каталана Лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink catalanaLate">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseEleven" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingEleven" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі (Крема Каталана) - 10г; Суха молочна
+                                суміш - 10г; Стакан 180 мл - 1шт.; Вода -
+                                150мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingTwelve">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseTwelve" aria-expanded="false"
+                                aria-controls="Talia-collapseTwelve">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        MAXI Крема Каталана
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink maxiCatalana">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseTwelve" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingTwelve" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Капучино Айріш Віскі (Крема Каталана) - 30г;
+                                Стакан 340 мл - 1шт.; Вода - 250мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingThirteen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseThirteen" aria-expanded="false"
+                                aria-controls="Talia-collapseThirteen">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Макіато
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink macchiato">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseThirteen" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingThirteen" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Кава (зерно) - 8,6г; Суха молочна суміш - 7г; Цукор - 8г;
+                                Стакан 180 мл - 1шт.; Вода - 110мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingFourteen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseFourteen" aria-expanded="false"
+                                aria-controls="Talia-collapseFourteen">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Американо з молоком
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink americanoMilk">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseFourteen" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingFourteen" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Кава (зерно) - 8,6г; Суха молочна суміш - 10г; Цукор -
+                                8г;
+                                Стакан 180 мл - 1шт.; Вода - 150мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Talia-headingFoFifteen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Talia-collapseFoFifteen" aria-expanded="false"
+                                aria-controls="Talia-collapseFoFifteen">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        MAXI Капучино
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink maxiCappuccino">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Talia-collapseFoFifteen" class="accordion-collapse collapse"
+                            aria-labelledby="Talia-headingFifteen" data-bs-parent="#accordionBianchiTalia">
+                            <div class="accordion-body">Склад: Кава (зерно) - 8,6г; Суха молочна суміш - 14г; Цукор -
+                                8г;
+                                Стакан 340 мл - 1шт.; Вода - 250мл</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion calc_receipts collapse p-2 pb-4" id="accordionNectaKoro">
+            <div class="row">
+                <div class="col col-auto col-md-6">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Koro-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Koro-collapseOne" aria-expanded="false"
+                                aria-controls="Koro-collapseOne">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Еспресо
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink espresso">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Koro-collapseOne" class="accordion-collapse collapse" aria-labelledby="Koro-headingOne"
+                            data-bs-parent="#accordionNectaKoro">
+                            <div class="accordion-body">Склад: Кава(зерно) - 9 г; Цукор - 4 г; Стакан 180 мл - 1шт.;
+                                Вода - 50мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Koro-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Koro-collapseTwo" aria-expanded="false"
+                                aria-controls="Koro-collapseTwo">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Американо
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink americano">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Koro-collapseTwo" class="accordion-collapse collapse" aria-labelledby="Koro-headingTwo"
+                            data-bs-parent="#accordionNectaKoro">
+                            <div class="accordion-body">Склад: Кава(зерно) - 9г; Цукор - 8г; Стакан 180 мл - 1шт.;
+                                Вода - 110мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Koro-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Koro-collapseThree" aria-expanded="false"
+                                aria-controls="Koro-collapseThree">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        MAXI Лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink maxiLate">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Koro-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="Koro-headingThree" data-bs-parent="#accordionNectaKoro">
+                            <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 18г; Цукор -
+                                12г; Стакан 340 мл - 1шт.; Вода - 280мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Koro-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Koro-collapseFour" aria-expanded="false"
+                                aria-controls="Koro-collapseFour">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Капучино
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink cappuccino">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Koro-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="Koro-headingFour" data-bs-parent="#accordionNectaKoro">
+                            <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 10г; Цукор -
+                                8г; Стакан 180 мл - 1шт.; Вода - 150мл</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-auto col-md-6">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Koro-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Koro-collapseFive" aria-expanded="false"
+                                aria-controls="Koro-collapseFive">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Лате
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink late">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Koro-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="Koro-headingFive" data-bs-parent="#accordionNectaKoro">
+                            <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 12г; Цукор -
+                                8г; Стакан 180 мл - 1шт.; Вода - 140мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Koro-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Koro-collapseSix" aria-expanded="false"
+                                aria-controls="Koro-collapseSix">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        MAXI Капучино
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink maxiCappuccino">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Koro-collapseSix" class="accordion-collapse collapse" aria-labelledby="Koro-headingSix"
+                            data-bs-parent="#accordionNectaKoro">
+                            <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 16г; Цукор - 12г;
+                                Стакан 340 мл - 1шт.;
+                                Вода - 270мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Koro-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Koro-collapseSeven" aria-expanded="false"
+                                aria-controls="Koro-collapseSeven">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Американо з молоком
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink americanoMilk">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Koro-collapseSeven" class="accordion-collapse collapse"
+                            aria-labelledby="Koro-headingSeven" data-bs-parent="#accordionNectaKoro">
+                            <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 7г; Цукор - 8г;
+                                Стакан 180 мл - 1шт.;
+                                Вода - 150мл</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Koro-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Koro-collapseEight" aria-expanded="false"
+                                aria-controls="Koro-collapseEight">
+                                <div class="row">
+                                    <div class="col text-nowrap accordion-drink">
+                                        Еспресо з молоком
+                                    </div>
+                                    <div class="col text-nowrap text-end accordion-drink espressoMilk">
+                                        0,00 грн.
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="Koro-collapseEight" class="accordion-collapse collapse"
+                            aria-labelledby="Koro-headingEight" data-bs-parent="#accordionNectaKoro">
+                            <div class="accordion-body">Склад: Кава(зерно) - 9г; Суха молочна суміш - 5г; Цукор - 4г;
+                                Стакан 180 мл - 1шт.;
+                                Вода - 50мл</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container hr-line"></div>
     <!-- /////////////////////////////////////////   CoffeMashineGallery    //////////////////////////////////////// -->
     <div class="gallery" id="gallery">
@@ -482,19 +1250,7 @@
             <h6><small>© 2016-2022 Bianchi professional</small></h6>
         </div>
     </footer>
-    <!-- /////////////////////////////////////Toast///////////////////////////// -->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="60000">
-            <div class="toast-header">
-                <img src="./img/logo_popup.webp" class="rounded me-2" alt="logo">
-                <strong class="me-auto">Бажаєте розрахувати собівартість напоїв?</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
-            </div>
-            <div class="toast-body text-center fw-bold">
-                Скористайтесь нашим <a href="./index.html#calc">калькулятором</a>.
-            </div>
-        </div>
-    </div>
+    
     <!-- /////////////////////////////////////modal///////////////////////////// -->
     <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

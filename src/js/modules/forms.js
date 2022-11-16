@@ -6,10 +6,12 @@ function forms() {
     };
 
     const toastLive = document.getElementById('liveToast');
-    const toast = new bootstrap.Toast(toastLive);
-    setTimeout(() => {
-        toast.show();
-    }, 7000);
+    if (toastLive != null) {
+        const toast = new bootstrap.Toast(toastLive);
+        setTimeout(() => {
+            toast.show();
+        }, 7000);
+    };
     
     document.addEventListener('click', ({target}) => {
         if (!target.classList.contains('btn')) {
