@@ -30,7 +30,7 @@ function forms() {
 
             let prefix = '';
             const TOKEN = process.env.TOKEN;
-            const CHAT_ID = '-1001646707499';
+            const CHAT_ID = process.env.CHAT_ID;
             const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
             const data = new FormData(form); //получаем данные
             
