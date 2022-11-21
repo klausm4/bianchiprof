@@ -8,7 +8,7 @@ let path = require('path');
 require('dotenv').config();
 module.exports = {
   mode: 'production',
-  // mode: 'development',
+  //mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'index.js',
