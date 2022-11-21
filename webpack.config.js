@@ -38,10 +38,6 @@ module.exports = {
       template: path.resolve(__dirname, 'src/avtomaty.html'),
     }),
     new HtmlWebpackPlugin({
-      filename: 'chay.html',
-      template: path.resolve(__dirname, 'src/chay.html'),
-    }),
-    new HtmlWebpackPlugin({
       filename: 'contacty.html',
       template: path.resolve(__dirname, 'src/contacty.html'),
     }),
@@ -66,8 +62,8 @@ module.exports = {
       template: path.resolve(__dirname, 'src/postovie.html'),
     }),
     new HtmlWebpackPlugin({
-      filename: 'stakany.html',
-      template: path.resolve(__dirname, 'src/stakany.html'),
+      filename: 'chay_stakany.html',
+      template: path.resolve(__dirname, 'src/chay_stakany.html'),
     }),
     new HtmlWebpackPlugin({
       filename: 'syropi.html',
