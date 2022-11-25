@@ -7,9 +7,10 @@ const Dotenv = require('dotenv-webpack');
 let path = require('path');
 require('dotenv').config();
 module.exports = {
-  mode: 'production',
-  //mode: 'development',
-  entry: './src/index.js',
+  //mode: 'production',
+  mode: 'development',
+  entry: path.join(__dirname, 'src/index.js'),
+  //entry: '/src/index.js',
   output: {
     filename: 'index.js',
     path: path.join(__dirname, 'dist')
@@ -81,9 +82,65 @@ module.exports = {
       filename: 'zernovoy_kofe.html',
       template: path.resolve(__dirname, 'src/zernovoy_kofe.html'),
     }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/index_ru.html',
+      template: path.resolve(__dirname, 'src/ru/index_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/avtomaty_ru.html',
+      template: path.resolve(__dirname, 'src/ru/avtomaty_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/chay_stakany_ru.html',
+      template: path.resolve(__dirname, 'src/ru/chay_stakany_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/contacty_ru.html',
+      template: path.resolve(__dirname, 'src/ru/contacty_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/dlya_cafe_restoranov_ru.html',
+      template: path.resolve(__dirname, 'src/ru/dlya_cafe_restoranov_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/dlya_magazinov_i_setey_ru.html',
+      template: path.resolve(__dirname, 'src/ru/dlya_magazinov_i_setey_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/kofemolki_ru.html',
+      template: path.resolve(__dirname, 'src/ru/kofemolki_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/moloko_shokolad_ru.html',
+      template: path.resolve(__dirname, 'src/ru/moloko_shokolad_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/postovie_ru.html',
+      template: path.resolve(__dirname, 'src/ru/postovie_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/syropi_ru.html',
+      template: path.resolve(__dirname, 'src/ru/syropi_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/vending_avtomaty_ru.html',
+      template: path.resolve(__dirname, 'src/ru/vending_avtomaty_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/vending_ru.html',
+      template: path.resolve(__dirname, 'src/ru/vending_ru.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/zernovoy_kofe_ru.html',
+      template: path.resolve(__dirname, 'src/ru/zernovoy_kofe_ru.html'),
+    }),
     new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [
+        // {
+        //   from: "./src/ru",
+        //   to: "./ru",
+        // },
         {
           from: "./src/video",
           to: "./video",
