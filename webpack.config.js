@@ -137,10 +137,10 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [
-        // {
-        //   from: "./src/ru",
-        //   to: "./ru",
-        // },
+        {
+          from: "./src/ru/img",
+          to: "./ru/img",
+        },
         {
           from: "./src/video",
           to: "./video",

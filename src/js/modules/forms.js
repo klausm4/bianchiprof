@@ -8,7 +8,6 @@ function forms() {
     };
 
     const lang = document.location.pathname.substring(0, 4);
-    console.log(lang);
 
     const toastLive = document.querySelector('#liveToast');
     if (toastLive != null) {
