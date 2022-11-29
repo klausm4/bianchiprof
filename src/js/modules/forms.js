@@ -1,9 +1,14 @@
 function forms() {
 
     const message = { //набор сообщений
-        success: 'Дякуємо! Чекайте на дзвінок менеджера!',
-        failure: 'Спробуйте відправити повідомлення через декілька хвилин'
+        successua: 'Дякуємо! Чекайте на дзвінок менеджера!',
+        successru: 'Спасибо! Ожидайте звонка менеджера!',
+        failureua: 'Спробуйте відправити повідомлення через декілька хвилин',
+        failureru: 'Попробуйте отправить сообщение через несколько минут'
     };
+
+    const lang = document.location.pathname.substring(0, 4);
+    console.log(lang);
 
     const toastLive = document.querySelector('#liveToast');
     if (toastLive != null) {
@@ -12,8 +17,8 @@ function forms() {
             toast.show();
         }, 7000);
     };
-    
-    document.addEventListener('click', ({target}) => {
+
+    document.addEventListener('click', ({ target }) => {
         if (!target.classList.contains('btn')) {
             clearPopup();
         };
@@ -31,9 +36,9 @@ function forms() {
             let prefix = '';
             const TOKEN = process.env.TOKEN;
             const CHAT_ID = process.env.CHAT_ID;
-            const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+            const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
             const data = new FormData(form); //получаем данные
-            
+
             if (data.has('userNameModal')) {//Устанавливаем префикс имени поля для модального окна
                 prefix = 'Modal';
             };
@@ -44,25 +49,25 @@ function forms() {
             const city = data.get('city' + prefix);
 
             if (name.trim().length < 2) {
-                const textContent = "Занадто коротке Ім'я";
+                const textContent = (lang === '/ru/') ? "Слишком короткое имя" : "Занадто коротке ім'я";
                 showPopup('userName' + prefix, textContent);
                 return
             };
 
             if (telephone.length < 18) {
-                const textContent = "Занадто короткий номер телефону";
+                const textContent = (lang === '/ru/') ? "Слишком короткий номер телефона" : "Занадто короткий номер телефону";
                 showPopup('telephone' + prefix, textContent);
                 return
             };
 
             if (!direction) {
-                const textContent = "Виберіть один з пунктів списку";
+                const textContent = (lang === '/ru/') ? "Выберите один из пунктов списка" : "Виберіть один з пунктів списку";
                 showPopup('direction' + prefix, textContent);
                 return
             };
 
             if (city.trim().length < 2) {
-                const textContent = "Занадто коротка назва міста";
+                const textContent = (lang === '/ru/') ? "Слишком короткое название города" : "Занадто коротка назва міста";
                 showPopup('city' + prefix, textContent);
                 return
             };
@@ -72,7 +77,8 @@ function forms() {
                 const diff = new Date().getTime() - localStorage.getItem('dispatchTime');
                 if (diff < wait) {
                     const minute = Math.ceil((wait - diff) / (1000 * 60));
-                    const textContent = `Спробуйте відправити наступну заявку через ${minute} хвилин`;
+                    const textContent = (lang === '/ru/') ? `Попробуйте отправить следующую заявку через ${minute} минут` : 
+                                                            `Спробуйте відправити наступну заявку через ${minute} хвилин`;
                     showPopup('sendRequest' + prefix, textContent);
                     return
                 };
@@ -81,28 +87,30 @@ function forms() {
             form.classList.add('sending');
 
             let siteMessage = `<b>Заявка с сайта bianchiprof.com</b>\n`;
-            siteMessage += `<b>Отправитель: </b> ${ name }\n`;
-            siteMessage += `<b>Телефон: </b> ${ telephone }\n`;
-            siteMessage += `<b>Направление: </b> ${ direction }\n`;
-            siteMessage += `<b>Город: </b> ${ city }`;
+            siteMessage += `<b>Отправитель: </b> ${name}\n`;
+            siteMessage += `<b>Телефон: </b> ${telephone}\n`;
+            siteMessage += `<b>Направление: </b> ${direction}\n`;
+            siteMessage += `<b>Город: </b> ${city}`;
 
             axios.post(URL_API, {
                 chat_id: CHAT_ID,
                 parse_mode: 'html',
                 text: siteMessage
             })
-            .then((res) => {
-                showThanksModal(prefix, message.success);
-                localStorage.setItem('dispatchTime', new Date().getTime());
-            })
-            .catch((err) => {
-                showThanksModal(prefix, message.failure);
-            })
-            .finally(() => {
-                form.classList.remove('sending');
-                resetForm();
-            })
-            
+                .then((res) => {
+                    const messageSuccess = (lang === '/ru/') ? message.successru : message.successua;
+                    showThanksModal(prefix, messageSuccess);
+                    localStorage.setItem('dispatchTime', new Date().getTime());
+                })
+                .catch((err) => {
+                    const messageFailure = (lang === '/ru/') ? message.failureru : message.failureua;
+                    showThanksModal(prefix, messageFailure);
+                })
+                .finally(() => {
+                    form.classList.remove('sending');
+                    resetForm();
+                })
+
             // let response = await fetch('sendmail.php', {
             //     method: 'POST',
             //     body: data
@@ -113,7 +121,7 @@ function forms() {
             //     showThanksModal(prefix, message.success);
             //     localStorage.setItem('dispatchTime', new Date().getTime());
             //     resetForm();
-                
+
             // } else {
             //     form.classList.remove('sending');
             //     showThanksModal(prefix, message.failure);
