@@ -17,12 +17,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76167740-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-76167740-3');
+    </script>
     <!-- Facebook Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -446,7 +455,8 @@
         <h4 class="pb-2 text-center">3. Отримайте собівартість напоїв для вибраного типу кавомашини<span
                 class="select">* **</span></h4>
         <h6 class="pb-2"><span class="select">* </span>Не враховується вартість води та розмішувача.</h6>
-        <h6 class="pb-2"><span class="select">** </span>Зазначені рецептури напоїв є <b>базовими</b> для вибраного типу кавомашини і <b>можуть бути змінені</b> на вимогу замовника.</h6>
+        <h6 class="pb-2"><span class="select">** </span>Зазначені рецептури напоїв є <b>базовими</b> для вибраного типу
+            кавомашини і <b>можуть бути змінені</b> на вимогу замовника.</h6>
         <div class="accordion calc_receipts collapse show p-2 pb-4" id="accordionBianchiGaia">
             <div class="row">
                 <div class="col col-auto col-md-6">
@@ -1191,7 +1201,8 @@
                     <div class="col-4 p-4 offset-md-1">
                         <h6>ХОРЕКА</h6>
                         <p class="footer-left">
-                            Встановлення кавових машин по містах: Харків, Київ, Біла Церква, Умань, Бровари, Бориспіль, Черкаси
+                            Встановлення кавових машин по містах: Харків, Київ, Біла Церква, Умань, Бровари, Бориспіль,
+                            Черкаси
                         </p>
                         <div class="row">
                             <div class="col col-auto col-md-6 footer-left">
@@ -1254,7 +1265,7 @@
             <h6><small>© 2016-2022 Bianchi professional</small></h6>
         </div>
     </footer>
-    
+
     <!-- /////////////////////////////////////modal///////////////////////////// -->
     <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
