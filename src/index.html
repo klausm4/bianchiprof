@@ -31,7 +31,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -431,7 +431,8 @@
     </div>
     <!-- /////////////////////////////////////Toast///////////////////////////// -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="60000">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true"
+            data-bs-delay="15000">
             <div class="toast-header">
                 <img src="./img/logo_popup.webp" class="rounded me-2" alt="logo">
                 <strong class="me-auto">Бажаєте розрахувати собівартість напоїв?</strong>
@@ -450,7 +451,8 @@
                     <div class="col-4 p-4 offset-md-1">
                         <h6>ХОРЕКА</h6>
                         <p class="footer-left">
-                            Встановлення кавових машин по містах: Харків, Київ, Рівне, Біла Церква, Умань, Бровари, Бориспіль, Чернігів, Черкаси, Хмельницький
+                            Встановлення кавових машин по містах: Харків, Київ, Рівне, Біла Церква, Умань, Бровари,
+                            Бориспіль, Чернігів, Черкаси, Хмельницький
                         </p>
                         <div class="row">
                             <div class="col col-md-6 footer-left">
@@ -482,13 +484,13 @@
                                 <a class="telephone text-nowrap" href="tel:+380974996005">т. +38 (097) 499-60-05</a>
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col footer-left">
                                 <h6>e-mail</h6>
                                 <a class="telephone text-nowrap"
                                     href="mailto:vend.coffee@bianchiprof.com">vend.coffee@bianchiprof.com</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-4 p-4 offset-md-2">
                         <div class="footer-left">
@@ -501,12 +503,13 @@
                             </p>
                         </div>
                         <h6>Менеджер з розвитку</h6>
-                        <p>
+                        <p class="footer-left">
                             <a class="telephone text-nowrap" href="tel:+380950252822">т. +38 (095) 025-28-22</a>
                         </p>
+                        <h6>У разі запитань, зауважень чи пропозицій звертайтесь за ел.адресою:</h6>
                         <p>
                             <a class="telephone text-nowrap"
-                                href="mailto:vend.coffee@bianchiprof.com">vend.coffee@bianchiprof.com</a>
+                                href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
                         </p>
                     </div>
                 </div>
