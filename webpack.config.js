@@ -83,6 +83,14 @@ module.exports = {
       template: path.resolve(__dirname, 'src/zernovoy_kofe.html'),
     }),
     new HtmlWebpackPlugin({
+      filename: 'legal_terms.html',
+      template: path.resolve(__dirname, 'src/legal_terms.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'privacy_policy.html',
+      template: path.resolve(__dirname, 'src/privacy_policy.html'),
+    }),
+    new HtmlWebpackPlugin({
       filename: 'ru/index.html',
       template: path.resolve(__dirname, 'src/ru/index.html'),
     }),
@@ -133,6 +141,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'ru/zernovoy_kofe.html',
       template: path.resolve(__dirname, 'src/ru/zernovoy_kofe.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/legal_terms.html',
+      template: path.resolve(__dirname, 'src/ru/legal_terms.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/privacy_policy.html',
+      template: path.resolve(__dirname, 'src/ru/privacy_policy.html'),
     }),
     new MiniCssExtractPlugin(),
     new CopyPlugin({
