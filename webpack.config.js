@@ -170,6 +170,14 @@ module.exports = {
           to: "./favicon.png",
         },
         {
+          from: "./src/PHPMailer",
+          to: "./PHPMailer",
+        },
+        {
+          from: "./src/sendmail.php",
+          to: "./sendmail.php",
+        },
+        {
           from: "./src/robots.txt",
           to: "./robots.txt",
         }
