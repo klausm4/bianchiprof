@@ -384,7 +384,7 @@
 }
 
 .consultation {
-  width: 70%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -929,6 +929,7 @@ figure.effect-text-three ul {
 
 .slider {
   position: relative;
+  right: 12px;
   padding: 0px 150px 0px;
 }
 .slider .slick-arrow {
@@ -942,12 +943,12 @@ figure.effect-text-three ul {
 }
 .slider .slick-prev {
   border: 0px;
-  left: 0;
+  left: 20px;
   background: url("../img/index/sl_arrow_l.webp") 0 0/100% no-repeat;
 }
 .slider .slick-next {
   border: 0px;
-  right: 0;
+  right: 20px;
   background: url("../img/index/sl_arrow_r.webp") 0 0/100% no-repeat;
 }
 
