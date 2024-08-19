@@ -8,6 +8,20 @@
   color: #9BC715;
 }
 
+.greenlink {
+  color: #9BC715;
+}
+.greenlink:hover {
+  color: #9BC715;
+}
+
+.blacklink {
+  color: #000;
+}
+.blacklink:hover {
+  color: #000;
+}
+
 .select {
   color: #9BC715;
   font-weight: bold;

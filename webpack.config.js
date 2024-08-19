@@ -35,6 +35,10 @@ module.exports = {
       template: path.resolve(__dirname, 'src/index.html'),
     }),
     new HtmlWebpackPlugin({
+      filename: 'arenda.html',
+      template: path.resolve(__dirname, 'src/arenda.html'),
+    }),
+    new HtmlWebpackPlugin({
       filename: 'avtomaty.html',
       template: path.resolve(__dirname, 'src/avtomaty.html'),
     }),
@@ -43,8 +47,12 @@ module.exports = {
       template: path.resolve(__dirname, 'src/contacty.html'),
     }),
     new HtmlWebpackPlugin({
-      filename: 'dlya_cafe_restoranov.html',
-      template: path.resolve(__dirname, 'src/dlya_cafe_restoranov.html'),
+      filename: 'dlya_ofisov.html',
+      template: path.resolve(__dirname, 'src/dlya_ofisov.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'dlya_azs.html',
+      template: path.resolve(__dirname, 'src/dlya_azs.html'),
     }),
     new HtmlWebpackPlugin({
       filename: 'dlya_magazinov_i_setey.html',
@@ -67,12 +75,20 @@ module.exports = {
       template: path.resolve(__dirname, 'src/chay_stakany.html'),
     }),
     new HtmlWebpackPlugin({
+      filename: 'rashodniki.html',
+      template: path.resolve(__dirname, 'src/rashodniki.html'),
+    }),
+    new HtmlWebpackPlugin({
       filename: 'syropi.html',
       template: path.resolve(__dirname, 'src/syropi.html'),
     }),
     new HtmlWebpackPlugin({
       filename: 'vending_avtomaty.html',
       template: path.resolve(__dirname, 'src/vending_avtomaty.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'vending_snack.html',
+      template: path.resolve(__dirname, 'src/vending_snack.html'),
     }),
     new HtmlWebpackPlugin({
       filename: 'vending.html',
@@ -95,6 +111,10 @@ module.exports = {
       template: path.resolve(__dirname, 'src/ru/index.html'),
     }),
     new HtmlWebpackPlugin({
+      filename: 'ru/arenda.html',
+      template: path.resolve(__dirname, 'src/ru/arenda.html'),
+    }),
+    new HtmlWebpackPlugin({
       filename: 'ru/avtomaty.html',
       template: path.resolve(__dirname, 'src/ru/avtomaty.html'),
     }),
@@ -107,12 +127,16 @@ module.exports = {
       template: path.resolve(__dirname, 'src/ru/contacty.html'),
     }),
     new HtmlWebpackPlugin({
-      filename: 'ru/dlya_cafe_restoranov.html',
-      template: path.resolve(__dirname, 'src/ru/dlya_cafe_restoranov.html'),
+      filename: 'ru/dlya_azs.html',
+      template: path.resolve(__dirname, 'src/ru/dlya_azs.html'),
     }),
     new HtmlWebpackPlugin({
       filename: 'ru/dlya_magazinov_i_setey.html',
       template: path.resolve(__dirname, 'src/ru/dlya_magazinov_i_setey.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/dlya_ofisov.html',
+      template: path.resolve(__dirname, 'src/ru/dlya_ofisov.html'),
     }),
     new HtmlWebpackPlugin({
       filename: 'ru/kofemolki.html',
@@ -127,12 +151,20 @@ module.exports = {
       template: path.resolve(__dirname, 'src/ru/postovie.html'),
     }),
     new HtmlWebpackPlugin({
+      filename: 'ru/rashodniki.html',
+      template: path.resolve(__dirname, 'src/ru/rashodniki.html'),
+    }),
+    new HtmlWebpackPlugin({
       filename: 'ru/syropi.html',
       template: path.resolve(__dirname, 'src/ru/syropi.html'),
     }),
     new HtmlWebpackPlugin({
       filename: 'ru/vending_avtomaty.html',
       template: path.resolve(__dirname, 'src/ru/vending_avtomaty.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/vending_snack.html',
+      template: path.resolve(__dirname, 'src/ru/vending_snack.html'),
     }),
     new HtmlWebpackPlugin({
       filename: 'ru/vending.html',
