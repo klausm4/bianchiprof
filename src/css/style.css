@@ -958,12 +958,24 @@ figure.effect-text-three ul {
 .slider .slick-prev {
   border: 0px;
   left: 20px;
+  opacity: 50%;
+  transition: 0.3s;
   background: url("../img/index/sl_arrow_l.webp") 0 0/100% no-repeat;
+}
+.slider .slick-prev:hover {
+  opacity: 100%;
+  transition: 0.3s;
 }
 .slider .slick-next {
   border: 0px;
   right: 20px;
+  opacity: 50%;
+  transition: 0.3s;
   background: url("../img/index/sl_arrow_r.webp") 0 0/100% no-repeat;
+}
+.slider .slick-next:hover {
+  opacity: 100%;
+  transition: 0.3s;
 }
 
 .slider__item {
