@@ -488,6 +488,10 @@
   text-align: center;
   margin-bottom: 35px;
 }
+.separator h1 {
+  font-size: 30px;
+  line-height: 53px;
+}
 .separator h3 {
   line-height: 53px;
 }
