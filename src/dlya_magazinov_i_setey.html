@@ -444,7 +444,67 @@
     </div>
     <!-- /////////////////////////////////////////   CoffeMashineGallery    //////////////////////////////////////// -->
     <div class="gallery" id="gallery">
-      <div class="container text-center">
+      <div class="container text-center gallery">
+        <div class="container text-center">
+          <div class="row justify-content-between">
+            <div class="col-4">РЕКОМЕНДОВАНЕ ОБЛАДНАННЯ</div>
+            <div class="col-4">
+              <a class="greenlink main-text-size" href="./avtomaty.html">
+                перейти до каталогу →
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col col-md-3 col-lg-2">
+            <div class="img-fluid">
+              <a href="./avtomaty.html#ancor-korinto">
+                <img
+                  src="./img/dlya_magazinov_i_setey/necta_korinto_prime.png"
+                  class="scale"
+                  alt="Кавомашина Necta Korinto Prime" />
+              </a>
+            </div>
+          </div>
+          <div class="col col-md-3 col-lg-2">
+            <div class="img-fluid">
+              <a href="./avtomaty.html#ancor-gaia-touch">
+                <img
+                  src="./img/dlya_magazinov_i_setey/gaia_touch.png"
+                  class="scale"
+                  alt="Кавомашина Bianchi Gaia Touch" />
+              </a>
+            </div>
+          </div>
+          <div class="col col-md-3 col-lg-2">
+            <div class="img-fluid">
+              <a href="./avtomaty.html#ancor-talia-touch">
+                <img
+                  src="./img/dlya_magazinov_i_setey/bianchi_talia_touch.png"
+                  class="scale"
+                  alt="Кавомашина Bianchi Talia Touch" />
+              </a>
+            </div>
+          </div>
+          <div class="col col-md-3 col-lg-2">
+            <div class="img-fluid">
+              <a href="./avtomaty.html#ancor-minibona">
+                <img
+                  src="./img/dlya_magazinov_i_setey/rheavendors_minibona.png"
+                  class="scale"
+                  alt="Кавомашина Rheavendors Minibona 2" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <!-- <div class="gallery" id="gallery">
+      <div class="container text-center gallery">
         <div class="container text-center">
           <div class="row justify-content-between">
             <div class="col-4">РЕКОМЕНДОВАНЕ ОБЛАДНАННЯ</div>
@@ -498,7 +558,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- /////////////////////////////////////////   Carousel    ////////////////////////////////////////     -->
     <div class="container">
       <div class="row mb-3">
@@ -912,18 +972,23 @@
           autoplay: true,
           centerMode: false,
           variableWidth: false,
-          adaptiveHeight: true,
           responsive: [
             {
-              breakpoint: 992,
+              breakpoint: 1220,
               settings: {
                 slidesToShow: 3,
               },
             },
             {
-              breakpoint: 768,
+              breakpoint: 978,
               settings: {
                 slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 560,
+              settings: {
+                slidesToShow: 1,
               },
             },
           ],
