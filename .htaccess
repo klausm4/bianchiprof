@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+RewriteCond %{THE_REQUEST} //
+RewriteRule .* /$0 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.bianchiprof\.com$ [NC]
+RewriteRule ^(.*)$ https://bianchiprof.com/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} /index.html
+RewriteCond %{QUERY_STRING} ^\z
+RewriteRule ^(.*)$ https://bianchiprof.com/? [R=301,L]
