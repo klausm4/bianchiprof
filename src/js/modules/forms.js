@@ -98,9 +98,11 @@ function forms() {
 
       form.classList.add("sending");
 
+      let telnospaces = telephone.replace(/\s/g, '');
+
       let siteMessage = `<b>Заявка с сайта bianchiprof.com</b>\n`;
       siteMessage += `<b>Отправитель: </b> ${name}\n`;
-      siteMessage += `<b>Телефон: </b> ${telephone}\n`;
+      siteMessage += `<b>Телефон: </b> ${telnospaces}\n`;
       siteMessage += `<b>Направление: </b> ${direction}\n`;
       siteMessage += `<b>Город: </b> ${city}`;
 
