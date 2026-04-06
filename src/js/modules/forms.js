@@ -9,13 +9,13 @@ function forms() {
 
   const lang = document.location.pathname.substring(0, 4);
 
-  const toastLive = document.querySelector("#liveToast");
+ /*  const toastLive = document.querySelector("#liveToast");
   if (toastLive != null) {
     const toast = new bootstrap.Toast(toastLive);
     setTimeout(() => {
       toast.show();
     }, 7000);
-  }
+  } */
 
   document.addEventListener("click", ({ target }) => {
     if (!target.classList.contains("btn")) {
