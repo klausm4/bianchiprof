@@ -72,13 +72,15 @@
     <div class="header__up">
       <div class="container">
         <div class="row">
-          <div class="header__item col">
-            <ul>
-              <li class="telephone text-nowrap text-end">
-                <img src="../img/mail.png" />
-                <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
-              </li>
-            </ul>
+          <div class="header__item col mx-auto d-flex justify-content-end gap-3">
+            <div class="text-nowrap text-end">
+              <img src="../img/mail.png" />
+              <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
+            </div>
+            <div class="text-nowrap text-end">
+              <img src="../img/app.png" />
+              <a class="telephone" data-bs-toggle="modal" data-bs-target="#Modal" href="#">Оставить заявку</a>
+            </div>
           </div>
         </div>
       </div>
@@ -147,6 +149,11 @@
                   <li>
                     <a class="dropdown-item" href="./vending_snack.html">
                       Вендинговые снековые автоматы
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./kofeinia.html">
+                      Кофейня самообслуживания
                     </a>
                   </li>
                 </ul>
@@ -230,13 +237,11 @@
             Преимущества наших сухих смесей:
           </small>
         </h5>
-        <ul>
-          <small>
-            <li>Быстрое и легкое приготовление напитков, безупречная растворимость в кофемашине.</li>
-            <li>Постоянно высокий уровень вкуса и текстуры в каждой чашке.</li>
-            <li>Минимизация потерь и быстрое обслуживание клиентов.</li>
-            <li>Смеси для разных видов напитков, которые удовлетворят самых требовательных ценителей.</li>
-          </small>
+        <ul class="mt-3">
+          <li>Быстрое и легкое приготовление напитков, безупречная растворимость в кофемашине.</li>
+          <li>Постоянно высокий уровень вкуса и текстуры в каждой чашке.</li>
+          <li>Минимизация потерь и быстрое обслуживание клиентов.</li>
+          <li>Смеси для разных видов напитков, которые удовлетворят самых требовательных ценителей.</li>
         </ul>
       </div>
       <div class="col"></div>
@@ -245,11 +250,11 @@
   <!-- /////////////////////////////////////////   Goods    ////////////////////////////////////////     -->
   <div class="container hr-line"></div>
   <div class="container cards">
-    <div class="row">
-      <div id="anhcor-milk-ru" class="col mb-1">
+    <div class="row justify-content-center">
+      <div id="anhcor-milk-ru" class="col col-auto col-md-4 mb-4">
         <div class="card hover-text-one">
           <figure class="effect-text-three">
-            <img src="../img/moloko_shokolad/milk.webp" class="card-img-top combo" alt="Bianchi Creamer" />
+            <img src="../img/moloko_shokolad/milk.webp" class="card-img-top" alt="Bianchi Creamer" />
             <figcaption class="goods">
               <ul class="lh-sm">
                 <li>
@@ -289,7 +294,55 @@
           </div>
         </div>
       </div>
-      <div id="anhcor-cacao-ru" class="col mb-1">
+      <div id="anhcor-CremerPremium-ru" class="col col-auto col-md-4 mb-4">
+        <div class="card hover-text-one">
+          <figure class="effect-text-three">
+            <img src="../img/moloko_shokolad/cremer_premium.webp" class="card-img-top" alt="Сухе молоко" />
+            <figcaption class="goods">
+              <ul class="lh-sm">
+                <li>
+                  <b>
+                    Вес:
+                    <br />
+                  </b>
+                  1 кг.
+                </li>
+                <br />
+                <li>
+                  <b>
+                    Производитель:
+                    <br />
+                  </b>
+                  Голландия
+                </li>
+              </ul>
+            </figcaption>
+          </figure>
+          <div class="card-body">
+            <h3 class="text-center">Сухие сливки "Bianchi Cremer Premium"</h3><br />
+            <small>
+              <p class="lh-sm">
+                Сухие сливки <b>Cremer Premium</b> разработаны специально для использования в автоматических кофемашинах
+                и вендинговых автоматах.
+                Они мгновенно растворяются, не оставляя комочков и осадка, и образуют роскошную, устойчивую густую пенку
+                (крем).
+                Этот ингредиент идеально подчеркивает и смягчает вкус кофе, превращая обычное эспрессо в изысканный
+                кофейно-молочный напиток.</p>
+              <p class="lh-sm">
+                <b>Свойства:</b> отличная растворимость, устойчивость к слеживанию и влаге, высокая плотность пены.
+              </p>
+              <p class="lh-sm">
+                <b>Вкус:</b> нежный, сливочный, без посторонних привкусов, прекрасно сочетается с кофе.
+              </p>
+              <p class="lh-sm">
+                <b>Для чего подходит:</b> приготовление капучино, латте, макиато и горячего шоколада в любых типах
+                кофемашин.
+              </p>
+            </small>
+          </div>
+        </div>
+      </div>
+      <div id="anhcor-cacao-ru" class="col col-auto col-md-4 mb-4">
         <div class="card hover-text-one">
           <figure class="effect-text-three">
             <img src="../img/moloko_shokolad/hot_cocoa.webp" class="card-img-top" alt="Bianchi Hot Cocoa" />
@@ -334,7 +387,7 @@
           </div>
         </div>
       </div>
-      <div id="anhcor-irish-ru" class="col mb-1">
+      <div id="anhcor-irish-ru" class="col col-auto col-md-4 mb-4">
         <div class="card hover-text-one">
           <figure class="effect-text-three">
             <img src="../img/moloko_shokolad/irish.webp" class="card-img-top" alt="Bianchi Irish Whiskey" />
@@ -381,7 +434,7 @@
           </div>
         </div>
       </div>
-      <div id="anhcor-catalana-ru" class="col mb-1">
+      <div id="anhcor-catalana-ru" class="col col-auto col-md-4 mb-4">
         <div class="card hover-text-one">
           <figure class="effect-text-three">
             <img src="../img/moloko_shokolad/catalana.webp" class="card-img-top" alt="Bianchi Crema Catalana" />
@@ -593,6 +646,7 @@
                 <option selected disabled value="">Меня интересует...</option>
                 <option>Кофемашина для кафе или торговой точки</option>
                 <option>Торговый автомат с кофе или снеками</option>
+                <option>Кофейня самообслуживания</option>
               </select>
             </div>
             <div class="mb-3">

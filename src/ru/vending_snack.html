@@ -74,13 +74,15 @@
     <div class="header__up">
       <div class="container">
         <div class="row">
-          <div class="header__item col">
-            <ul>
-              <li class="telephone text-nowrap text-end">
-                <img src="../img/mail.png" />
-                <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
-              </li>
-            </ul>
+          <div class="header__item col mx-auto d-flex justify-content-end gap-3">
+            <div class="text-nowrap text-end">
+              <img src="../img/mail.png" />
+              <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
+            </div>
+            <div class="text-nowrap text-end">
+              <img src="../img/app.png" />
+              <a class="telephone" data-bs-toggle="modal" data-bs-target="#Modal" href="#">Оставить заявку</a>
+            </div>
           </div>
         </div>
       </div>
@@ -149,6 +151,11 @@
                   <li>
                     <a class="dropdown-item" href="./vending_snack.html">
                       Вендинговые снековые автоматы
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./kofeinia.html">
+                      Кофейня самообслуживания
                     </a>
                   </li>
                 </ul>
@@ -225,27 +232,25 @@
             быстрый доступ к вкусным перекусам.
           </small>
         </h5>
-        <ul>
-          <small>
-            <li>
-              Ассортимент аппаратов включает в себя чипсы, батончики, печенье и другие
-              популярные снеки, которые идеально дополняют напитки или могут быть
-              самостоятельным перекусом.
-            </li>
-            <li>
-              Наши вендинговые аппараты оборудованы системой оплаты банковской картой с
-              помощью мобильного приложения ProstoPay, а также Googl Pay, Apple Pay,
-              NFC.
-            </li>
-            <li>
-              Такой сервис становится незаменимым в офисах, АЗС, в учебных заведениях и
-              торговых центрах.
-            </li>
-            <li>
-              Возможно комбинирование снекового аппарата с вендингом машиной для горячих
-              напитков, с одной системой оплаты.
-            </li>
-          </small>
+        <ul class="mt-3">
+          <li>
+            Ассортимент аппаратов включает в себя чипсы, батончики, печенье и другие
+            популярные снеки, которые идеально дополняют напитки или могут быть
+            самостоятельным перекусом.
+          </li>
+          <li>
+            Наши вендинговые аппараты оборудованы системой оплаты банковской картой с
+            помощью мобильного приложения ProstoPay, а также Googl Pay, Apple Pay,
+            NFC.
+          </li>
+          <li>
+            Такой сервис становится незаменимым в офисах, АЗС, в учебных заведениях и
+            торговых центрах.
+          </li>
+          <li>
+            Возможно комбинирование снекового аппарата с вендингом машиной для горячих
+            напитков, с одной системой оплаты.
+          </li>
         </ul>
       </div>
       <div class="col"></div>
@@ -646,6 +651,7 @@
                 <option selected disabled value="">Меня интересует...</option>
                 <option>Кофемашина для кафе или торговой точки</option>
                 <option>Торговый автомат с кофе или снеками</option>
+                <option>Кофейня самообслуживания</option>
               </select>
             </div>
             <div class="mb-3">

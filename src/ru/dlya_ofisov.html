@@ -72,13 +72,15 @@
     <div class="header__up">
       <div class="container">
         <div class="row">
-          <div class="header__item col">
-            <ul>
-              <li class="telephone text-nowrap text-end">
-                <img src="../img/mail.png" />
-                <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
-              </li>
-            </ul>
+          <div class="header__item col mx-auto d-flex justify-content-end gap-3">
+            <div class="text-nowrap text-end">
+              <img src="../img/mail.png" />
+              <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
+            </div>
+            <div class="text-nowrap text-end">
+              <img src="../img/app.png" />
+              <a class="telephone" data-bs-toggle="modal" data-bs-target="#Modal" href="#">Оставить заявку</a>
+            </div>
           </div>
         </div>
       </div>
@@ -149,6 +151,11 @@
                   <li>
                     <a class="dropdown-item" href="./vending_snack.html">
                       Вендинговые снековые автоматы
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./kofeinia.html">
+                      Кофейня самообслуживания
                     </a>
                   </li>
                 </ul>
@@ -307,7 +314,7 @@
             выбранной кофеваркой.
           </li>
           <li>
-            Если у вас есть несколько фелиалов, мы можем поставить кофемашину в каждый,
+            Если у вас есть несколько филиалов, мы можем поставить кофемашину в каждый,
             при условии, что в этом регионе есть наш представитель.
           </li>
         </ul>
@@ -469,70 +476,6 @@
       </div>
     </div>
   </div>
-  <!-- ////////////////////// Timeline ///////////////////////// -->
-  <div class="d-flex justify-content-center separator p-1">
-    <h3>Что нужно для сотрудничества</h3>
-  </div>
-  <div class="container timeline">
-    <div class="row">
-      <div class="col">
-        <div class="timeline-steps aos-init aos-animate">
-          <div class="timeline-step">
-            <div class="timeline-content" data-original-title="2004">
-              <div class="inner-circle"></div>
-              <p class="num fw-bold">1</p>
-              <h5>Оформление</h5>
-              <p class="lh-sm text-muted">
-                <small>
-                  Оставьте заявку на нашем сайте по телефону или с помощью электронной
-                  почты.
-                </small>
-              </p>
-            </div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-content">
-              <div class="inner-circle"></div>
-              <p class="num fw-bold">2</p>
-              <h5>Подтверждение</h5>
-              <p class="lh-sm text-muted">
-                <small>
-                  Наш менеджер свяжется с Вами и подготовит для Вас самую выгодное
-                  предложение, исходя из ваших потребностей.
-                </small>
-              </p>
-            </div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-content">
-              <div class="inner-circle"></div>
-              <p class="num fw-bold">3</p>
-              <h5>Установка</h5>
-              <p class="lh-sm text-muted">
-                <small>
-                  Мы в короткие сроки установим кофемашину в Вашем. заведении.
-                </small>
-              </p>
-            </div>
-          </div>
-          <div class="timeline-step mb-0">
-            <div class="timeline-content">
-              <div class="inner-circle"></div>
-              <p class="num fw-bold">4</p>
-              <h5>Обслуживание</h5>
-              <p class="lh-sm text-muted">
-                <small>
-                  Полное сопровождение и бесплатная техническая поддержка на протяжении
-                  всего сотрудничества.
-                </small>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container hr-line"></div>
   <!-- /////////////////////////////////////////   Consultation    ////////////////////////////////////////     -->
   <div class="container consultation mb-1">
     <div class="row g-5">
@@ -788,6 +731,7 @@
                 <option selected disabled value="">Меня интересует...</option>
                 <option>Кофемашина для кафе или торговой точки</option>
                 <option>Торговый автомат с кофе или снеками</option>
+                <option>Кофейня самообслуживания</option>
               </select>
             </div>
             <div class="mb-3">

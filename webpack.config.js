@@ -63,6 +63,10 @@ module.exports = {
       template: path.resolve(__dirname, 'src/kofemolki.html'),
     }),
     new HtmlWebpackPlugin({
+      filename: 'kofeinia.html',
+      template: path.resolve(__dirname, 'src/kofeinia.html'),
+    }),
+    new HtmlWebpackPlugin({
       filename: 'moloko_shokolad.html',
       template: path.resolve(__dirname, 'src/moloko_shokolad.html'),
     }),
@@ -141,6 +145,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'ru/kofemolki.html',
       template: path.resolve(__dirname, 'src/ru/kofemolki.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'ru/kofeinia.html',
+      template: path.resolve(__dirname, 'src/ru/kofeinia.html'),
     }),
     new HtmlWebpackPlugin({
       filename: 'ru/moloko_shokolad.html',

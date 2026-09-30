@@ -72,13 +72,15 @@
     <div class="header__up">
       <div class="container">
         <div class="row">
-          <div class="header__item col">
-            <ul>
-              <li class="telephone text-nowrap text-end">
+          <div class="header__item col mx-auto d-flex justify-content-end gap-3">
+            <div class="text-nowrap text-end">
                 <img src="../img/mail.png" />
                 <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
-              </li>
-            </ul>
+              </div>
+              <div class="text-nowrap text-end">
+                <img src="../img/app.png" />
+                <a class="telephone" data-bs-toggle="modal" data-bs-target="#Modal" href="#">Залишити заявку</a>
+              </div>
           </div>
         </div>
       </div>
@@ -144,6 +146,11 @@
                   <li>
                     <a class="dropdown-item" href="./vending_snack.html">
                       Вендінгові снекові автомати
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./kofeinia.html">
+                      Кав’ярня самообслуговування
                     </a>
                   </li>
                 </ul>
@@ -440,6 +447,7 @@
               <option selected disabled value="">Мене цікавить...</option>
               <option>Кавомашина для кафе або торгової точки</option>
               <option>Торговий автомат з кавою або снеками</option>
+              <option>Кав'ярня самообслуговування</option>
             </select>
           </div>
           <div class="mb-3">
@@ -669,7 +677,7 @@
           <div class="col-lg-4 col-6 p-4 offset-md-1">
             <h6>ХОРЕКА</h6>
             <p class="footer-left">
-              Встановлення кавових машин по містах: Київ, Харків, Біла Церква, Львів, 
+              Встановлення кавових машин по містах: Київ, Харків, Біла Церква, Львів,
               Бориспіль, Бровари, Вінниця, Івано-Франківськ, Кропивницький, Лозова, Луцьк, Мукачево,
               Павлоград, Рівне, Тернопіль, Умань, Хмельницький, Черкаси, Чернігів, Шепетівка.
             </p>
@@ -686,7 +694,7 @@
                   т. +38 (073) 510-31-30
                 </a>
               </div>
-              
+
             </div>
             <div class="row">
               <div class="col col-md-6 footer-left">
@@ -814,6 +822,7 @@
                 <option selected disabled value="">Мене цікавить...</option>
                 <option>Кавомашина для кафе або торгової точки</option>
                 <option>Торговий автомат з кавою або снеками</option>
+                <option>Кав'ярня самообслуговування</option>
               </select>
             </div>
             <div class="mb-3">

@@ -72,13 +72,15 @@
     <div class="header__up">
       <div class="container">
         <div class="row">
-          <div class="header__item col">
-            <ul>
-              <li class="telephone text-nowrap text-end">
-                <img src="../img/mail.png" />
-                <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
-              </li>
-            </ul>
+          <div class="header__item col mx-auto d-flex justify-content-end gap-3">
+            <div class="text-nowrap text-end">
+              <img src="../img/mail.png" />
+              <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
+            </div>
+            <div class="text-nowrap text-end">
+              <img src="../img/app.png" />
+              <a class="telephone" data-bs-toggle="modal" data-bs-target="#Modal" href="#">Залишити заявку</a>
+            </div>
           </div>
         </div>
       </div>
@@ -149,6 +151,11 @@
                       Вендінгові снекові автомати
                     </a>
                   </li>
+                  <li>
+                    <a class="dropdown-item" href="./kofeinia.html">
+                      Кав’ярня самообслуговування
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -217,8 +224,7 @@
       <div class="col mb-1">
         <div class="card hover-text-one">
           <figure class="effect-text-three">
-            <img src="./img/rashodniki/zolotoy_stakan.webp" class="card-img-top combo"
-              alt="Картонний стакан для кави" />
+            <img src="./img/rashodniki/stakan.webp" class="card-img-top combo" alt="Картонний стакан для кави" />
             <figcaption class="goods">
               <ul class="lh-sm">
                 <li>
@@ -257,14 +263,15 @@
             <h3 class="text-center">Картонні стакани Bianchi</h3>
             <small>
               <p class="lh-sm">
-                Золоті стакани компанії Bianchi Professional впізнавані споживачем у
-                багатьох містах України.
+                Новий стиль Bianchi Professional — лаконічний чорний стакан із золотим логотипом, що підкреслює
+                впізнаваність та преміальний характер бренду.
               </p>
               <p class="lh-sm">
-                Стакани виробляються з міцного якісного картону із застосуванням
-                зовнішньої ламінації.
+                Стакани виготовляються з міцного якісного картону із зовнішньою ламінацією, приємні на дотик та зручні
+                для напоїв із собою.
               </p>
-              <p class="lh-sm">В асортименті представлені різні об'єми.</p>
+              <p class="lh-sm">В асортименті представлені стакани різних об’ємів — для еспресо, американо, капучино,
+                лате та інших гарячих напоїв.</p>
             </small>
           </div>
         </div>
@@ -575,6 +582,7 @@
                 <option selected disabled value="">Мене цікавить...</option>
                 <option>Кавомашина для кафе або торгової точки</option>
                 <option>Торговий автомат з кавою або снеками</option>
+                <option>Кав'ярня самообслуговування</option>
               </select>
             </div>
             <div class="mb-3">

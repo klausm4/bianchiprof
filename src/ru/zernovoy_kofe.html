@@ -72,13 +72,15 @@
     <div class="header__up">
       <div class="container">
         <div class="row">
-          <div class="header__item col">
-            <ul>
-              <li class="telephone text-nowrap text-end">
-                <img src="../img/mail.png" />
-                <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
-              </li>
-            </ul>
+          <div class="header__item col mx-auto d-flex justify-content-end gap-3">
+            <div class="text-nowrap text-end">
+              <img src="../img/mail.png" />
+              <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
+            </div>
+            <div class="text-nowrap text-end">
+              <img src="../img/app.png" />
+              <a class="telephone" data-bs-toggle="modal" data-bs-target="#Modal" href="#">Оставить заявку</a>
+            </div>
           </div>
         </div>
       </div>
@@ -147,6 +149,11 @@
                   <li>
                     <a class="dropdown-item" href="./vending_snack.html">
                       Вендинговые снековые автоматы
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./kofeinia.html">
+                      Кофейня самообслуживания
                     </a>
                   </li>
                 </ul>
@@ -219,22 +226,20 @@
             обслуживанием.
           </small>
         </h5>
-        <ul>
-          <small>
-            <li>
-              Мы предлагаем лучшие сорта кофе, которые идеально подходят для автоматических кофемашин, обеспечивая
-              насыщенный вкус и
-              непревзойденный аромат каждой чашки.
-            </li>
-            <li>
-              Наш зерновой кофе изготовлен на ультрасовременных кофейных фабриках Голландии (ICS) с применением
-              лучшего оборудования и профессиональных знаний высококлассных мировых специалистов.
-            </li>
-            <li>
-              Богатство вкуса и аромата, отборные зерна и идеально отточенные рецепты блендов – основные отличительные
-              особенности линейки кофе Bianchi.
-            </li>
-          </small>
+        <ul class="mt-3">
+          <li>
+            Мы предлагаем лучшие сорта кофе, которые идеально подходят для автоматических кофемашин, обеспечивая
+            насыщенный вкус и
+            непревзойденный аромат каждой чашки.
+          </li>
+          <li>
+            Наш зерновой кофе изготовлен на ультрасовременных кофейных фабриках Голландии (ICS) с применением
+            лучшего оборудования и профессиональных знаний высококлассных мировых специалистов.
+          </li>
+          <li>
+            Богатство вкуса и аромата, отборные зерна и идеально отточенные рецепты блендов – основные отличительные
+            особенности линейки кофе Bianchi.
+          </li>
         </ul>
       </div>
       <div class="col"></div>
@@ -243,7 +248,7 @@
   <!-- /////////////////////////////////////////   Goods    ////////////////////////////////////////     -->
   <div class="container hr-line"></div>
   <div class="container cards">
-    <div class="row">
+    <div class="row justify-content-center">
       <div id="anhcor-classic-ru" class="col col-auto col-md-4 mb-1">
         <div class="card hover-text-one">
           <figure class="effect-text-three">
@@ -392,11 +397,106 @@
           </div>
         </div>
       </div>
-
+      <div id="anhcor-sogno" class="col col-auto col-md-4 mb-4">
+        <div class="card hover-text-one">
+          <figure class="effect-text-three">
+            <img src="../img/zernovoy_kofe/Sogno.webp" class="card-img-top" alt="кава арабіка в зернах" />
+            <figcaption class="goods">
+              <ul class="lh-sm">
+                <li>
+                  <b>
+                    Вес:
+                    <br />
+                  </b>
+                  1 кг.
+                </li>
+                <br />
+                <li>
+                  <b>
+                    Производитель:
+                    <br />
+                  </b>
+                  Голландия
+                </li>
+              </ul>
+            </figcaption>
+          </figure>
+          <div class="card-body">
+            <h3 class="text-center">Кофе в зернах <br />Bianchi "Sogno"</h3><br />
+            <small>
+              <p class="lh-sm">
+                Название кофе Sogno переводится как «Мечта».
+                Это идеально сбалансированный бленд, созданный для тех, кто ценит гармонию и классические кофейные
+                традиции.
+                Его мягкий, обволакивающий вкус раскрывается постепенно, создавая атмосферу уюта и тепла.
+                Он прекрасно подходит как для бодрящего утреннего ритуала, так и для приятного перерыва в течение дня.
+              </p>
+              <p class="lh-sm">
+                <b>Вкус:</b> глубокий, бархатистый, с тонкими шоколадно-ореховыми оттенками.
+              </p>
+              <p class="lh-sm">
+                <b>Аромат:</b> утончённый, насыщенный, с мягким сладковатым послевкусием.
+              </p>
+              <p class="lh-sm">
+                <b>Для чего подходит:</b> идеальная основа для классического эспрессо, насыщенного американо и нежных
+                молочных напитков (капучино, латте).
+              </p>
+            </small>
+          </div>
+        </div>
+      </div>
+      <div id="anhcor-idea" class="col col-auto col-md-4 mb-4">
+        <div class="card hover-text-one">
+          <figure class="effect-text-three">
+            <img src="../img/zernovoy_kofe/Idea.webp" class="card-img-top" alt="кава арабіка в зернах" />
+            <figcaption class="goods">
+              <ul class="lh-sm">
+                <li>
+                  <b>
+                    Вес:
+                    <br />
+                  </b>
+                  1 кг.
+                </li>
+                <br />
+                <li>
+                  <b>
+                    Производитель:
+                    <br />
+                  </b>
+                  Голландия
+                </li>
+              </ul>
+            </figcaption>
+          </figure>
+          <div class="card-body">
+            <h3 class="text-center">Кофе в зернах <br />Bianchi "Idea"</h3><br />
+            <small>
+              <p class="lh-sm">
+                Кофе <b>"Idea"</b> создан для тех, кому важна максимальная концентрация, вдохновение и прилив сил для
+                новых достижений.
+                Отличительная особенность этого напитка — его невероятная деликатность.
+                Особо внимательное обращение с зернами делает вкус удивительно чистым и мягким, убирая лишнюю горечь и
+                кислотность,
+                но полностью сохраняя бодрящие свойства кофеина.
+              </p>
+              <p class="lh-sm">
+                <b>Вкус:</b> легкий, деликатный, с приятными карамельными нотами без резкой горечи.
+              </p>
+              <p class="lh-sm">
+                <b>Аромат:</b> яркий, выразительный и вдохновляющий.
+              </p>
+              <p class="lh-sm">
+                <b>Для кого подойдет:</b> для тех, кто ищет мягкий, но в то же время эффективно бодрящий напиток,
+                который легко пьется в течение всего дня.
+              </p>
+            </small>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-  </div>
+
   <!-- /////////////////////////////////////Toast///////////////////////////// -->
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true"
@@ -564,6 +664,7 @@
                 <option selected disabled value="">Меня интересует...</option>
                 <option>Кофемашина для кафе или торговой точки</option>
                 <option>Торговый автомат с кофе или снеками</option>
+                <option>Кофейня самообслуживания</option>
               </select>
             </div>
             <div class="mb-3">

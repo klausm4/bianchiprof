@@ -72,13 +72,15 @@
     <div class="header__up">
       <div class="container">
         <div class="row">
-          <div class="header__item col">
-            <ul>
-              <li class="telephone text-nowrap text-end">
-                <img src="../img/mail.png" />
-                <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
-              </li>
-            </ul>
+          <div class="header__item col mx-auto d-flex justify-content-end gap-3">
+            <div class="text-nowrap text-end">
+              <img src="../img/mail.png" />
+              <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
+            </div>
+            <div class="text-nowrap text-end">
+              <img src="../img/app.png" />
+              <a class="telephone" data-bs-toggle="modal" data-bs-target="#Modal" href="#">Залишити заявку</a>
+            </div>
           </div>
         </div>
       </div>
@@ -147,6 +149,11 @@
                   <li>
                     <a class="dropdown-item" href="./vending_snack.html">
                       Вендінгові снекові автомати
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./kofeinia.html">
+                      Кав’ярня самообслуговування
                     </a>
                   </li>
                 </ul>
@@ -219,22 +226,20 @@
             обслуговуванням.
           </small>
         </h5>
-        <ul>
-          <small>
-            <li>
-              Ми пропонуємо найкращі сорти кави, які ідеально підходять для автоматичних кавових машин, забезпечуючи
-              насичений смак та неперевершений аромат кожної чашки.
-            </li>
-            <li>
-              Наша зернова кава виготовлена на ультрасучасних кавових фабриках
-              Голандії (ICS) із застосуванням найкращого обладнання та професійних знань
-              висококласних світових спеціалістів.
-            </li>
-            <li>
-              Багатство смаку та аромату, відбірні зерна та ідеально відточені рецепти блендів - основні відмінні
-              особливості лінійки кави Bianchi.
-            </li>
-          </small>
+        <ul class="mt-3">
+          <li>
+            Ми пропонуємо найкращі сорти кави, які ідеально підходять для автоматичних кавових машин, забезпечуючи
+            насичений смак та неперевершений аромат кожної чашки.
+          </li>
+          <li>
+            Наша зернова кава виготовлена на ультрасучасних кавових фабриках
+            Голандії (ICS) із застосуванням найкращого обладнання та професійних знань
+            висококласних світових спеціалістів.
+          </li>
+          <li>
+            Багатство смаку та аромату, відбірні зерна та ідеально відточені рецепти блендів - основні відмінні
+            особливості лінійки кави Bianchi.
+          </li>
         </ul>
       </div>
       <div class="col"></div>
@@ -243,8 +248,8 @@
   <!-- /////////////////////////////////////////   Goods    ////////////////////////////////////////     -->
   <div class="container hr-line"></div>
   <div class="container cards">
-    <div class="row">
-      <div id="anhcor-classic" class="col col-auto col-md-4 mb-1">
+    <div class="row justify-content-center">
+      <div id="anhcor-classic" class="col col-auto col-md-4 mb-4">
         <div class="card hover-text-one">
           <figure class="effect-text-three">
             <img src="./img/zernovoy_kofe/Classic.webp" class="card-img-top" alt="Кава в зернах для кавомашин" />
@@ -295,7 +300,7 @@
           </div>
         </div>
       </div>
-      <div id="anhcor-beans" class="col col-auto col-md-4 mb-1">
+      <div id="anhcor-beans" class="col col-auto col-md-4 mb-4">
         <div class="card hover-text-one">
           <figure class="effect-text-three">
             <img src="./img/zernovoy_kofe/Beans1.webp" class="card-img-top" alt="смачна кава в зернах" />
@@ -340,7 +345,7 @@
           </div>
         </div>
       </div>
-      <div id="anhcor-elite" class="col col-auto col-md-4 mb-1">
+      <div id="anhcor-elite" class="col col-auto col-md-4 mb-4">
         <div class="card hover-text-one">
           <figure class="effect-text-three">
             <img src="./img/zernovoy_kofe/Elit.webp" class="card-img-top" alt="кава арабіка в зернах" />
@@ -391,10 +396,103 @@
           </div>
         </div>
       </div>
-
+      <div id="anhcor-sogno" class="col col-auto col-md-4 mb-4">
+        <div class="card hover-text-one">
+          <figure class="effect-text-three">
+            <img src="./img/zernovoy_kofe/Sogno.webp" class="card-img-top" alt="кава арабіка в зернах" />
+            <figcaption class="goods">
+              <ul class="lh-sm">
+                <li>
+                  <b>
+                    Вага:
+                    <br />
+                  </b>
+                  1 кг.
+                </li>
+                <br />
+                <li>
+                  <b>
+                    Виробник:
+                    <br />
+                  </b>
+                  Голандія
+                </li>
+              </ul>
+            </figcaption>
+          </figure>
+          <div class="card-body">
+            <h3 class="text-center">Кава в зернах <br />Bianchi "Sogno"</h3><br />
+            <small>
+              <p class="lh-sm">
+                Назва кави Sogno перекладається як «Мрія».
+                Це ідеально збалансований бленд, створений для тих, хто цінує гармонію та класичні кавові традиції.
+                Його м'який, обволікаючий смак розкривається поступово, створюючи атмосферу затишку та тепла.
+                Він чудово підходить як для підбадьорливого ранкового ритуалу, так і для приємної перерви протягом дня.
+              </p>
+              <p class="lh-sm">
+                <b>Смак:</b> глибокий, оксамитовий, із тонкими шоколадно-горіховими відтінками.
+              </p>
+              <p class="lh-sm">
+                <b>Аромат:</b> витончений, щільний, із м'яким солодкуватим посмаком.
+              </p>
+              <p class="lh-sm">
+                <b>Для чого підходить:</b> ідеальна основа для класичного еспресо, насиченого американо та ніжних
+                молочних напоїв (капучино, лате).
+              </p>
+            </small>
+          </div>
+        </div>
+      </div>
+      <div id="anhcor-idea" class="col col-auto col-md-4 mb-4">
+        <div class="card hover-text-one">
+          <figure class="effect-text-three">
+            <img src="./img/zernovoy_kofe/Idea.webp" class="card-img-top" alt="кава арабіка в зернах" />
+            <figcaption class="goods">
+              <ul class="lh-sm">
+                <li>
+                  <b>
+                    Вага:
+                    <br />
+                  </b>
+                  1 кг.
+                </li>
+                <br />
+                <li>
+                  <b>
+                    Виробник:
+                    <br />
+                  </b>
+                  Голандія
+                </li>
+              </ul>
+            </figcaption>
+          </figure>
+          <div class="card-body">
+            <h3 class="text-center">Кава в зернах <br />Bianchi "Idea"</h3><br />
+            <small>
+              <p class="lh-sm">
+                Кава <b>"Idea"</b> створена для тих, кому важлива максимальна концентрація, натхнення та приплив сил для
+                нових звершень.
+                Відмінна риса цього напою — його неймовірна делікатність.
+                Особлива дбайлива обробка зерен робить смак дивовижно чистим і м'яким, прибираючи зайву гіркоту та
+                кислотність,
+                але повністю зберігаючи підбадьорливі властивості кофеїну.
+              </p>
+              <p class="lh-sm">
+                <b>Смак:</b> легкий, делікатний, із приємними карамельними нотами без різкої гіркоти.
+              </p>
+              <p class="lh-sm">
+                <b>Аромат:</b> яскравий, виразний та надихаючий.
+              </p>
+              <p class="lh-sm">
+                <b>Для кого підійде:</b> для тих, хто шукає м'який, але водночас ефективно підбадьорливий напій, який
+                легко п'ється протягом усього дня.
+              </p>
+            </small>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  </div>
   </div>
   <!-- /////////////////////////////////////Toast///////////////////////////// -->
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -565,6 +663,7 @@
                 <option selected disabled value="">Мене цікавить...</option>
                 <option>Кавомашина для кафе або торгової точки</option>
                 <option>Торговий автомат з кавою або снеками</option>
+                <option>Кав'ярня самообслуговування</option>
               </select>
             </div>
             <div class="mb-3">

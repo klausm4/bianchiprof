@@ -72,13 +72,15 @@
     <div class="header__up">
       <div class="container">
         <div class="row">
-          <div class="header__item col">
-            <ul>
-              <li class="telephone text-nowrap text-end">
-                <img src="../img/mail.png" />
-                <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
-              </li>
-            </ul>
+          <div class="header__item col mx-auto d-flex justify-content-end gap-3">
+            <div class="text-nowrap text-end">
+              <img src="../img/mail.png" />
+              <a class="telephone" href="mailto:support@bianchiprof.com">support@bianchiprof.com</a>
+            </div>
+            <div class="text-nowrap text-end">
+              <img src="../img/app.png" />
+              <a class="telephone" data-bs-toggle="modal" data-bs-target="#Modal" href="#">Залишити заявку</a>
+            </div>
           </div>
         </div>
       </div>
@@ -147,6 +149,11 @@
                   <li>
                     <a class="dropdown-item" href="./vending_snack.html">
                       Вендінгові снекові автомати
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./kofeinia.html">
+                      Кав’ярня самообслуговування
                     </a>
                   </li>
                 </ul>
@@ -323,28 +330,28 @@
         <div class="col col-md-3 col-lg-2">
           <div class="img-fluid">
             <a href="./avtomaty.html#anhcor-gaia-touch">
-              <img src="./img/dlya_azs/gaia_touch.png" class="scale" alt="Кавове обладнання для бізнесу" />
+              <img src="./img/dlya_azs/gaia_touch.webp" class="scale" alt="Кавове обладнання для бізнесу" />
             </a>
           </div>
         </div>
         <div class="col col-md-3 col-lg-2">
           <div class="img-fluid">
             <a href="./avtomaty.html#anhcor-korinto">
-              <img src="./img/dlya_azs/necta_korinto_prime.png" class="scale" alt="Кавоварка на зернах" />
+              <img src="./img/dlya_azs/necta_korinto_prime.webp" class="scale" alt="Кавоварка на зернах" />
             </a>
           </div>
         </div>
         <div class="col col-md-3 col-lg-2">
           <div class="img-fluid">
             <a href="./avtomaty.html#anhcor-coro">
-              <img src="./img/dlya_azs/necta_koro_prime.png" class="scale" alt="Оренда кавових апаратів Рівне" />
+              <img src="./img/dlya_azs/necta_koro_prime.webp" class="scale" alt="Оренда кавових апаратів Рівне" />
             </a>
           </div>
         </div>
         <div class="col col-md-3 col-lg-2">
           <div class="img-fluid">
             <a href="./avtomaty.html#anhcor-gaia-style">
-              <img src="./img/dlya_azs/gaya_style.png" class="scale" alt="Bianchi Gaya_Style" />
+              <img src="./img/dlya_azs/gaya_style.webp" class="scale" alt="Bianchi Gaya_Style" />
             </a>
           </div>
         </div>
@@ -731,6 +738,7 @@
                 <option selected disabled value="">Мене цікавить...</option>
                 <option>Кавомашина для кафе або торгової точки</option>
                 <option>Торговий автомат з кавою або снеками</option>
+                <option>Кав'ярня самообслуговування</option>
               </select>
             </div>
             <div class="mb-3">
