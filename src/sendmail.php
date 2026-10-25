@@ -36,7 +36,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'mail.bianchiprof.com'; // SMTP сервера вашей почты
     $mail->Username   = 'task@bianchiprof.com'; // Логин на почте
-    $mail->Password   = 'taskbianchi'; // Пароль на почте
+    $mail->Password   = 'ua9x5zm78t'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('task@bianchiprof.com', 'Менеджер задач'); // Адрес самой почты и имя отправителя
